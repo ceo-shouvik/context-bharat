@@ -1,0 +1,19 @@
+{
+  "library_id": "/cashfree/cashfree-pg",
+  "name": "Cashfree Payments",
+  "description": "Payment gateway and payout solution. Orders, payment links, subscriptions, and bank transfers.",
+  "category": "indian-fintech",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://docs.cashfree.com/", "crawl_depth": 3},
+      {"type": "github", "repo": "cashfree/cashfree-pg-sdk-nodejs"},
+      {"type": "github", "repo": "cashfree/cashfree-pg-sdk-python"}
+    ]
+  },
+  "npm_package": "@cashfreepayments/cashfree-js",
+  "pypi_package": "cashfree-pg",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["payments", "india", "fintech", "payout"]
+}

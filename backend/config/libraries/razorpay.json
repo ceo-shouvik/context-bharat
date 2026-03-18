@@ -1,0 +1,20 @@
+{
+  "library_id": "/razorpay/razorpay-sdk",
+  "name": "Razorpay",
+  "description": "India's leading payment gateway. Payment links, orders, subscriptions, payouts, webhooks, and route.",
+  "category": "indian-fintech",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://razorpay.com/docs/", "crawl_depth": 3},
+      {"type": "github", "repo": "razorpay/razorpay-node"},
+      {"type": "github", "repo": "razorpay/razorpay-python"}
+    ]
+  },
+  "npm_package": "razorpay",
+  "pypi_package": "razorpay",
+  "github_repo": "razorpay/razorpay-node",
+  "refresh_interval_hours": 24,
+  "languages": ["en", "hi"],
+  "tags": ["payments", "india", "fintech", "upi", "subscription", "payout"]
+}

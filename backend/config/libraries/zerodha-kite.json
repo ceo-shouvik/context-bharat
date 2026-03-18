@@ -1,0 +1,20 @@
+{
+  "library_id": "/zerodha/kite-api",
+  "name": "Zerodha Kite API",
+  "description": "India's most popular trading API. Orders, portfolio, market data, and WebSocket streaming for stocks, F&O, and commodities.",
+  "category": "indian-trading",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://kite.trade/docs/connect/v3/", "crawl_depth": 3},
+      {"type": "github", "repo": "zerodha/pykiteconnect"},
+      {"type": "github", "repo": "zerodha/kiteconnect-js"}
+    ]
+  },
+  "pypi_package": "kiteconnect",
+  "npm_package": "kiteconnect",
+  "github_repo": "zerodha/pykiteconnect",
+  "refresh_interval_hours": 24,
+  "languages": ["en", "hi"],
+  "tags": ["trading", "india", "stocks", "zerodha", "algo-trading", "websocket"]
+}

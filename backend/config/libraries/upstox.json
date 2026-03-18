@@ -1,0 +1,18 @@
+{
+  "library_id": "/upstox/upstox-api",
+  "name": "Upstox API v3",
+  "description": "Modern trading API with OpenAPI spec. Orders, portfolio, market data, option chain.",
+  "category": "indian-trading",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "github", "repo": "upstox/upstox-python"},
+      {"type": "github", "repo": "upstox/upstox-js-sdk"},
+      {"type": "web", "url": "https://upstox.com/developer/api-documentation/", "crawl_depth": 3}
+    ]
+  },
+  "pypi_package": "upstox-python-sdk",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["trading", "india", "upstox", "algo-trading", "openapi"]
+}

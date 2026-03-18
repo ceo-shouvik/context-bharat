@@ -1,0 +1,16 @@
+{
+  "library_id": "/nsdl/digilocker-api",
+  "name": "DigiLocker API",
+  "description": "Government document wallet API for issuing and verifying Aadhaar, driving licence, and other documents.",
+  "category": "india-dpi",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://digitallocker.gov.in/public/oauth2/1/discovery", "crawl_depth": 2},
+      {"type": "github", "repo": "SetuHQ/digilocker-integration"}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["digilocker", "india", "dpi", "documents", "kyc", "aadhaar"]
+}

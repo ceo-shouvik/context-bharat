@@ -1,0 +1,15 @@
+{
+  "library_id": "/gstn/gst-api",
+  "name": "GSTN API",
+  "description": "GST Network developer API for GST return filing, invoice management, e-way bills, and taxpayer info.",
+  "category": "india-dpi",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://developer.gst.gov.in/", "crawl_depth": 3}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en", "hi"],
+  "tags": ["gst", "gstn", "india", "tax", "compliance", "e-invoice", "e-way-bill"]
+}

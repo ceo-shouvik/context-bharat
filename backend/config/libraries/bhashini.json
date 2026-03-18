@@ -1,0 +1,16 @@
+{
+  "library_id": "/bhashini/bhashini-api",
+  "name": "Bhashini API",
+  "description": "India's National Language Translation Mission. ASR, TTS, translation, and NLP APIs for 22 Indian languages.",
+  "category": "indian-ai",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "github", "repo": "bhashini-ai/bhashini-apis"},
+      {"type": "web", "url": "https://bhashini.gov.in/ulca/search", "crawl_depth": 2}
+    ]
+  },
+  "refresh_interval_hours": 48,
+  "languages": ["en", "hi"],
+  "tags": ["bhashini", "india", "nlp", "translation", "tts", "asr", "indian-languages"]
+}

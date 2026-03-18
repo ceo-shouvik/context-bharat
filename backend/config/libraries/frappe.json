@@ -1,0 +1,20 @@
+{
+  "library_id": "/frappe/frappe-framework",
+  "name": "Frappe / ERPNext",
+  "description": "Open-source ERP and web framework made in India. REST API, DocType system, hooks, and customizations.",
+  "category": "enterprise-india",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "github", "repo": "frappe/frappe"},
+      {"type": "github", "repo": "frappe/erpnext"},
+      {"type": "web", "url": "https://frappeframework.com/docs/", "crawl_depth": 3},
+      {"type": "web", "url": "https://docs.erpnext.com/", "crawl_depth": 2}
+    ]
+  },
+  "github_repo": "frappe/frappe",
+  "pypi_package": "frappe",
+  "refresh_interval_hours": 48,
+  "languages": ["en", "hi"],
+  "tags": ["frappe", "erpnext", "erp", "india", "open-source", "python", "rest-api"]
+}

@@ -1,0 +1,16 @@
+{
+  "library_id": "/npci/upi-specs",
+  "name": "UPI / NPCI",
+  "description": "Unified Payments Interface technical specification. XML-based protocol powering 85% of India's digital payments.",
+  "category": "india-dpi",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "pdf", "url": "https://www.npci.org.in/what-we-do/upi/product-overview"},
+      {"type": "web", "url": "https://www.npci.org.in/what-we-do/upi/api-documentation", "crawl_depth": 2}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["upi", "npci", "payments", "india", "dpi", "xml", "vpa"]
+}

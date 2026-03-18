@@ -1,0 +1,25 @@
+{
+  "name": "context7-india",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-ready documentation for India's developer ecosystem",
+  "packageManager": "pnpm@9.0.0",
+  "workspaces": [
+    "mcp-server",
+    "mcp-server/packages/sdk",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:all": "concurrently --names 'backend,mcp,frontend,worker' --prefix-colors 'yellow,blue,green,magenta' 'make dev-backend' 'pnpm --filter mcp-server dev' 'pnpm --filter frontend dev' 'make dev-worker'",
+    "dev:backend": "make dev-backend",
+    "dev:mcp": "pnpm --filter mcp-server dev",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "build": "pnpm --filter mcp-server build && pnpm --filter frontend build",
+    "test": "make test",
+    "lint": "make lint",
+    "format": "make format"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "library_id": "/sarvam/sarvam-api",
+  "name": "Sarvam AI",
+  "description": "India-built AI APIs for 22 Indian languages. Translation, ASR, TTS, and transliteration.",
+  "category": "indian-ai",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://docs.sarvam.ai/", "crawl_depth": 3}
+    ]
+  },
+  "refresh_interval_hours": 24,
+  "languages": ["en", "hi"],
+  "tags": ["sarvam", "india", "ai", "translation", "speech", "nlp", "indian-languages"]
+}

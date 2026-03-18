@@ -1,0 +1,116 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-backend:
+    name: Backend Tests
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: context7india_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      redis:
+        image: redis:7-alpine
+        ports: ["6379:6379"]
+        options: --health-cmd "redis-cli ping" --health-interval 10s
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: backend/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r backend/requirements.txt
+
+      - name: Run migrations
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/context7india_test
+        run: cd backend && alembic upgrade head
+
+      - name: Run unit tests
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/context7india_test
+          OPENAI_API_KEY: test_key
+          COHERE_API_KEY: test_key
+          UPSTASH_REDIS_URL: redis://localhost:6379
+          UPSTASH_REDIS_TOKEN: ""
+          JWT_SECRET: test_jwt_secret_minimum_32_chars_ok
+        run: cd backend && pytest tests/unit -v --cov=app --cov-report=xml
+
+      - name: Run integration tests
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/context7india_test
+          OPENAI_API_KEY: test_key
+          COHERE_API_KEY: test_key
+          UPSTASH_REDIS_URL: redis://localhost:6379
+          UPSTASH_REDIS_TOKEN: ""
+          JWT_SECRET: test_jwt_secret_minimum_32_chars_ok
+        run: cd backend && pytest tests/integration -v
+
+  test-mcp:
+    name: MCP Server Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Install and test
+        run: |
+          cd mcp-server
+          pnpm install
+          pnpm typecheck
+          pnpm test
+
+  test-frontend:
+    name: Frontend Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Install and build
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: https://placeholder.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: placeholder
+          NEXT_PUBLIC_API_BASE_URL: https://api.context7india.com
+        run: |
+          cd frontend
+          pnpm install
+          pnpm typecheck
+          pnpm build
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ruff
+      - run: cd backend && ruff check . && ruff format --check .

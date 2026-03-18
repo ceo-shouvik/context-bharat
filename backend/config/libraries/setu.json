@@ -1,0 +1,17 @@
+{
+  "library_id": "/setu/setu-docs",
+  "name": "Setu APIs",
+  "description": "Financial data APIs. Account Aggregator, UPI deeplinks, bill collection, BBPS, and data gateway.",
+  "category": "indian-fintech",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "github", "repo": "SetuHQ/docs"},
+      {"type": "web", "url": "https://docs.setu.co/", "crawl_depth": 3}
+    ]
+  },
+  "github_repo": "SetuHQ/docs",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["setu", "india", "account-aggregator", "upi", "fintech", "bbps"]
+}

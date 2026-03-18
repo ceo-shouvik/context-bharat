@@ -1,0 +1,29 @@
+{
+  "library_id": "/uidai/aadhaar-ekyc",
+  "name": "Aadhaar eKYC",
+  "description": "UIDAI Aadhaar-based electronic Know Your Customer (eKYC) API. Biometric and OTP-based identity verification for financial services.",
+  "category": "india-dpi",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {
+        "type": "pdf",
+        "urls": [
+          "https://uidai.gov.in/images/resource/aadhaar_authentication_api_2_5.pdf",
+          "https://uidai.gov.in/images/resource/aadhaar_ekyc_api_2_5.pdf"
+        ]
+      },
+      {
+        "type": "web",
+        "urls": [
+          "https://developer.uidai.gov.in/",
+          "https://uidai.gov.in/ecosystem/authentication-ecosystem.html"
+        ],
+        "crawl_depth": 2
+      }
+    ]
+  },
+  "refresh_interval_hours": 168,
+  "languages": ["en", "hi"],
+  "tags": ["aadhaar", "ekyc", "identity", "india", "dpi", "uidai", "biometric", "otp"]
+}

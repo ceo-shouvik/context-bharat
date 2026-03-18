@@ -1,0 +1,19 @@
+{
+  "library_id": "/ondc/protocol-specs",
+  "name": "ONDC Protocol",
+  "description": "Open Network for Digital Commerce. Beckn Protocol async buyer/seller architecture, Ed25519 signing, and multi-domain APIs.",
+  "category": "india-dpi",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "github", "repo": "ONDC-Official/ONDC-Protocol-Specs"},
+      {"type": "github", "repo": "ONDC-Official/log-validation-utility"},
+      {"type": "github", "repo": "ONDC-Official/reference-implementations"},
+      {"type": "web", "url": "https://docs.ondc.org/", "crawl_depth": 4}
+    ]
+  },
+  "github_repo": "ONDC-Official/ONDC-Protocol-Specs",
+  "refresh_interval_hours": 48,
+  "languages": ["en", "hi"],
+  "tags": ["ondc", "beckn", "ecommerce", "india", "dpi", "buyer-app", "seller-app"]
+}

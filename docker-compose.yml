@@ -1,0 +1,55 @@
+version: "3.9"
+
+services:
+  # PostgreSQL with pgvector extension
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: context7india_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: context7india
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/scripts/init_db.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Redis for Celery broker + response cache
+  redis:
+    image: redis:7-alpine
+    container_name: context7india_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Optional: Flower — Celery task monitoring UI
+  # flower:
+  #   image: mher/flower:2.0
+  #   container_name: context7india_flower
+  #   command: celery --broker=redis://redis:6379/0 flower --port=5555
+  #   ports:
+  #     - "5555:5555"
+  #   depends_on:
+  #     - redis
+
+volumes:
+  postgres_data:
+  redis_data:
+
+# Usage:
+#   docker compose up -d           # Start Postgres + Redis
+#   docker compose down            # Stop
+#   docker compose down -v         # Stop + delete data (fresh start)
+#   docker compose logs postgres   # Check DB logs

@@ -1,0 +1,30 @@
+{
+  "library_id": "/juspay/hyperswitch",
+  "name": "Juspay HyperSwitch",
+  "description": "Open-source payment orchestrator and Juspay payment gateway. Supports UPI, cards, net banking, and wallets for Indian merchants.",
+  "category": "indian-fintech",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {
+        "type": "web",
+        "urls": [
+          "https://docs.juspay.in/",
+          "https://hyperswitch.io/docs"
+        ],
+        "crawl_depth": 3
+      },
+      {
+        "type": "github",
+        "repos": [
+          "juspay/hyperswitch",
+          "juspay/hyperswitch-web"
+        ]
+      }
+    ]
+  },
+  "github_repo": "juspay/hyperswitch",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["payments", "india", "fintech", "upi", "payment-orchestrator", "open-source"]
+}

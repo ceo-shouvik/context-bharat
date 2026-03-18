@@ -1,0 +1,14 @@
+{
+  "library_id": "/zoho/zoho-crm-api",
+  "name": "Zoho CRM API",
+  "description": "Zoho CRM REST API v7. Contacts, leads, deals, modules, webhooks, and OAuth 2.0 authentication.",
+  "category": "enterprise-india",
+  "source": {
+    "type": "web",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v7/",
+    "crawl_depth": 3
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["zoho", "crm", "india", "enterprise", "saas", "oauth"]
+}

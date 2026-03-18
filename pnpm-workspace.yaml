@@ -1,0 +1,4 @@
+packages:
+  - "mcp-server"
+  - "mcp-server/packages/*"
+  - "frontend"
