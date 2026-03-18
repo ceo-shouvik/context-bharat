@@ -7,7 +7,7 @@ import { UsageChart } from "@/components/usage-chart";
 import { FeatureCards } from "@/components/feature-cards";
 
 export const metadata = {
-  title: "Dashboard — Context Bharat",
+  title: "Dashboard — contextBharat",
   description: "Manage your API keys and test documentation queries.",
 };
 

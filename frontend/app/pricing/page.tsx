@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Pricing — Context Bharat",
+  title: "Pricing — contextBharat",
   description: "Free to start. ₹399/month for unlimited access to 100+ Indian APIs.",
 };
 

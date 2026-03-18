@@ -38,6 +38,7 @@ export default function LoginPage() {
 
   return (
     <main className="min-h-screen bg-[#05080f] flex items-center justify-center px-4">
+      <title>Sign In — contextBharat</title>
       <div className="w-full max-w-sm">
         {/* Logo */}
         <div className="text-center mb-8">

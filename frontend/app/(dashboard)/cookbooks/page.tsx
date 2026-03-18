@@ -68,7 +68,7 @@ export default function CookbooksPage() {
 
   if (!features.cookbooks) {
     return (
-      <div className="min-h-screen bg-[#05080f]">
+      <div className="min-h-screen bg-[#05080f]"><title>Cookbooks — contextBharat</title>
         <div className="max-w-6xl mx-auto px-6 py-12">
           <ComingSoon />
         </div>
@@ -77,7 +77,7 @@ export default function CookbooksPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#05080f]">
+    <div className="min-h-screen bg-[#05080f]"><title>Cookbooks — contextBharat</title>
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="mb-10">
           <h1 className="text-white text-2xl font-semibold">Integration Cookbooks</h1>

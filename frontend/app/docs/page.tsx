@@ -4,7 +4,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Setup Guide — Context Bharat",
+  title: "Setup Guide — contextBharat",
   description:
     "Connect Context Bharat MCP to Claude, Cursor, VS Code, and Windsurf in under 60 seconds.",
 };

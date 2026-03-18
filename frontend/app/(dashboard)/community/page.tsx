@@ -151,7 +151,7 @@ export default function CommunityPage() {
 
   if (!features.communityQa) {
     return (
-      <div className="min-h-screen bg-[#05080f]">
+      <div className="min-h-screen bg-[#05080f]"><title>Community — contextBharat</title>
         <div className="max-w-6xl mx-auto px-6 py-12">
           <ComingSoon />
         </div>
@@ -160,7 +160,7 @@ export default function CommunityPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#05080f]">
+    <div className="min-h-screen bg-[#05080f]"><title>Community — contextBharat</title>
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="flex items-start justify-between mb-8 flex-wrap gap-4">
           <div>

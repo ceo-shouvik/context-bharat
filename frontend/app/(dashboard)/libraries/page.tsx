@@ -61,7 +61,7 @@ export default function LibrariesPage() {
     : libraries;
 
   return (
-    <div className="min-h-screen bg-[#05080f]">
+    <div className="min-h-screen bg-[#05080f]"><title>Libraries — contextBharat</title>
       <div className="max-w-6xl mx-auto px-6 py-12">
         <h1 className="text-white text-2xl font-semibold mb-2">Library Catalog</h1>
         <p className="text-gray-400 mb-8">
