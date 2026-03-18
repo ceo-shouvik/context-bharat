@@ -25,9 +25,26 @@
 }
 
 .animate-scroll {
-  animation: scroll 40s linear infinite;
+  animation: scroll 60s linear infinite;
 }
 
 .animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-reverse {
+  animation: scroll-reverse 55s linear infinite;
+}
+
+.animate-scroll-reverse:hover {
   animation-play-state: paused;
 }
