@@ -13,12 +13,14 @@ from app.api.v1 import snippets, offline, cookbooks, sdkgen, testgen, openapigen
 from app.api.v1 import integrations, compliance, errors, community
 from app.core.config import settings
 from app.core.database import engine
+from app.core.feature_flags import flags
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Startup and shutdown events."""
     # Startup
+    flags.log_status()
     yield
     # Shutdown
     await engine.dispose()
