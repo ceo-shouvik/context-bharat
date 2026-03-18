@@ -17,7 +17,7 @@ export default function DashboardPage() {
         {/* Header */}
         <div className="mb-10">
           <div className="font-bold text-[#f59e1c] text-xl mb-1">
-            contextbharat<span className="text-white">.in</span>
+            contextbharat<span className="text-white">.com</span>
           </div>
           <h1 className="text-white text-2xl font-semibold mt-4">Dashboard</h1>
           <p className="text-gray-400 text-sm mt-1">

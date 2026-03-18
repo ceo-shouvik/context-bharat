@@ -67,7 +67,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-8">
             <Link href="/" className="font-bold text-[#f59e1c] text-lg">
-              contextbharat<span className="text-white">.in</span>
+              contextbharat<span className="text-white">.com</span>
             </Link>
             <div className="flex gap-4 text-sm">
               <Link

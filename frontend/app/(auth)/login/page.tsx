@@ -42,7 +42,7 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="font-bold text-[#f59e1c] text-2xl mb-2">
-            contextbharat<span className="text-white">.in</span>
+            contextbharat<span className="text-white">.com</span>
           </div>
           <p className="text-gray-400 text-sm">Get your free API key</p>
         </div>

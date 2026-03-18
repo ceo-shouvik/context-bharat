@@ -72,7 +72,7 @@ export default function LandingPage() {
       {/* Nav */}
       <nav className="border-b border-white/10 px-6 py-4 flex items-center justify-between max-w-6xl mx-auto">
         <div className="font-bold text-[#f59e1c] text-xl">
-          contextbharat<span className="text-white">.in</span>
+          contextbharat<span className="text-white">.com</span>
         </div>
         <div className="flex gap-6 text-sm text-gray-400">
           <Link href="/libraries" className="hover:text-white transition-colors">
@@ -363,7 +363,7 @@ const paymentLink = await razorpay.paymentLink.create({
           <div className="flex flex-col md:flex-row justify-between items-start gap-8">
             <div>
               <div className="font-bold text-[#f59e1c] text-xl mb-2">
-                contextbharat<span className="text-white">.in</span>
+                contextbharat<span className="text-white">.com</span>
               </div>
               <p className="text-gray-500 text-sm max-w-xs">
                 Built in India, for India&apos;s developers. The MCP client is Apache 2.0. The
