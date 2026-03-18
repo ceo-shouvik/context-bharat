@@ -4,6 +4,7 @@
  */
 import Link from "next/link";
 import { LivePlayground } from "@/components/live-playground";
+import { LogoSlider } from "@/components/logo-slider";
 
 export const metadata = {
   title: "contextBharat — Up-to-date docs for Indian APIs in your AI editor",
@@ -97,6 +98,9 @@ export default function LandingPage() {
           </p>
         </div>
       </section>
+
+      {/* Logo slider — social proof */}
+      <LogoSlider />
 
       {/* Live Playground — the hero feature */}
       <section id="try" className="max-w-4xl mx-auto px-6 py-16">

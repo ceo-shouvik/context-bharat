@@ -13,3 +13,21 @@
     --background-rgb: 11, 15, 25;
   }
 }
+
+/* Infinite scroll animation for logo slider */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
