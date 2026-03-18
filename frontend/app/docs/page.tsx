@@ -131,7 +131,7 @@ export default function DocsPage() {
       {/* Nav */}
       <nav className="border-b border-white/10 px-6 py-4 flex items-center justify-between max-w-6xl mx-auto">
         <Link href="/" className="font-bold text-[#f59e1c] text-xl">
-          contextbharat<span className="text-white">.com</span>
+          context<span className="text-white">Bharat</span>
         </Link>
         <div className="flex gap-6 text-sm text-gray-400">
           <Link href="/libraries" className="hover:text-white transition-colors">
