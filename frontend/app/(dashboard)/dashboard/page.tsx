@@ -4,6 +4,7 @@
 import { ApiKeyManager } from "@/components/api-key-manager";
 import { QueryTester } from "@/components/query-tester";
 import { UsageChart } from "@/components/usage-chart";
+import { FeatureCards } from "@/components/feature-cards";
 
 export const metadata = {
   title: "Dashboard — Context Bharat",
@@ -110,6 +111,9 @@ export default function DashboardPage() {
               </div>
             </div>
           </section>
+
+          {/* Features */}
+          <FeatureCards />
 
           {/* Query Sandbox */}
           <section>

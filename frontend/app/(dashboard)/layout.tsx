@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import type { AuthChangeEvent, Session } from "@supabase/supabase-js";
 import { supabase } from "@/lib/supabase";
+import { features } from "@/lib/features";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
@@ -82,6 +83,46 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               >
                 Libraries
               </Link>
+              {features.cookbooks && (
+                <Link
+                  href="/cookbooks"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cookbooks
+                </Link>
+              )}
+              {features.frameworkStarters && (
+                <Link
+                  href="/starters"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Starters
+                </Link>
+              )}
+              {(features.codeSnippets || features.testGeneration || features.openapiGeneration || features.sdkGeneration) && (
+                <Link
+                  href="/tools"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Tools
+                </Link>
+              )}
+              {features.complianceLayer && (
+                <Link
+                  href="/compliance"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Compliance
+                </Link>
+              )}
+              {features.communityQa && (
+                <Link
+                  href="/community"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Community
+                </Link>
+              )}
             </div>
           </div>
           <button
