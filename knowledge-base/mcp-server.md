@@ -6,11 +6,11 @@ How the MCP server works, how to test it, and how to extend it.
 
 ## What is MCP?
 
-Model Context Protocol (MCP) is an open standard (JSON-RPC 2.0) for giving AI coding assistants access to external tools and data. When a developer types "use context7india" in Claude or Cursor, the MCP server intercepts the request, fetches the relevant docs from our backend, and injects them into the LLM's context.
+Model Context Protocol (MCP) is an open standard (JSON-RPC 2.0) for giving AI coding assistants access to external tools and data. When a developer types "use contextbharat" in Claude or Cursor, the MCP server intercepts the request, fetches the relevant docs from our backend, and injects them into the LLM's context.
 
 MCP transport modes:
 - **stdio** — local process, AI client spawns MCP server as subprocess. Used by Claude Desktop, Cursor.
-- **Streamable HTTP** — remote server at `mcp.context7india.com/mcp`. Any MCP client can connect.
+- **Streamable HTTP** — remote server at `mcp.contextbharat.com/mcp`. Any MCP client can connect.
 
 ---
 
@@ -75,8 +75,8 @@ Retrieves relevant documentation.
 // In Claude Desktop ~/.claude.json or Cursor settings
 {
   "mcpServers": {
-    "context7india": {
-      "url": "https://mcp.context7india.com/mcp",
+    "contextbharat": {
+      "url": "https://mcp.contextbharat.com/mcp",
       "headers": {
         "Authorization": "Bearer YOUR_API_KEY"
       }
@@ -88,16 +88,16 @@ Retrieves relevant documentation.
 ### Option 2: Local (faster, works offline)
 
 ```bash
-npx @context7india/mcp --api-key YOUR_API_KEY
+npx @contextbharat/mcp --api-key YOUR_API_KEY
 ```
 
 Add to Claude Desktop `~/.claude.json`:
 ```json
 {
   "mcpServers": {
-    "context7india": {
+    "contextbharat": {
       "command": "npx",
-      "args": ["-y", "@context7india/mcp", "--api-key", "YOUR_API_KEY"]
+      "args": ["-y", "@contextbharat/mcp", "--api-key", "YOUR_API_KEY"]
     }
   }
 }
@@ -106,7 +106,7 @@ Add to Claude Desktop `~/.claude.json`:
 ### No API Key Mode
 
 ```bash
-npx @context7india/mcp
+npx @contextbharat/mcp
 # 100 queries/day free, top 30 libraries only
 ```
 
@@ -132,7 +132,7 @@ npx @modelcontextprotocol/inspector dist/index.js
 pnpm test
 
 # Integration test (requires local backend running)
-CONTEXT7INDIA_API_BASE_URL=http://localhost:8000 pnpm test:integration
+CONTEXTBHARAT_API_BASE_URL=http://localhost:8000 pnpm test:integration
 ```
 
 ---
@@ -156,7 +156,7 @@ const ListLibrariesInput = z.object({
 
 export const listLibrariesTool: Tool = {
   name: "list-libraries",
-  description: "List all available libraries in the Context7 India index. Filter by category.",
+  description: "List all available libraries in the Context Bharat index. Filter by category.",
   inputSchema: ListLibrariesInput,
   async handler(input) {
     return await backendClient.listLibraries({ category: input.category });
@@ -175,6 +175,6 @@ server.addTool(listLibrariesTool);
 ## Context7 Compatibility
 
 Our tool names and input schemas are compatible with Context7's API. This means:
-- Developers who use Context7 can switch to Context7 India with a URL change
+- Developers who use Context7 can switch to Context Bharat with a URL change
 - Community-built integrations (VS Code extensions, Cursor plugins) work with our server
 - We can gradually expand beyond Context7's feature set without breaking compatibility

@@ -7,7 +7,7 @@ from celery.schedules import crontab
 from app.core.config import settings
 
 celery_app = Celery(
-    "context7india",
+    "contextbharat",
     broker=settings.UPSTASH_REDIS_URL,
     backend=settings.UPSTASH_REDIS_URL,
     include=["app.tasks.ingestion_tasks"],

@@ -1,5 +1,5 @@
 /**
- * HTTP client for the Context7 India backend API.
+ * HTTP client for the Context Bharat backend API.
  * Called by MCP tool handlers.
  */
 import { config } from "./config.js";

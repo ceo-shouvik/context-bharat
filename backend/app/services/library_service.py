@@ -113,7 +113,7 @@ class LibraryService:
         from fastapi import HTTPException
         raise HTTPException(
             status_code=404,
-            detail=f"Library '{library_name}' not found. Browse available libraries at context7india.com/libraries",
+            detail=f"Library '{library_name}' not found. Browse available libraries at contextbharat.com/libraries",
         )
 
     async def update_freshness(self, library_id: str, chunk_count: int) -> None:

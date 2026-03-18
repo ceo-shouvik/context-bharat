@@ -1,7 +1,7 @@
-# Context7 India — Claude Code Instructions
+# Context Bharat — Claude Code Instructions
 
 ## Project Overview
-Context7 India is an AI-native MCP documentation server that indexes Indian fintech APIs, government APIs (UPI, GST, ONDC, Aadhaar), trading APIs (Zerodha, Upstox), enterprise tools (Zoho, Frappe, SAP B1), and global frameworks — serving India's 17M+ developers through Claude, Cursor, and VS Code via the Model Context Protocol.
+Context Bharat is an AI-native MCP documentation server that indexes Indian fintech APIs, government APIs (UPI, GST, ONDC, Aadhaar), trading APIs (Zerodha, Upstox), enterprise tools (Zoho, Frappe, SAP B1), and global frameworks — serving India's 17M+ developers through Claude, Cursor, and VS Code via the Model Context Protocol.
 
 **Think of this as:** A fork of Context7's open-source MCP client + a fully custom backend built for India's unique API landscape (PDFs, portal-gated docs, regional languages, offline-first).
 
@@ -66,7 +66,7 @@ Full architecture: @knowledge-base/architecture.md
 ## Monorepo Structure
 
 ```
-context7-india/
+context-bharat/
 ├── CLAUDE.md                    ← You are here
 ├── .claude/
 │   ├── rules/                   ← Scoped rules by directory

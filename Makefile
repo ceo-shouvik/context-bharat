@@ -1,4 +1,4 @@
-# Context7 India — Makefile
+# Context Bharat — Makefile
 # Run `make help` to see all commands
 
 .PHONY: help dev test lint format clean install setup ingest
@@ -6,7 +6,7 @@
 # ─── Help ───────────────────────────────────────────────────────────────────
 help:
 	@echo ""
-	@echo "Context7 India — Available Commands"
+	@echo "Context Bharat — Available Commands"
 	@echo "════════════════════════════════════"
 	@echo ""
 	@echo "Setup:"

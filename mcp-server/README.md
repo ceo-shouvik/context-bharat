@@ -1,11 +1,11 @@
-# @context7india/mcp
+# @contextbharat/mcp
 
 MCP server for Indian API documentation.
 
 ## Install
 
 ```bash
-npx @context7india/mcp --api-key YOUR_KEY
+npx @contextbharat/mcp --api-key YOUR_KEY
 ```
 
 ## Claude Desktop config
@@ -13,9 +13,9 @@ npx @context7india/mcp --api-key YOUR_KEY
 ```json
 {
   "mcpServers": {
-    "context7india": {
+    "contextbharat": {
       "command": "npx",
-      "args": ["-y", "@context7india/mcp", "--api-key", "YOUR_KEY"]
+      "args": ["-y", "@contextbharat/mcp", "--api-key", "YOUR_KEY"]
     }
   }
 }

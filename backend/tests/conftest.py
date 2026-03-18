@@ -11,7 +11,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_asyn
 # Use in-memory SQLite for unit tests, Postgres for integration
 TEST_DB_URL = os.getenv(
     "TEST_DATABASE_URL",
-    "postgresql+asyncpg://postgres:postgres@localhost:5432/context7india_test",
+    "postgresql+asyncpg://postgres:postgres@localhost:5432/contextbharat_test",
 )
 
 @pytest.fixture(scope="session")

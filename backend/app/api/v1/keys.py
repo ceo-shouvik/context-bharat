@@ -28,7 +28,7 @@ async def create_api_key(
     Generate a new API key for the authenticated user.
     The raw key is shown ONCE — store it safely.
     """
-    raw_key = f"c7i_{secrets.token_urlsafe(32)}"
+    raw_key = f"cb_{secrets.token_urlsafe(32)}"
     key_hash = hashlib.sha256(raw_key.encode()).hexdigest()
     key_prefix = raw_key[:12]
 

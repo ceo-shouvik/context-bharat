@@ -6,7 +6,7 @@ import { QueryTester } from "@/components/query-tester";
 import { UsageChart } from "@/components/usage-chart";
 
 export const metadata = {
-  title: "Dashboard — Context7 India",
+  title: "Dashboard — Context Bharat",
   description: "Manage your API keys and test documentation queries.",
 };
 
@@ -17,7 +17,7 @@ export default function DashboardPage() {
         {/* Header */}
         <div className="mb-10">
           <div className="font-bold text-[#f59e1c] text-xl mb-1">
-            context7<span className="text-white">.in</span>
+            contextbharat<span className="text-white">.in</span>
           </div>
           <h1 className="text-white text-2xl font-semibold mt-4">Dashboard</h1>
           <p className="text-gray-400 text-sm mt-1">
@@ -48,15 +48,15 @@ export default function DashboardPage() {
               <pre className="bg-black/40 rounded-lg p-4 text-sm text-green-300 font-mono overflow-x-auto">
 {`{
   "mcpServers": {
-    "context7india": {
+    "contextbharat": {
       "command": "npx",
-      "args": ["-y", "@context7india/mcp", "--api-key", "YOUR_API_KEY"]
+      "args": ["-y", "@contextbharat/mcp", "--api-key", "YOUR_API_KEY"]
     }
   }
 }`}
               </pre>
               <p className="text-gray-500 text-xs mt-3">
-                Then type <code className="text-[#f59e1c]">use context7india</code> in any Claude
+                Then type <code className="text-[#f59e1c]">use contextbharat</code> in any Claude
                 or Cursor prompt.
               </p>
 
@@ -68,8 +68,8 @@ export default function DashboardPage() {
                 <pre className="bg-black/40 rounded-lg p-4 text-sm text-green-300 font-mono overflow-x-auto">
 {`{
   "mcpServers": {
-    "context7india": {
-      "url": "https://mcp.context7india.com/mcp",
+    "contextbharat": {
+      "url": "https://mcp.contextbharat.com/mcp",
       "headers": {
         "Authorization": "Bearer YOUR_API_KEY"
       }
@@ -91,14 +91,14 @@ export default function DashboardPage() {
                     <span className="w-2 h-2 bg-green-400 rounded-full" />
                     <span className="text-sm text-white font-medium">API</span>
                   </div>
-                  <div className="text-xs text-gray-500">api.context7india.com</div>
+                  <div className="text-xs text-gray-500">api.contextbharat.com</div>
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-2 mb-1">
                     <span className="w-2 h-2 bg-green-400 rounded-full" />
                     <span className="text-sm text-white font-medium">MCP Server</span>
                   </div>
-                  <div className="text-xs text-gray-500">mcp.context7india.com</div>
+                  <div className="text-xs text-gray-500">mcp.contextbharat.com</div>
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-2 mb-1">

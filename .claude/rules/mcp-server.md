@@ -4,7 +4,7 @@ globs: ["mcp-server/**/*.ts"]
 
 # MCP Server Rules (TypeScript)
 
-You are working on the Context7 India MCP server.
+You are working on the Context Bharat MCP server.
 
 ## This is the developer-facing layer
 Every output from this server is consumed by an LLM (Claude, GPT-4, etc.).

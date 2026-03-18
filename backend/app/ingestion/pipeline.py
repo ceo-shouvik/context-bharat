@@ -1,5 +1,5 @@
 """
-Context7 India — Ingestion Pipeline Orchestrator
+Context Bharat — Ingestion Pipeline Orchestrator
 
 Stages:
   1. Load config from backend/config/libraries/{library_id}.json

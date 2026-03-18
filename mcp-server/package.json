@@ -1,11 +1,11 @@
 {
-  "name": "@context7india/mcp",
+  "name": "@contextbharat/mcp",
   "version": "0.1.0",
   "description": "MCP server for Indian API documentation — Razorpay, Zerodha, ONDC, UPI, and 100+ more",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "context7india-mcp": "./dist/index.js"
+    "contextbharat-mcp": "./dist/index.js"
   },
   "scripts": {
     "dev": "tsx watch src/index.ts",

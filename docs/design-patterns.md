@@ -166,7 +166,7 @@ import { Tool } from "@modelcontextprotocol/typescript-sdk";
 import { backendClient } from "../client";
 
 const QueryDocsInput = z.object({
-  libraryId: z.string().describe("Context7India-compatible library ID, e.g. /razorpay/razorpay-sdk"),
+  libraryId: z.string().describe("ContextBharat-compatible library ID, e.g. /razorpay/razorpay-sdk"),
   query: z.string().describe("The developer's question or task"),
   tokenBudget: z.number().default(5000).describe("Max tokens in response"),
   language: z.enum(["en", "hi", "ta", "te", "kn", "bn"]).default("en"),
@@ -197,8 +197,8 @@ class BackendClient {
   private readonly apiKey: string | undefined;
 
   constructor() {
-    this.baseUrl = process.env.CONTEXT7INDIA_API_BASE_URL ?? "https://api.context7india.com";
-    this.apiKey = process.env.CONTEXT7INDIA_API_KEY;
+    this.baseUrl = process.env.CONTEXTBHARAT_API_BASE_URL ?? "https://api.contextbharat.com";
+    this.apiKey = process.env.CONTEXTBHARAT_API_KEY;
   }
 
   async getDocs(params: GetDocsParams): Promise<DocsResponse> {

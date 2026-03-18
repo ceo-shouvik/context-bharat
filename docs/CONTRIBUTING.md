@@ -1,6 +1,6 @@
 # Contributing
 
-Welcome. This document explains how to contribute to Context7 India.
+Welcome. This document explains how to contribute to Context Bharat.
 
 ---
 
@@ -68,7 +68,7 @@ PR description should include:
 
 ## How to Report a Bug
 
-1. Check [existing issues](https://github.com/context7india/context7-india/issues) first
+1. Check [existing issues](https://github.com/contextbharat/context-bharat/issues) first
 2. Open a new issue with the bug report template
 3. Include: what you expected, what happened, reproduction steps
 
@@ -93,8 +93,8 @@ For major documentation improvements to Indian government APIs — we especially
 
 ```bash
 # Clone the repo
-git clone https://github.com/context7india/context7-india.git
-cd context7-india
+git clone https://github.com/contextbharat/context-bharat.git
+cd context-bharat
 
 # Install all deps
 pnpm install
@@ -128,7 +128,7 @@ See `docs/style-guide.md` for all style rules. The short version:
 
 ## Community
 
-- Twitter/X: `@context7india`
+- Twitter/X: `@contextbharat`
 - GitHub Discussions for questions
 - Monthly Document-a-thon events — follow Twitter for announcements
 - iSPIRT community for India Stack API discussions

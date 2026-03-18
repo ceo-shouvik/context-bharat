@@ -1,9 +1,9 @@
 /**
- * API client for the Context7 India backend.
+ * API client for the Context Bharat backend.
  * Used by React components to fetch library data.
  */
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL ?? "https://api.context7india.com";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL ?? "https://api.contextbharat.com";
 
 export interface Library {
   library_id: string;

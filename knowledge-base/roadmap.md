@@ -8,7 +8,7 @@ What we're building, what's done, and what's next. Updated weekly.
 
 **Goal:** MCP server running locally, backend API live, first 8 libraries indexed.
 
-- [ ] Fork upstash/context7 MCP client → rename to @context7india/mcp
+- [ ] Fork upstash/context7 MCP client → rename to @contextbharat/mcp
 - [ ] Update MCP client to point to our backend API URL
 - [ ] FastAPI backend skeleton with `/v1/libraries/resolve` and `/v1/docs/query`
 - [ ] Supabase schema: libraries + doc_chunks + api_keys tables
@@ -85,7 +85,7 @@ What we're building, what's done, and what's next. Updated weekly.
 - [ ] Ingestion failure alerts (Slack webhook)
 - [ ] Apache 2.0 LICENSE file
 - [ ] README.md with 1-minute quickstart
-- [ ] Publish @context7india/mcp to npm
+- [ ] Publish @contextbharat/mcp to npm
 - [ ] Deploy to production (Railway + Vercel)
 - [ ] Cloudflare Worker for edge caching
 - [ ] Product Hunt submission prepared

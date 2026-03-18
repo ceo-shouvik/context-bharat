@@ -37,7 +37,7 @@ async def resolve_library(
     service: LibraryService = Depends(get_library_service),
 ) -> ResolveLibraryResponse:
     """
-    Resolve a library name to a canonical Context7India library ID.
+    Resolve a library name to a canonical ContextBharat library ID.
     This is the backend for the MCP resolve-library-id tool.
 
     Example: "razorpay" → "/razorpay/razorpay-sdk"

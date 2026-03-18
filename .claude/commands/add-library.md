@@ -1,6 +1,6 @@
 # /add-library
 
-Add a new library to the Context7 India index.
+Add a new library to the Context Bharat index.
 
 ## Steps Claude will take
 1. Ask: library name, URL, category, languages needed

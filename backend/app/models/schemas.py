@@ -65,7 +65,7 @@ class LibraryListResponse(BaseModel):
 # ─── Docs / Query Schemas ─────────────────────────────────────────────────────
 
 class QueryDocsRequest(BaseModel):
-    library_id: str = Field(..., description="Context7India library ID")
+    library_id: str = Field(..., description="ContextBharat library ID")
     query: str = Field(..., description="Developer's question or task")
     token_budget: int = Field(default=5000, ge=100, le=20000)
     language: Language = Field(default=Language.EN)

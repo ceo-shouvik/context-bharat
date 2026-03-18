@@ -32,10 +32,10 @@ async def verify_api_key(
     raw_key = credentials.credentials
 
     # Validate format
-    if not raw_key.startswith("c7i_"):
+    if not raw_key.startswith("cb_"):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid API key format. Keys start with 'c7i_'.",
+            detail="Invalid API key format. Keys start with 'cb_'.",
         )
 
     # Hash and look up in DB

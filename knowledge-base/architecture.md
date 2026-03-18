@@ -1,6 +1,6 @@
 # System Architecture
 
-Full technical architecture of Context7 India. Read this when you need to understand how all components connect.
+Full technical architecture of Context Bharat. Read this when you need to understand how all components connect.
 
 ---
 
@@ -22,8 +22,8 @@ Full technical architecture of Context7 India. Read this when you need to unders
 │  • query-docs          → retrieves relevant doc chunks          │
 │                                                                 │
 │  Forked from: upstash/context7 (MIT License)                   │
-│  Package: @context7india/mcp                                    │
-│  Hosted: mcp.context7india.com (Cloudflare Worker)             │
+│  Package: @contextbharat/mcp                                    │
+│  Hosted: mcp.contextbharat.com (Cloudflare Worker)             │
 └────────────────────────┬────────────────────────────────────────┘
                          │ HTTPS REST API
                          │ Bearer token auth
@@ -121,8 +121,8 @@ mcp-server/
 ```
 
 **Deployment:**
-- Remote: Cloudflare Worker at `mcp.context7india.com/mcp`
-- Local: `npx @context7india/mcp` (stdio mode)
+- Remote: Cloudflare Worker at `mcp.contextbharat.com/mcp`
+- Local: `npx @contextbharat/mcp` (stdio mode)
 - Both modes share identical tool behavior
 
 ---
@@ -397,12 +397,12 @@ GitHub (source)
 ```
 User Request → Cloudflare DNS
     │
-    ├── api.context7india.com → Cloudflare Workers → Railway (origin)
+    ├── api.contextbharat.com → Cloudflare Workers → Railway (origin)
     │   (5-min cache on GET /v1/libraries)
     │
-    ├── mcp.context7india.com → Cloudflare Workers → MCP server
+    ├── mcp.contextbharat.com → Cloudflare Workers → MCP server
     │
-    └── context7india.com → Vercel Edge Network → Next.js
+    └── contextbharat.com → Vercel Edge Network → Next.js
 ```
 
 ---

@@ -4,7 +4,7 @@ globs: ["frontend/**/*.tsx", "frontend/**/*.ts"]
 
 # Frontend Rules (Next.js 15)
 
-You are working on the Context7 India marketing site and dashboard.
+You are working on the Context Bharat marketing site and dashboard.
 
 ## Architecture
 - Default to Server Components — only use `"use client"` for interactive components

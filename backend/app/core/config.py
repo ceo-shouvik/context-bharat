@@ -34,7 +34,7 @@ class Settings(BaseSettings):
     ENVIRONMENT: str = Field("development", description="development | staging | production")
     LOG_LEVEL: str = Field("INFO", description="Logging level")
     ALLOWED_ORIGINS: list[str] = Field(
-        default=["http://localhost:3000", "https://context7india.com"],
+        default=["http://localhost:3000", "https://contextbharat.com"],
         description="CORS allowed origins",
     )
 

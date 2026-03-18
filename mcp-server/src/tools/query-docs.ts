@@ -18,7 +18,7 @@ export const queryDocsSchema = z.object({
   libraryId: z
     .string()
     .describe(
-      "Context7India-compatible library ID. Use resolve-library-id first if you only have a name. " +
+      "ContextBharat-compatible library ID. Use resolve-library-id first if you only have a name. " +
       "Format: /owner/repo — e.g. /razorpay/razorpay-sdk, /zerodha/kite-api, /ondc/protocol-specs",
     ),
   query: z
@@ -80,8 +80,8 @@ export async function queryDocsHandler(input: QueryDocsInput): Promise<string> {
       return [
         `Library \`${input.libraryId}\` not found or not yet indexed.`,
         ``,
-        `Check the full library catalog: https://context7india.com/libraries`,
-        `If this library should be indexed, open an issue: https://github.com/context7india/context7-india/issues`,
+        `Check the full library catalog: https://contextbharat.com/libraries`,
+        `If this library should be indexed, open an issue: https://github.com/contextbharat/context-bharat/issues`,
       ].join("\n");
     }
     throw error;

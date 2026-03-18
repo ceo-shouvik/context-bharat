@@ -1,5 +1,5 @@
 """
-Context7 India — FastAPI Backend
+Context Bharat — FastAPI Backend
 """
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Context7 India API",
+    title="Context Bharat API",
     description="AI-ready documentation for Indian APIs and developer tools",
     version="0.1.0",
     docs_url="/docs",

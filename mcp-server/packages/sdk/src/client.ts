@@ -1,12 +1,12 @@
 import type { ClientOptions, Library, QueryDocsParams, QueryDocsResult } from "./types.js";
 
-export class Context7IndiaClient {
+export class ContextBharatClient {
   private readonly baseUrl: string;
   private readonly apiKey: string;
   private readonly timeoutMs: number;
 
   constructor(options: ClientOptions = {}) {
-    this.baseUrl = (options.baseUrl ?? "https://api.context7india.com").replace(/\/$/, "");
+    this.baseUrl = (options.baseUrl ?? "https://api.contextbharat.com").replace(/\/$/, "");
     this.apiKey = options.apiKey ?? "";
     this.timeoutMs = options.timeoutMs ?? 10_000;
   }

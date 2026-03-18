@@ -1,7 +1,7 @@
 {
-  "name": "@context7india/sdk",
+  "name": "@contextbharat/sdk",
   "version": "0.1.0",
-  "description": "TypeScript SDK for the Context7 India API",
+  "description": "TypeScript SDK for the Context Bharat API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

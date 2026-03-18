@@ -32,8 +32,8 @@ jobs:
 
       - name: Trigger re-index
         env:
-          CONTEXT7INDIA_API_KEY: ${{ secrets.INTERNAL_API_KEY }}
-          CONTEXT7INDIA_API_BASE_URL: ${{ secrets.API_BASE_URL }}
+          CONTEXTBHARAT_API_KEY: ${{ secrets.INTERNAL_API_KEY }}
+          CONTEXTBHARAT_API_BASE_URL: ${{ secrets.API_BASE_URL }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           UPSTASH_REDIS_URL: ${{ secrets.UPSTASH_REDIS_URL }}
           UPSTASH_REDIS_TOKEN: ${{ secrets.UPSTASH_REDIS_TOKEN }}
@@ -52,4 +52,4 @@ jobs:
         run: |
           curl -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
             -H "Content-Type: application/json" \
-            -d '{"text": "⚠️ Context7 India: Daily re-index failed! Check GitHub Actions."}'
+            -d '{"text": "⚠️ Context Bharat: Daily re-index failed! Check GitHub Actions."}'

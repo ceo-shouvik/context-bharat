@@ -17,7 +17,7 @@ The MCP (Model Context Protocol) is a complex JSON-RPC 2.0 specification with mu
 Context7's repo (`upstash/context7`) is MIT-licensed. It contains the MCP client layer: TypeScript SDK, tool definitions (`resolve-library-id`, `query-docs`), transport handling, and multi-editor integration configs. Their backend (crawling, vector DB, ranking) is proprietary and not included.
 
 **Decision:**
-Fork `upstash/context7` at the MCP client layer. Keep our own backend entirely separate. Rename the npm package to `@context7india/mcp`. Update the API base URL to point to our backend. Add our India-specific tool extensions on top.
+Fork `upstash/context7` at the MCP client layer. Keep our own backend entirely separate. Rename the npm package to `@contextbharat/mcp`. Update the API base URL to point to our backend. Add our India-specific tool extensions on top.
 
 **Consequences:**
 - Saves 6 weeks of MCP protocol implementation
@@ -185,7 +185,7 @@ We need to decide what to open-source and under what license. The community mode
 
 **Decision:**
 - **MCP Server client layer:** Apache 2.0 (permissive, allows commercial use by integrators)
-- **Library config schema (`context7india.json` format):** Public domain / CC0
+- **Library config schema (`contextbharat.json` format):** Public domain / CC0
 - **Backend ingestion pipeline:** **Proprietary / closed** — this is our moat
 - **Vector index and embeddings:** **Proprietary / closed**
 

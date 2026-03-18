@@ -1,6 +1,6 @@
 /**
  * MCP Tool: resolve-library-id
- * Maps a human library name to a canonical Context7India library ID.
+ * Maps a human library name to a canonical ContextBharat library ID.
  *
  * Example: "zerodha trading api" → "/zerodha/kite-api"
  */
@@ -49,10 +49,10 @@ export async function resolveLibraryIdHandler(
   } catch (error) {
     if (error instanceof BackendError && error.status === 404) {
       return [
-        `Library "${input.libraryName}" not found in the Context7 India index.`,
+        `Library "${input.libraryName}" not found in the Context Bharat index.`,
         ``,
-        `Try browsing available libraries at https://context7india.com/libraries`,
-        `Or contribute a new library: https://github.com/context7india/context7-india/blob/main/docs/CONTRIBUTING.md`,
+        `Try browsing available libraries at https://contextbharat.com/libraries`,
+        `Or contribute a new library: https://github.com/contextbharat/context-bharat/blob/main/docs/CONTRIBUTING.md`,
       ].join("\n");
     }
     throw error;

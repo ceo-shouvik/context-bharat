@@ -29,7 +29,7 @@ npm install -g @railway/cli
 railway login
 
 # Create project
-railway init context7india
+railway init contextbharat
 
 # Deploy backend service
 railway up --service backend
@@ -143,7 +143,7 @@ export default {
     if (response) return response;
 
     // Fetch from origin (Railway)
-    response = await fetch(`https://api-origin.context7india.com${new URL(request.url).pathname}`, request);
+    response = await fetch(`https://api-origin.contextbharat.com${new URL(request.url).pathname}`, request);
 
     // Cache GET requests for 5 minutes
     if (request.method === "GET" && response.ok) {
@@ -183,8 +183,8 @@ jobs:
       - run: pip install -r backend/requirements.txt
       - name: Trigger ingestion
         env:
-          CONTEXT7INDIA_API_KEY: ${{ secrets.INTERNAL_API_KEY }}
-          CONTEXT7INDIA_API_BASE_URL: ${{ secrets.API_BASE_URL }}
+          CONTEXTBHARAT_API_KEY: ${{ secrets.INTERNAL_API_KEY }}
+          CONTEXTBHARAT_API_BASE_URL: ${{ secrets.API_BASE_URL }}
         run: |
           python backend/scripts/trigger_scheduled_ingestion.py
 ```
@@ -276,8 +276,8 @@ INTERNAL_API_KEY=...                   # For GitHub Actions → API calls
 GITHUB_TOKEN=...                       # For GitHub API crawling (higher rate limit)
 
 # MCP Server
-CONTEXT7INDIA_API_BASE_URL=https://api.context7india.com
-CONTEXT7INDIA_API_KEY=...              # Used by remote MCP server
+CONTEXTBHARAT_API_BASE_URL=https://api.contextbharat.com
+CONTEXTBHARAT_API_KEY=...              # Used by remote MCP server
 
 # Monitoring (optional)
 SLACK_WEBHOOK_URL=...                  # For ingestion failure alerts

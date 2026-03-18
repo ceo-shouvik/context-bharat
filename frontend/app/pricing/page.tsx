@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Pricing — Context7 India",
+  title: "Pricing — Context Bharat",
   description: "Free to start. ₹399/month for unlimited access to 100+ Indian APIs.",
 };
 
@@ -56,7 +56,7 @@ const plans = [
     ],
     na: [],
     cta: "Contact Us",
-    href: "mailto:team@context7india.com",
+    href: "mailto:team@contextbharat.com",
   },
 ];
 
@@ -79,7 +79,7 @@ const faqs = [
   },
   {
     q: "Can I self-host the MCP server?",
-    a: "The MCP client is Apache 2.0 — you can run it locally with npx @context7india/mcp. The backend index is hosted by us.",
+    a: "The MCP client is Apache 2.0 — you can run it locally with npx @contextbharat/mcp. The backend index is hosted by us.",
   },
   {
     q: "Do you support offline usage?",
@@ -93,7 +93,7 @@ export default function PricingPage() {
       {/* Nav */}
       <nav className="border-b border-white/10 px-6 py-4 flex items-center justify-between max-w-6xl mx-auto">
         <Link href="/" className="font-bold text-[#f59e1c] text-xl">
-          context7<span className="text-white">.in</span>
+          contextbharat<span className="text-white">.in</span>
         </Link>
         <div className="flex gap-6 text-sm text-gray-400">
           <Link href="/libraries" className="hover:text-white transition-colors">

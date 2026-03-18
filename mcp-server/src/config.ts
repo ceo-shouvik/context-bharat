@@ -4,9 +4,9 @@
  */
 export const config = {
   /** Backend API base URL */
-  apiBaseUrl: process.env.CONTEXT7INDIA_API_BASE_URL ?? "https://api.context7india.com",
+  apiBaseUrl: process.env.CONTEXTBHARAT_API_BASE_URL ?? "https://api.contextbharat.com",
   /** API key for authentication — optional, uses free tier if absent */
-  apiKey: process.env.CONTEXT7INDIA_API_KEY ?? "",
+  apiKey: process.env.CONTEXTBHARAT_API_KEY ?? "",
   /** Default token budget for query-docs */
   defaultTokenBudget: 5000,
   /** Request timeout in milliseconds */

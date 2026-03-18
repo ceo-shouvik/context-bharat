@@ -4,7 +4,7 @@ globs: ["backend/**/*.py"]
 
 # Backend Rules (Python)
 
-You are working on the Context7 India FastAPI backend.
+You are working on the Context Bharat FastAPI backend.
 
 ## Always
 - Use async/await for all I/O operations

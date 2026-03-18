@@ -1,6 +1,6 @@
 # Website Content
 
-All copy for the marketing site (context7india.com). Use this as the source of truth for all public messaging.
+All copy for the marketing site (contextbharat.com). Use this as the source of truth for all public messaging.
 
 ---
 
@@ -49,7 +49,7 @@ Before every coding session, you paste API docs into your prompt. You repeat you
 **Heading:** Real docs. Real time. Indian APIs first.
 
 **Copy:**
-Context7 India is an MCP server for Indian developers. Type `use context7india` in Claude or Cursor. Get accurate, current documentation injected directly into your AI's context — without leaving your editor.
+Context Bharat is an MCP server for Indian developers. Type `use contextbharat` in Claude or Cursor. Get accurate, current documentation injected directly into your AI's context — without leaving your editor.
 
 **Features (4-up grid):**
 
@@ -60,7 +60,7 @@ Razorpay, Zerodha Kite, ONDC Protocol, UPI/NPCI, GSTN, DigiLocker, Zoho, Frappe,
 First-ever Hindi developer docs for Indian APIs. Built with Sarvam AI's Mayura model. Tamil, Telugu, and Kannada coming soon.
 
 **Works Where You Work**
-Claude, Cursor, VS Code, Windsurf — if it supports MCP, it supports Context7 India. One API key, every tool.
+Claude, Cursor, VS Code, Windsurf — if it supports MCP, it supports Context Bharat. One API key, every tool.
 
 **Always Fresh**
 Automated re-indexing. When Razorpay updates their API, we update our docs. Daily cron runs at 2 AM IST.
@@ -92,17 +92,17 @@ React, Next.js, FastAPI, Django, Flutter, Spring Boot — because you're buildin
 
 **Heading:** Three lines. That's it.
 
-Step 1 — **Get your API key** at context7india.com/dashboard. Free. No credit card.
+Step 1 — **Get your API key** at contextbharat.com/dashboard. Free. No credit card.
 
 Step 2 — **Add to your tool.** One command for Claude, Cursor, or VS Code. Takes 60 seconds.
 
-Step 3 — **Just build.** Type `use context7india` in any prompt. Accurate docs appear instantly.
+Step 3 — **Just build.** Type `use contextbharat` in any prompt. Accurate docs appear instantly.
 
 **Code example:**
 ```
-User: How do I create a Razorpay payment link? use context7india
+User: How do I create a Razorpay payment link? use contextbharat
 
-Claude: [fetching Razorpay documentation via Context7 India...]
+Claude: [fetching Razorpay documentation via Context Bharat...]
 
 Based on current Razorpay docs (v1.3, updated 6 hours ago):
 
@@ -186,12 +186,12 @@ A: We only receive the query string your AI sends us. Your code never leaves you
 ## SEO Metadata
 
 **Homepage:**
-- Title: Context7 India — AI Documentation for Indian APIs
+- Title: Context Bharat — AI Documentation for Indian APIs
 - Description: Get up-to-date Razorpay, Zerodha, ONDC, UPI, and 100+ Indian API docs in Claude, Cursor, and VS Code. Free to start.
 - Keywords: razorpay docs, zerodha kite api, ondc integration, upi api, indian api documentation, mcp server india
 
 **Library pages (example — Razorpay):**
-- Title: Razorpay API Documentation for Claude & Cursor — Context7 India
+- Title: Razorpay API Documentation for Claude & Cursor — Context Bharat
 - Description: Get current Razorpay SDK docs injected into Claude and Cursor. Payment links, orders, subscriptions, webhooks. Always up to date.
 
 ---
@@ -199,15 +199,15 @@ A: We only receive the query string your AI sends us. Your code never leaves you
 ## Press / About Copy
 
 **One-liner:**
-Context7 India is an MCP documentation server that gives AI coding assistants up-to-date context for Indian APIs, government specs, and fintech SDKs.
+Context Bharat is an MCP documentation server that gives AI coding assistants up-to-date context for Indian APIs, government specs, and fintech SDKs.
 
 **Short (50 words):**
-India's 17 million developers use tools that have never heard of Razorpay, Zerodha, or ONDC. Context7 India fixes that — injecting accurate, fresh documentation for 100+ Indian APIs directly into Claude, Cursor, and VS Code through the Model Context Protocol.
+India's 17 million developers use tools that have never heard of Razorpay, Zerodha, or ONDC. Context Bharat fixes that — injecting accurate, fresh documentation for 100+ Indian APIs directly into Claude, Cursor, and VS Code through the Model Context Protocol.
 
 **Long (150 words):**
 Context7, the global MCP documentation tool, indexes 9,000+ libraries — but not a single Indian API. No Razorpay, no ONDC, no Zerodha, no UPI specs. India's developers were left behind.
 
-Context7 India is the fix. We've built an MCP server that indexes Indian fintech APIs, government digital public infrastructure (UPI, ONDC, GSTN, DigiLocker), trading APIs (Zerodha, Upstox), enterprise tools (Zoho, Frappe), and global frameworks — and delivers that documentation directly into Claude, Cursor, and VS Code.
+Context Bharat is the fix. We've built an MCP server that indexes Indian fintech APIs, government digital public infrastructure (UPI, ONDC, GSTN, DigiLocker), trading APIs (Zerodha, Upstox), enterprise tools (Zoho, Frappe), and global frameworks — and delivers that documentation directly into Claude, Cursor, and VS Code.
 
 We solve what Context7 can't: we ingest government PDFs through OCR pipelines, crawl authenticated government portals, and provide documentation in Hindi and regional languages. For free, for individual developers. For ₹399/month for unlimited access.
 

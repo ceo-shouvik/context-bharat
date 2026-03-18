@@ -63,7 +63,7 @@ async def test_create_api_key_with_valid_token():
 
         assert response.status_code == 201
         data = response.json()
-        assert data["key"].startswith("c7i_")
+        assert data["key"].startswith("cb_")
         assert data["tier"] == "free"
         assert data["daily_limit"] == 100
     finally:
@@ -82,7 +82,7 @@ async def test_list_api_keys_with_valid_token():
 
     mock_key = MagicMock(spec=ApiKey)
     mock_key.id = "00000000-0000-0000-0000-000000000001"
-    mock_key.key_prefix = "c7i_test1234"
+    mock_key.key_prefix = "cb_test1234"
     mock_key.name = "my-key"
     mock_key.tier = "free"
     mock_key.daily_limit = 100
@@ -112,6 +112,6 @@ async def test_list_api_keys_with_valid_token():
         assert response.status_code == 200
         data = response.json()
         assert len(data) == 1
-        assert data[0]["key_prefix"] == "c7i_test1234"
+        assert data[0]["key_prefix"] == "cb_test1234"
     finally:
         app.dependency_overrides.clear()

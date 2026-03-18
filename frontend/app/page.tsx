@@ -1,11 +1,11 @@
 /**
- * Landing page — context7india.com
+ * Landing page — contextbharat.com
  * Copy sourced from website/content.md
  */
 import Link from "next/link";
 
 export const metadata = {
-  title: "Context7 India — AI Documentation for Indian APIs",
+  title: "Context Bharat — AI Documentation for Indian APIs",
   description:
     "Get up-to-date Razorpay, Zerodha, ONDC, UPI, and 100+ Indian API docs in Claude, Cursor, and VS Code. Free to start.",
 };
@@ -52,7 +52,7 @@ const HOW_IT_WORKS = [
   {
     step: "1",
     title: "Get your API key",
-    description: "Free at context7india.com/dashboard. No credit card.",
+    description: "Free at contextbharat.com/dashboard. No credit card.",
   },
   {
     step: "2",
@@ -62,7 +62,7 @@ const HOW_IT_WORKS = [
   {
     step: "3",
     title: "Just build",
-    description: 'Type "use context7india" in any prompt. Accurate docs appear instantly.',
+    description: 'Type "use contextbharat" in any prompt. Accurate docs appear instantly.',
   },
 ];
 
@@ -72,7 +72,7 @@ export default function LandingPage() {
       {/* Nav */}
       <nav className="border-b border-white/10 px-6 py-4 flex items-center justify-between max-w-6xl mx-auto">
         <div className="font-bold text-[#f59e1c] text-xl">
-          context7<span className="text-white">.in</span>
+          contextbharat<span className="text-white">.in</span>
         </div>
         <div className="flex gap-6 text-sm text-gray-400">
           <Link href="/libraries" className="hover:text-white transition-colors">
@@ -85,7 +85,7 @@ export default function LandingPage() {
             Pricing
           </Link>
           <Link
-            href="https://github.com/context7india/context7-india"
+            href="https://github.com/contextbharat/context-bharat"
             className="hover:text-white transition-colors"
           >
             GitHub
@@ -195,8 +195,8 @@ export default function LandingPage() {
           Real docs. Real time. Indian APIs first.
         </h2>
         <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
-          Context7 India is an MCP server for Indian developers. Type{" "}
-          <code className="text-[#f59e1c]">use context7india</code> in Claude or Cursor. Get
+          Context Bharat is an MCP server for Indian developers. Type{" "}
+          <code className="text-[#f59e1c]">use contextbharat</code> in Claude or Cursor. Get
           accurate, current documentation injected directly into your AI&apos;s context.
         </p>
         <div className="grid md:grid-cols-2 gap-6">
@@ -211,7 +211,7 @@ export default function LandingPage() {
             },
             {
               title: "Works Where You Work",
-              body: "Claude, Cursor, VS Code, Windsurf — if it supports MCP, it supports Context7 India. One API key, every tool.",
+              body: "Claude, Cursor, VS Code, Windsurf — if it supports MCP, it supports Context Bharat. One API key, every tool.",
             },
             {
               title: "Always Fresh",
@@ -273,11 +273,11 @@ export default function LandingPage() {
           </div>
           <pre className="p-5 text-sm text-gray-300 font-mono overflow-x-auto leading-relaxed">
             <span className="text-gray-500">User:</span> How do I create a Razorpay payment link?{" "}
-            <span className="text-[#f59e1c]">use context7india</span>
+            <span className="text-[#f59e1c]">use contextbharat</span>
             {"\n\n"}
             <span className="text-gray-500">Claude:</span>{" "}
             <span className="text-gray-400 italic">
-              [fetching Razorpay documentation via Context7 India...]
+              [fetching Razorpay documentation via Context Bharat...]
             </span>
             {"\n\n"}
             <span className="text-gray-400">
@@ -363,7 +363,7 @@ const paymentLink = await razorpay.paymentLink.create({
           <div className="flex flex-col md:flex-row justify-between items-start gap-8">
             <div>
               <div className="font-bold text-[#f59e1c] text-xl mb-2">
-                context7<span className="text-white">.in</span>
+                contextbharat<span className="text-white">.in</span>
               </div>
               <p className="text-gray-500 text-sm max-w-xs">
                 Built in India, for India&apos;s developers. The MCP client is Apache 2.0. The
@@ -384,13 +384,13 @@ const paymentLink = await razorpay.paymentLink.create({
               </div>
               <div className="flex flex-col gap-2 text-gray-400">
                 <Link
-                  href="https://github.com/context7india/context7-india"
+                  href="https://github.com/contextbharat/context-bharat"
                   className="hover:text-white transition-colors"
                 >
                   GitHub
                 </Link>
                 <Link
-                  href="https://twitter.com/context7india"
+                  href="https://twitter.com/contextbharat"
                   className="hover:text-white transition-colors"
                 >
                   Twitter
@@ -399,7 +399,7 @@ const paymentLink = await razorpay.paymentLink.create({
             </div>
           </div>
           <div className="mt-8 pt-6 border-t border-white/5 text-center text-xs text-gray-600">
-            © 2026 Context7 India. Apache 2.0 (MCP Client). All rights reserved (Index).
+            © 2026 Context Bharat. Apache 2.0 (MCP Client). All rights reserved (Index).
           </div>
         </div>
       </footer>

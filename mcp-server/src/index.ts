@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Context7 India — MCP Server
+ * Context Bharat — MCP Server
  *
  * Provides AI coding assistants (Claude, Cursor, VS Code) with up-to-date
  * documentation for Indian APIs, government specs, and global frameworks.
@@ -10,7 +10,7 @@
  *   - query-docs: retrieve relevant documentation chunks
  *
  * Forked from: upstash/context7 (MIT License)
- * Backend: Context7 India proprietary index
+ * Backend: Context Bharat proprietary index
  */
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
@@ -28,7 +28,7 @@ import { queryDocsHandler, queryDocsSchema } from "./tools/query-docs.js";
 
 const server = new Server(
   {
-    name: "context7india",
+    name: "contextbharat",
     version: config.version,
   },
   {
@@ -43,7 +43,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
     {
       name: "resolve-library-id",
       description:
-        "Resolve a library or API name to a Context7India-compatible library ID. " +
+        "Resolve a library or API name to a ContextBharat-compatible library ID. " +
         "Always call this before query-docs if you only have a library name. " +
         "Supports 100+ Indian APIs (Razorpay, Zerodha, ONDC, UPI, GST) and global frameworks.",
       inputSchema: {
@@ -73,7 +73,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
         properties: {
           libraryId: {
             type: "string",
-            description: "Context7India library ID, e.g. /razorpay/razorpay-sdk",
+            description: "ContextBharat library ID, e.g. /razorpay/razorpay-sdk",
           },
           query: {
             type: "string",
@@ -136,7 +136,7 @@ async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
   process.stderr.write(
-    `Context7 India MCP server v${config.version} started (stdio)\n`,
+    `Context Bharat MCP server v${config.version} started (stdio)\n`,
   );
 }
 

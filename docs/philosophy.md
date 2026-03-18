@@ -1,6 +1,6 @@
 # Philosophy
 
-How we build Context7 India. Read this before writing a single line of code.
+How we build Context Bharat. Read this before writing a single line of code.
 
 ---
 
@@ -39,7 +39,7 @@ If a library's docs are only available as a PDF, we index it. If a developer has
 
 ## 3. AI-Native Development
 
-We build Context7 India with AI. This is not ironic — it's the point.
+We build Context Bharat with AI. This is not ironic — it's the point.
 
 - Claude Code writes boilerplate (CRUD endpoints, test skeletons, config parsers)
 - Engineers architect, review, and make technical decisions
@@ -79,7 +79,7 @@ Stale documentation is worse than no documentation. A developer who follows an o
 - Slow connections that timeout on large API responses
 
 Our offline strategy:
-- Pre-downloadable `.context7india` packs per library (compressed Markdown + metadata)
+- Pre-downloadable `.contextbharat` packs per library (compressed Markdown + metadata)
 - MCP client checks local cache before hitting remote API
 - Sync-when-online: detect connectivity, refresh stale local caches
 - Pack size targets: <5MB per library, <100MB for top-30 bundle
@@ -122,7 +122,7 @@ Add complexity when a specific measured pain demands it. Never speculatively.
 The MCP client is MIT-licensed and will stay that way. The community should be able to run their own MCP servers pointing to our API.
 
 The ingestion pipeline, vector index, and ranking system are proprietary — this is our business. But we:
-- Open-source the library configuration format (`context7india.json`)
+- Open-source the library configuration format (`contextbharat.json`)
 - Accept community PRs to add new libraries to the index
 - Publish detailed API documentation for the REST API
 - Provide a self-hostable reference implementation (later, post-revenue)

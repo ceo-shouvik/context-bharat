@@ -4,11 +4,11 @@ services:
   # PostgreSQL with pgvector extension
   postgres:
     image: pgvector/pgvector:pg16
-    container_name: context7india_postgres
+    container_name: contextbharat_postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: context7india
+      POSTGRES_DB: contextbharat
     ports:
       - "5432:5432"
     volumes:
@@ -23,7 +23,7 @@ services:
   # Redis for Celery broker + response cache
   redis:
     image: redis:7-alpine
-    container_name: context7india_redis
+    container_name: contextbharat_redis
     ports:
       - "6379:6379"
     volumes:
@@ -37,7 +37,7 @@ services:
   # Optional: Flower — Celery task monitoring UI
   # flower:
   #   image: mher/flower:2.0
-  #   container_name: context7india_flower
+  #   container_name: contextbharat_flower
   #   command: celery --broker=redis://redis:6379/0 flower --port=5555
   #   ports:
   #     - "5555:5555"
