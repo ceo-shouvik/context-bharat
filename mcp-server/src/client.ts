@@ -79,7 +79,7 @@ class BackendClient {
     if (!response.ok) {
       throw new BackendError(response.status, await response.text());
     }
-    return response.json();
+    return response.json() as Promise<{ libraries: ResolveLibraryResult[]; total: number }>;
   }
 
   private async post<T>(path: string, body: unknown): Promise<T> {

@@ -3,6 +3,7 @@
  */
 "use client";
 
+import { useRouter } from "next/navigation";
 import type { Library } from "@/lib/api";
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -31,14 +32,23 @@ interface Props {
 }
 
 export function LibraryCard({ library, onClick }: Props) {
+  const router = useRouter();
   const freshnessPercent = Math.round((library.freshness_score ?? 0) * 100);
   const colorClass = CATEGORY_COLORS[library.category] ?? CATEGORY_COLORS["global-framework"];
   const categoryLabel = CATEGORY_LABELS[library.category] ?? library.category;
 
+  function handleClick() {
+    if (onClick) {
+      onClick();
+    } else {
+      router.push(`/libraries/${encodeURIComponent(library.library_id)}`);
+    }
+  }
+
   return (
     <div
-      onClick={onClick}
-      className="bg-[#0c1120] border border-[#1e2d44] rounded-xl p-5 cursor-pointer hover:border-[#253650] transition-all"
+      onClick={handleClick}
+      className="bg-[#0c1120] border border-[#1e2d44] rounded-xl p-5 cursor-pointer hover:border-[#f59e1c]/30 hover:shadow-lg hover:shadow-[#f59e1c]/5 transition-all"
     >
       {/* Header */}
       <div className="flex items-start justify-between mb-3">
