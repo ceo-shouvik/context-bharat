@@ -1,405 +1,287 @@
 /**
- * Landing page — contextbharat.com
- * Copy sourced from website/content.md
+ * Landing page — contextBharat
+ * UX: Demo-first. Show value before asking for signup.
  */
 import Link from "next/link";
+import { LivePlayground } from "@/components/live-playground";
 
 export const metadata = {
-  title: "Context Bharat — AI Documentation for Indian APIs",
+  title: "contextBharat — Up-to-date docs for Indian APIs in your AI editor",
   description:
-    "Get up-to-date Razorpay, Zerodha, ONDC, UPI, and 100+ Indian API docs in Claude, Cursor, and VS Code. Free to start.",
+    "Get up-to-date Razorpay, Zerodha, ONDC, UPI, and 100+ Indian API docs in Claude, Cursor, and VS Code. Free MCP server.",
 };
-
-const LIBRARY_CATEGORIES = [
-  {
-    title: "Indian Fintech",
-    description:
-      "Razorpay, Cashfree, Juspay, PayU, Paytm PG, Setu — complete payment integration docs in seconds.",
-    color: "text-amber-400",
-    border: "border-amber-500/20",
-  },
-  {
-    title: "India Stack / DPI",
-    description:
-      "ONDC Protocol, UPI/NPCI, Account Aggregator, GSTN, DigiLocker, Bhashini — the hardest APIs to integrate, made accessible.",
-    color: "text-green-400",
-    border: "border-green-500/20",
-  },
-  {
-    title: "Trading APIs",
-    description:
-      "Zerodha Kite, Upstox, AngelOne SmartAPI — algo trading and broker integrations with full API coverage.",
-    color: "text-blue-400",
-    border: "border-blue-500/20",
-  },
-  {
-    title: "Enterprise India",
-    description:
-      "Zoho CRM, Frappe/ERPNext, Tally Prime, SAP B1 — ERP and enterprise tools Indian businesses actually use.",
-    color: "text-purple-400",
-    border: "border-purple-500/20",
-  },
-  {
-    title: "Global Frameworks",
-    description:
-      "React, Next.js, FastAPI, Django, Flutter, Spring Boot — because you're building with these too.",
-    color: "text-slate-400",
-    border: "border-slate-500/20",
-  },
-];
-
-const HOW_IT_WORKS = [
-  {
-    step: "1",
-    title: "Get your API key",
-    description: "Free at contextbharat.com/dashboard. No credit card.",
-  },
-  {
-    step: "2",
-    title: "Add to your tool",
-    description: "One command for Claude, Cursor, or VS Code. Takes 60 seconds.",
-  },
-  {
-    step: "3",
-    title: "Just build",
-    description: 'Type "use contextbharat" in any prompt. Accurate docs appear instantly.',
-  },
-];
 
 export default function LandingPage() {
   return (
     <main className="min-h-screen bg-[#05080f] text-white">
-      {/* Nav */}
-      <nav className="border-b border-white/10 px-6 py-4 flex items-center justify-between max-w-6xl mx-auto">
-        <div className="font-bold text-[#f59e1c] text-xl">
-          context<span className="text-white">Bharat</span>
+      {/* Nav — simplified */}
+      <nav className="border-b border-white/10 px-6 py-4">
+        <div className="flex items-center justify-between max-w-6xl mx-auto">
+          <Link href="/" className="font-bold text-[#f59e1c] text-xl">
+            context<span className="text-white">Bharat</span>
+          </Link>
+          <div className="hidden md:flex gap-6 text-sm text-gray-400">
+            <Link href="/docs" className="hover:text-white transition-colors">Install</Link>
+            <Link href="/libraries" className="hover:text-white transition-colors">Libraries</Link>
+            <Link href="/pricing" className="hover:text-white transition-colors">Plans</Link>
+          </div>
+          <div className="flex gap-3">
+            <Link
+              href="#try"
+              className="bg-[#f59e1c] text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#fbbf45] transition-colors"
+            >
+              Try Live
+            </Link>
+            <Link
+              href="/dashboard"
+              className="border border-white/20 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/5 transition-colors hidden md:block"
+            >
+              Get API Key
+            </Link>
+          </div>
         </div>
-        <div className="flex gap-6 text-sm text-gray-400">
-          <Link href="/libraries" className="hover:text-white transition-colors">
-            Libraries
-          </Link>
-          <Link href="/docs" className="hover:text-white transition-colors">
-            Docs
-          </Link>
-          <Link href="/pricing" className="hover:text-white transition-colors">
-            Pricing
-          </Link>
-          <Link
-            href="https://github.com/contextbharat/context-bharat"
-            className="hover:text-white transition-colors"
-          >
-            GitHub
-          </Link>
-        </div>
-        <Link
-          href="/dashboard"
-          className="bg-[#f59e1c] text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#fbbf45] transition-colors"
-        >
-          Get Free API Key
-        </Link>
       </nav>
 
-      {/* Hero */}
-      <section className="max-w-6xl mx-auto px-6 pt-24 pb-16 text-center">
-        <div className="inline-flex items-center gap-2 bg-[#f59e1c]/10 border border-[#f59e1c]/25 text-[#f59e1c] text-xs font-semibold px-4 py-2 rounded-full mb-8 uppercase tracking-wider">
-          <span className="w-2 h-2 bg-[#f59e1c] rounded-full animate-pulse" />
-          AI-Native · MCP-Compatible · India-First
-        </div>
-        <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
-          The Documentation Layer
-          <br />
-          <span className="text-[#f59e1c]">India&apos;s Developers</span> Deserved
+      {/* Hero — clear, concise */}
+      <section className="max-w-6xl mx-auto px-6 pt-20 pb-12 text-center">
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-5">
+          Up-to-date docs for <span className="text-[#f59e1c]">Indian APIs</span>
+          <br className="hidden md:block" /> in your AI editor
         </h1>
-        <p className="text-gray-400 text-xl max-w-2xl mx-auto mb-10">
-          Razorpay, Zerodha Kite, ONDC, UPI, GST — instantly in Claude, Cursor, and VS Code. No
-          more hallucinated payment flows. No more reading PDFs.
+        <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+          Razorpay, ONDC, UPI, Zerodha, GSTN — accurate documentation injected into
+          Claude, Cursor, and VS Code via MCP. No hallucinations. Always fresh.
         </p>
-        <div className="flex gap-4 justify-center">
+        <div className="flex gap-3 justify-center mb-4">
           <Link
-            href="/dashboard"
+            href="#try"
             className="bg-[#f59e1c] text-black px-8 py-3 rounded-xl font-semibold hover:bg-[#fbbf45] transition-colors"
           >
-            Get Free API Key
+            Try It Now — Free
           </Link>
           <Link
-            href="/libraries"
+            href="/docs"
             className="border border-white/20 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/5 transition-colors"
           >
-            See All Libraries →
+            Install in 60s
           </Link>
         </div>
-        <p className="text-gray-500 text-sm mt-6">
-          Trusted by 500+ Indian developers · 100+ APIs indexed · Hindi docs available
+        <p className="text-gray-600 text-sm">
+          No signup required to try. 100+ libraries indexed. Hindi docs available.
         </p>
       </section>
 
-      {/* Stats */}
+      {/* Install snippet — immediate clarity */}
+      <section className="max-w-3xl mx-auto px-6 pb-12">
+        <div className="bg-[#0c1120] border border-[#1e2d44] rounded-xl p-5">
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-gray-500 text-xs">Add to Claude / Cursor / VS Code</span>
+            <span className="text-green-400 text-xs flex items-center gap-1">
+              <span className="w-1.5 h-1.5 bg-green-400 rounded-full" />
+              MCP Compatible
+            </span>
+          </div>
+          <pre className="bg-black/40 rounded-lg p-4 text-sm text-green-300 font-mono overflow-x-auto">
+{`{
+  "mcpServers": {
+    "contextbharat": {
+      "command": "npx",
+      "args": ["-y", "@contextbharat/mcp"]
+    }
+  }
+}`}
+          </pre>
+          <p className="text-gray-500 text-xs mt-3">
+            Then type <code className="text-[#f59e1c] font-semibold">use contextbharat</code> in
+            any prompt. That&apos;s it.
+          </p>
+        </div>
+      </section>
+
+      {/* Live Playground — the hero feature */}
+      <section id="try" className="max-w-4xl mx-auto px-6 py-16">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-3">Try it right now</h2>
+          <p className="text-gray-400">
+            This is exactly what your AI assistant receives. Pick a library, ask a question.
+          </p>
+        </div>
+        <LivePlayground />
+      </section>
+
+      {/* What it does — 3 clear benefits */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              icon: "01",
+              title: "Your AI knows Indian APIs",
+              body: "Stop pasting docs into prompts. contextBharat gives Claude and Cursor real-time access to Razorpay, ONDC, UPI, Zerodha, GSTN, and 100+ more libraries.",
+            },
+            {
+              icon: "02",
+              title: "Always up-to-date",
+              body: "We re-crawl every library daily. When Razorpay ships a new API version, your AI knows about it within 24 hours. No more deprecated code.",
+            },
+            {
+              icon: "03",
+              title: "Hindi + regional languages",
+              body: "First-ever Hindi developer docs for Indian APIs. Tamil, Telugu, Kannada, Bengali also supported. Built with Sarvam AI Mayura.",
+            },
+          ].map(({ icon, title, body }) => (
+            <div key={icon}>
+              <div className="text-[#f59e1c] font-mono text-sm font-bold mb-3">{icon}</div>
+              <h3 className="text-white font-semibold text-lg mb-2">{title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Library categories */}
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-2xl font-bold">100+ Libraries Indexed</h2>
+          <Link href="/libraries" className="text-[#f59e1c] text-sm hover:underline">
+            Browse all →
+          </Link>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { title: "Indian Fintech", libs: "Razorpay, Cashfree, Juspay, Setu, PayU", color: "text-amber-400", border: "border-amber-500/20" },
+            { title: "India Stack / DPI", libs: "ONDC, UPI/NPCI, GSTN, DigiLocker, Bhashini, AA", color: "text-green-400", border: "border-green-500/20" },
+            { title: "Trading APIs", libs: "Zerodha Kite, Upstox, AngelOne SmartAPI", color: "text-blue-400", border: "border-blue-500/20" },
+            { title: "Enterprise", libs: "Zoho CRM, Frappe/ERPNext, Tally Prime", color: "text-purple-400", border: "border-purple-500/20" },
+            { title: "Indian AI", libs: "Sarvam AI, Krutrim, AI4Bharat, Bhashini", color: "text-pink-400", border: "border-pink-500/20" },
+            { title: "Global Frameworks", libs: "React, Next.js, FastAPI, Django, Flutter", color: "text-slate-400", border: "border-slate-500/20" },
+          ].map(({ title, libs, color, border }) => (
+            <div key={title} className={`bg-white/[0.02] border ${border} rounded-xl p-5`}>
+              <h3 className={`font-semibold mb-1 ${color}`}>{title}</h3>
+              <p className="text-gray-500 text-sm">{libs}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* How it works — visual flow */}
+      <section className="max-w-4xl mx-auto px-6 py-20">
+        <h2 className="text-2xl font-bold text-center mb-12">How it works</h2>
+        <div className="relative">
+          {/* Connection line */}
+          <div className="hidden md:block absolute top-8 left-[16.5%] right-[16.5%] h-px bg-gradient-to-r from-[#f59e1c]/0 via-[#f59e1c]/30 to-[#f59e1c]/0" />
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { step: "1", title: "Install MCP", desc: "One JSON config. Works with Claude, Cursor, VS Code, Windsurf.", cta: "See install guide", href: "/docs" },
+              { step: "2", title: "Ask your question", desc: "Type naturally. Mention the library or say \"use contextbharat\".", cta: null, href: null },
+              { step: "3", title: "Get real docs", desc: "Your AI receives verified, up-to-date documentation with code examples.", cta: "Try it now", href: "#try" },
+            ].map(({ step, title, desc, cta, href }) => (
+              <div key={step} className="text-center">
+                <div className="w-12 h-12 rounded-full bg-[#f59e1c]/15 border border-[#f59e1c]/30 text-[#f59e1c] font-bold text-lg flex items-center justify-center mx-auto mb-4">
+                  {step}
+                </div>
+                <h3 className="text-white font-semibold mb-2">{title}</h3>
+                <p className="text-gray-400 text-sm mb-3">{desc}</p>
+                {cta && href && (
+                  <Link href={href} className="text-[#f59e1c] text-xs hover:underline">
+                    {cta} →
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Social proof */}
       <section className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { val: "100+", label: "Indian APIs indexed" },
-            { val: "17M", label: "Developers in India" },
-            { val: "Hindi", label: "Regional language docs" },
-            { val: "Free", label: "To start" },
+            { val: "100+", label: "Libraries indexed" },
+            { val: "<2s", label: "Response latency" },
+            { val: "6", label: "Languages supported" },
+            { val: "Free", label: "No credit card" },
           ].map(({ val, label }) => (
-            <div
-              key={label}
-              className="bg-white/5 border border-white/10 rounded-xl p-6 text-center"
-            >
-              <div className="text-3xl font-bold text-[#f59e1c] mb-1">{val}</div>
-              <div className="text-sm text-gray-400">{label}</div>
+            <div key={label} className="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+              <div className="text-2xl font-bold text-[#f59e1c] mb-1">{val}</div>
+              <div className="text-sm text-gray-500">{label}</div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Problem Section */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Your AI assistant doesn&apos;t know Indian APIs.
-        </h2>
-        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
-          Ask Claude to integrate Razorpay and it might reference a deprecated endpoint. Ask Cursor
-          about ONDC and watch it hallucinate the Beckn Protocol flow. Context7 indexes 9,000+
-          libraries — Indian APIs: zero.
-        </p>
-        <div className="grid md:grid-cols-3 gap-6">
+      {/* Pricing preview */}
+      <section className="max-w-4xl mx-auto px-6 py-20">
+        <h2 className="text-2xl font-bold text-center mb-2">Simple pricing</h2>
+        <p className="text-gray-400 text-center mb-10">Start free. Upgrade when you need more.</p>
+        <div className="grid md:grid-cols-3 gap-5">
           {[
-            {
-              title: "Wrong code, every time",
-              body: "Your AI writes Razorpay v2 code when v3 is current. It uses GSTN endpoints that no longer exist. Every integration starts with debugging code that was never right.",
-            },
-            {
-              title: "PDFs shouldn't be documentation",
-              body: "UPI specs are PDFs. ONDC has 132 GitHub repos. GSTN has portal-gated docs. Your AI can't read any of it. You can.",
-            },
-            {
-              title: "Hours of context-setting",
-              body: "Before every coding session, you paste API docs into your prompt. You repeat yourself every time. The AI forgets by next session.",
-            },
-          ].map(({ title, body }) => (
-            <div
-              key={title}
-              className="bg-white/5 border border-white/10 rounded-xl p-6"
-            >
-              <h3 className="text-white font-semibold mb-2">{title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{body}</p>
+            { name: "Free", price: "₹0", desc: "100 queries/day, 30 libraries", hl: false },
+            { name: "Pro", price: "₹399/mo", desc: "Unlimited, all libraries, Hindi", hl: true },
+            { name: "Team", price: "₹999/seat", desc: "Private repos, SLA, analytics", hl: false },
+          ].map((p) => (
+            <div key={p.name} className={`rounded-xl p-5 text-center ${p.hl ? "border-2 border-[#f59e1c] bg-[#f59e1c]/[0.04]" : "border border-[#1e2d44] bg-[#0c1120]"}`}>
+              <div className="text-gray-500 text-xs font-semibold uppercase tracking-wider mb-1">{p.name}</div>
+              <div className="text-2xl font-bold mb-1">{p.price}</div>
+              <div className="text-gray-500 text-sm">{p.desc}</div>
             </div>
           ))}
         </div>
-      </section>
-
-      {/* Solution Section */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Real docs. Real time. Indian APIs first.
-        </h2>
-        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
-          Context Bharat is an MCP server for Indian developers. Type{" "}
-          <code className="text-[#f59e1c]">use contextbharat</code> in Claude or Cursor. Get
-          accurate, current documentation injected directly into your AI&apos;s context.
-        </p>
-        <div className="grid md:grid-cols-2 gap-6">
-          {[
-            {
-              title: "100+ Libraries Indexed",
-              body: "Razorpay, Zerodha Kite, ONDC, UPI/NPCI, GSTN, DigiLocker, Zoho, Frappe, Sarvam AI — all the APIs that matter to Indian startups.",
-            },
-            {
-              title: "Hindi Documentation",
-              body: "First-ever Hindi developer docs for Indian APIs. Built with Sarvam AI's Mayura model. Tamil, Telugu, and Kannada coming soon.",
-            },
-            {
-              title: "Works Where You Work",
-              body: "Claude, Cursor, VS Code, Windsurf — if it supports MCP, it supports Context Bharat. One API key, every tool.",
-            },
-            {
-              title: "Always Fresh",
-              body: "Automated re-indexing. When Razorpay updates their API, we update our docs. Daily cron runs at 2 AM IST.",
-            },
-          ].map(({ title, body }) => (
-            <div
-              key={title}
-              className="bg-[#0c1120] border border-[#1e2d44] rounded-xl p-6"
-            >
-              <h3 className="text-white font-semibold mb-2">{title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{body}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Library Showcase */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Built for how India builds.
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {LIBRARY_CATEGORIES.map(({ title, description, color, border }) => (
-            <div
-              key={title}
-              className={`bg-white/[0.02] border ${border} rounded-xl p-5`}
-            >
-              <h3 className={`font-semibold mb-2 ${color}`}>{title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Three lines. That&apos;s it.
-        </h2>
-        <p className="text-gray-400 text-center mb-12">
-          From zero to real documentation in under a minute.
-        </p>
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {HOW_IT_WORKS.map(({ step, title, description }) => (
-            <div key={step} className="text-center">
-              <div className="w-10 h-10 rounded-full bg-[#f59e1c]/15 border border-[#f59e1c]/30 text-[#f59e1c] font-bold flex items-center justify-center mx-auto mb-4">
-                {step}
-              </div>
-              <h3 className="text-white font-semibold mb-2">{title}</h3>
-              <p className="text-gray-400 text-sm">{description}</p>
-            </div>
-          ))}
-        </div>
-        {/* Code example */}
-        <div className="max-w-3xl mx-auto bg-[#0c1120] border border-[#1e2d44] rounded-xl overflow-hidden">
-          <div className="px-4 py-2 border-b border-[#1e2d44] text-xs text-gray-500">
-            Claude / Cursor prompt
-          </div>
-          <pre className="p-5 text-sm text-gray-300 font-mono overflow-x-auto leading-relaxed">
-            <span className="text-gray-500">User:</span> How do I create a Razorpay payment link?{" "}
-            <span className="text-[#f59e1c]">use contextbharat</span>
-            {"\n\n"}
-            <span className="text-gray-500">Claude:</span>{" "}
-            <span className="text-gray-400 italic">
-              [fetching Razorpay documentation via Context Bharat...]
-            </span>
-            {"\n\n"}
-            <span className="text-gray-400">
-              Based on current Razorpay docs (v1.3, updated 6 hours ago):
-            </span>
-            {"\n\n"}
-            <span className="text-green-300">{`const razorpay = new Razorpay({
-  key_id: 'YOUR_KEY',
-  key_secret: 'YOUR_SECRET'
-});
-
-const paymentLink = await razorpay.paymentLink.create({
-  amount: 50000,  // In paise
-  currency: 'INR',
-  description: 'Payment for Order #1234',
-});`}</span>
-          </pre>
-        </div>
-      </section>
-
-      {/* Pricing Preview */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Start free. Pay when it saves you money.
-        </h2>
-        <p className="text-gray-400 text-center mb-12">
-          ₹399 is less than 2 samosas a day. Start free, no credit card required.
-        </p>
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {[
-            {
-              name: "Community",
-              price: "₹0",
-              features: ["100 queries/day", "Top 30 libraries", "English only"],
-              highlight: false,
-            },
-            {
-              name: "Pro",
-              price: "₹399/mo",
-              features: ["Unlimited queries", "All 100+ libraries", "Hindi + regional"],
-              highlight: true,
-            },
-            {
-              name: "Team",
-              price: "₹999/seat",
-              features: ["Everything in Pro", "Unlimited private repos", "SLA 99.9%"],
-              highlight: false,
-            },
-          ].map((plan) => (
-            <div
-              key={plan.name}
-              className={`rounded-xl p-6 text-center ${
-                plan.highlight
-                  ? "border-2 border-[#f59e1c] bg-[#f59e1c]/[0.04]"
-                  : "border border-[#1e2d44] bg-[#0c1120]"
-              }`}
-            >
-              <div className="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-2">
-                {plan.name}
-              </div>
-              <div className="text-2xl font-bold mb-4">{plan.price}</div>
-              <ul className="text-sm text-gray-400 space-y-2 mb-6">
-                {plan.features.map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div className="text-center mt-8">
-          <Link
-            href="/pricing"
-            className="text-[#f59e1c] text-sm hover:underline"
-          >
-            See full pricing details →
+        <div className="text-center mt-6">
+          <Link href="/pricing" className="text-[#f59e1c] text-sm hover:underline">
+            Compare plans →
           </Link>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-white/10 mt-12">
-        <div className="max-w-6xl mx-auto px-6 py-12">
+      {/* Final CTA */}
+      <section className="max-w-3xl mx-auto px-6 py-20 text-center">
+        <h2 className="text-3xl font-bold mb-4">Stop hallucinating Indian APIs</h2>
+        <p className="text-gray-400 mb-8">
+          Add contextBharat to your editor in 60 seconds. Free forever for individuals.
+        </p>
+        <div className="flex gap-3 justify-center">
+          <Link
+            href="/docs"
+            className="bg-[#f59e1c] text-black px-8 py-3 rounded-xl font-semibold hover:bg-[#fbbf45] transition-colors"
+          >
+            Install Now
+          </Link>
+          <Link
+            href="#try"
+            className="border border-white/20 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/5 transition-colors"
+          >
+            Try Live Demo
+          </Link>
+        </div>
+      </section>
+
+      {/* Footer — clean */}
+      <footer className="border-t border-white/10">
+        <div className="max-w-6xl mx-auto px-6 py-10">
           <div className="flex flex-col md:flex-row justify-between items-start gap-8">
             <div>
-              <div className="font-bold text-[#f59e1c] text-xl mb-2">
+              <div className="font-bold text-[#f59e1c] text-lg mb-1">
                 context<span className="text-white">Bharat</span>
               </div>
-              <p className="text-gray-500 text-sm max-w-xs">
-                Built in India, for India&apos;s developers. The MCP client is Apache 2.0. The
-                index is ours.
+              <p className="text-gray-600 text-sm max-w-xs">
+                Up-to-date Indian API docs for AI editors. Open-source MCP client.
               </p>
             </div>
-            <div className="flex gap-12 text-sm">
-              <div className="flex flex-col gap-2 text-gray-400">
-                <Link href="/libraries" className="hover:text-white transition-colors">
-                  Libraries
-                </Link>
-                <Link href="/pricing" className="hover:text-white transition-colors">
-                  Pricing
-                </Link>
-                <Link href="/docs" className="hover:text-white transition-colors">
-                  Docs
-                </Link>
+            <div className="flex gap-10 text-sm text-gray-500">
+              <div className="flex flex-col gap-2">
+                <Link href="/docs" className="hover:text-white transition-colors">Install</Link>
+                <Link href="/libraries" className="hover:text-white transition-colors">Libraries</Link>
+                <Link href="/pricing" className="hover:text-white transition-colors">Plans</Link>
               </div>
-              <div className="flex flex-col gap-2 text-gray-400">
-                <Link
-                  href="https://github.com/contextbharat/context-bharat"
-                  className="hover:text-white transition-colors"
-                >
-                  GitHub
-                </Link>
-                <Link
-                  href="https://twitter.com/contextbharat"
-                  className="hover:text-white transition-colors"
-                >
-                  Twitter
-                </Link>
+              <div className="flex flex-col gap-2">
+                <Link href="/dashboard" className="hover:text-white transition-colors">Dashboard</Link>
+                <Link href="https://github.com/contextbharat/context-bharat" className="hover:text-white transition-colors">GitHub</Link>
+                <Link href="https://twitter.com/contextbharat" className="hover:text-white transition-colors">Twitter</Link>
               </div>
             </div>
           </div>
-          <div className="mt-8 pt-6 border-t border-white/5 text-center text-xs text-gray-600">
-            © 2026 Context Bharat. Apache 2.0 (MCP Client). All rights reserved (Index).
+          <div className="mt-8 pt-5 border-t border-white/5 text-center text-xs text-gray-700">
+            Built in India. Apache 2.0 (MCP Client). © 2026 contextBharat.
           </div>
         </div>
       </footer>
