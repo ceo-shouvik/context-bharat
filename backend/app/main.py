@@ -8,7 +8,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.v1 import libraries, docs, keys, health
+from app.api.v1 import libraries, docs, keys, health, admin
 from app.api.v1 import snippets, offline, cookbooks, sdkgen, testgen, openapigen, starters, workflows, features
 from app.api.v1 import integrations, compliance, errors, community
 from app.core.config import settings
@@ -64,3 +64,5 @@ app.include_router(integrations.router, prefix="/v1")
 app.include_router(compliance.router, prefix="/v1")
 app.include_router(errors.router, prefix="/v1")
 app.include_router(community.router, prefix="/v1")
+# Admin panel
+app.include_router(admin.router, prefix="/v1")
