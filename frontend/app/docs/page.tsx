@@ -320,6 +320,25 @@ export default function DocsPage() {
           </div>
         </section>
 
+        {/* GitHub MCP Banner */}
+        <section className="mb-16">
+          <Link
+            href="/setup/github-mcp"
+            className="block bg-white/[0.02] border border-white/10 rounded-xl p-6 hover:border-[#f59e1c]/30 transition-colors"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <h3 className="text-white font-semibold mb-1">Need GitHub MCP too?</h3>
+                <p className="text-gray-400 text-sm">
+                  Access repos, issues, and PRs from your AI tool. We have setup scripts for macOS, Linux, and Windows
+                  that fix the common org-access and ENOENT issues.
+                </p>
+              </div>
+              <span className="text-[#f59e1c] text-sm whitespace-nowrap mt-1">Setup guide &rarr;</span>
+            </div>
+          </Link>
+        </section>
+
         {/* CTA */}
         <div className="text-center mt-12 py-12 border-t border-white/10">
           <h3 className="text-xl font-bold mb-4">Ready to start?</h3>

@@ -23,6 +23,7 @@ export default function LandingPage() {
           </Link>
           <div className="hidden md:flex gap-6 text-sm text-gray-400">
             <Link href="/docs" className="hover:text-white transition-colors">Install</Link>
+            <Link href="/setup" className="hover:text-white transition-colors">Tools</Link>
             <Link href="/libraries" className="hover:text-white transition-colors">Libraries</Link>
             <Link href="/pricing" className="hover:text-white transition-colors">Plans</Link>
           </div>
@@ -237,6 +238,29 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Free Tools Banner */}
+      <section className="max-w-4xl mx-auto px-6 py-12">
+        <Link
+          href="/setup"
+          className="block bg-gradient-to-r from-[#f59e1c]/5 to-purple-500/5 border border-[#f59e1c]/20 rounded-xl p-6 hover:border-[#f59e1c]/40 transition-colors"
+        >
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div>
+              <h3 className="text-white font-bold text-lg mb-1">
+                Free MCP Setup Tools
+              </h3>
+              <p className="text-gray-400 text-sm">
+                GitHub MCP not working? Org access denied? We built one-click setup scripts
+                for macOS, Linux, and Windows. Zero cost, runs locally.
+              </p>
+            </div>
+            <span className="text-[#f59e1c] text-sm font-medium whitespace-nowrap">
+              View tools &rarr;
+            </span>
+          </div>
+        </Link>
+      </section>
+
       {/* Final CTA */}
       <section className="max-w-3xl mx-auto px-6 py-20 text-center">
         <h2 className="text-3xl font-bold mb-4">Stop hallucinating Indian APIs</h2>
@@ -274,6 +298,7 @@ export default function LandingPage() {
             <div className="flex gap-10 text-sm text-gray-500">
               <div className="flex flex-col gap-2">
                 <Link href="/docs" className="hover:text-white transition-colors">Install</Link>
+                <Link href="/setup" className="hover:text-white transition-colors">Setup Tools</Link>
                 <Link href="/libraries" className="hover:text-white transition-colors">Libraries</Link>
                 <Link href="/pricing" className="hover:text-white transition-colors">Plans</Link>
               </div>

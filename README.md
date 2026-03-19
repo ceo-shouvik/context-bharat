@@ -60,6 +60,35 @@ Get a free API key at [contextbharat.com/dashboard](https://contextbharat.com/da
 
 ---
 
+## Free Setup Tools
+
+MCP setup is broken for most developers. We built one-command scripts that fix it.
+
+### GitHub MCP Setup (fixes org access + ENOENT errors)
+
+```bash
+# macOS / Linux
+curl -fsSL https://contextbharat.com/setup/github-mcp.sh | bash
+
+# Windows (PowerShell)
+irm https://contextbharat.com/setup/github-mcp.ps1 | iex
+```
+
+Guides you through PAT creation, verifies the token, auto-configures Claude/Cursor/VS Code. Windows script uses `cmd /c npx` to fix the `spawn npx ENOENT` error.
+
+### Context Bharat MCP Setup
+
+```bash
+# macOS / Linux
+curl -fsSL https://contextbharat.com/setup/contextbharat-mcp.sh | bash
+```
+
+Or run locally: `make setup-github-mcp` / `make setup-contextbharat-mcp` / `make setup-all-mcp`
+
+[Browse all setup tools](https://contextbharat.com/setup)
+
+---
+
 ## Libraries Indexed
 
 **Indian Fintech:** Razorpay, Cashfree, Juspay, PayU, Setu, Paytm PG, PhonePe Business
@@ -78,16 +107,24 @@ Get a free API key at [contextbharat.com/dashboard](https://contextbharat.com/da
 
 ## Repository Structure
 
+This is the **public** repo. The backend, ingestion pipeline, and admin dashboard are in a private repo.
+
 ```
-context-bharat/
-├── CLAUDE.md              ← Claude Code instructions (start here)
-├── backend/               ← Python FastAPI + ingestion pipeline
-├── mcp-server/            ← TypeScript MCP server (forked from upstash/context7)
-├── frontend/              ← Next.js 15 dashboard
-├── docs/                  ← Development documentation
-├── knowledge-base/        ← Technical deep-dives
-├── website/               ← Marketing copy
-└── docker-compose.yml     ← Local dev infrastructure
+context-bharat/                    (public — GitHub)
+├── CLAUDE.md                      ← Claude Code instructions
+├── mcp-server/                    ← TypeScript MCP server (Apache 2.0)
+├── tools/                         ← Free setup scripts (macOS/Linux/Windows)
+│   ├── setup-github-mcp.sh        ← GitHub MCP setup (bash)
+│   ├── setup-github-mcp.ps1       ← GitHub MCP setup (PowerShell)
+│   ├── setup-contextbharat-mcp.sh ← Context Bharat MCP setup
+│   └── setup-all-mcp.sh           ← All MCP servers at once
+├── frontend/app/(public)/         ← Public pages (landing, docs, setup guides)
+├── frontend/app/setup/            ← Setup tool pages (OS-specific guides)
+├── backend/config/libraries/      ← Library JSON configs (contribute here!)
+├── docs/                          ← Philosophy, decisions, contributing guide
+├── knowledge-base/api-catalog.md  ← Full library catalog
+├── website/                       ← Marketing copy
+└── docker-compose.yml             ← Local dev infrastructure
 ```
 
 ---
@@ -158,9 +195,13 @@ The MCP client layer is forked from [upstash/context7](https://github.com/upstas
 
 ## License
 
-MCP client: Apache 2.0
-Backend: Proprietary
+| Component | License |
+|-----------|---------|
+| MCP server (`mcp-server/`) | Apache 2.0 |
+| Setup tools (`tools/`) | Apache 2.0 |
+| Public frontend pages | Apache 2.0 |
+| Backend, ingestion, admin | Proprietary (private repo) |
 
 ---
 
-Built with ❤️ in India.
+Built in India, for India's developers.

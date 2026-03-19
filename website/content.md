@@ -118,6 +118,46 @@ const paymentLink = await razorpay.paymentLink.create({
 
 ---
 
+## Free Developer Tools Section
+
+**Heading:** We solve MCP pain — for free.
+
+**Subheading:** Setup scripts that fix real problems. Run locally. No data sent to us. Works on macOS, Linux, and Windows.
+
+**Copy:**
+MCP is powerful but setup is broken. The #1 error across the entire ecosystem — `spawn npx ENOENT` — has thousands of developers stuck. Org-level PAT restrictions block GitHub MCP for most teams. JSON config files fail silently. Nobody's fixing this.
+
+We are. Free setup tools that detect your OS, guide you through token creation, and configure your AI tools automatically. Because solving developer pain — even outside our core product — is how you earn trust.
+
+**Tools (card grid):**
+
+**GitHub MCP Setup** — Most Popular
+Org access denied? ENOENT error? Our script creates a fine-grained PAT with correct permissions, verifies it works, and auto-configures Claude/Cursor/VS Code. Windows script uses `cmd /c npx` to fix ENOENT automatically.
+- macOS/Linux: `curl -fsSL https://contextbharat.com/setup/github-mcp.sh | bash`
+- Windows: `irm https://contextbharat.com/setup/github-mcp.ps1 | iex`
+
+**Context Bharat MCP Setup**
+Indian API docs in your AI editor in 60 seconds. Auto-detects installed tools, configures MCP, optional API key for higher limits.
+- macOS/Linux: `curl -fsSL https://contextbharat.com/setup/contextbharat-mcp.sh | bash`
+
+**MCP Doctor** — Coming Soon
+Diagnoses broken MCP setups: validates JSON configs, checks Node.js PATH, tests token validity, verifies server connectivity. One command to find what's wrong.
+
+**Multi-Tool Config Sync** — Coming Soon
+Edit your MCP config once, sync to Claude Code, Cursor, VS Code, and Windsurf automatically. No more maintaining 4 separate JSON files.
+
+**CTA:** Browse All Setup Tools → `/setup`
+
+**SEO keywords for this section:**
+- spawn npx enoent fix
+- github mcp server setup
+- mcp personal access token
+- claude mcp not working
+- cursor mcp setup windows
+- github mcp org access denied
+
+---
+
 ## Pricing Section
 
 **Heading:** Start free. Pay when it saves you money.
@@ -175,7 +215,7 @@ A: We only receive the query string your AI sends us. Your code never leaves you
 
 **Tagline:** Built in India, for India's developers.
 
-**Links:** Libraries | Docs | Pricing | GitHub | Twitter | Status
+**Links:** Libraries | Docs | Setup Tools | Pricing | GitHub | Twitter | Status
 
 **Newsletter CTA:** "Get notified when new Indian APIs are added."
 
@@ -193,6 +233,15 @@ A: We only receive the query string your AI sends us. Your code never leaves you
 **Library pages (example — Razorpay):**
 - Title: Razorpay API Documentation for Claude & Cursor — Context Bharat
 - Description: Get current Razorpay SDK docs injected into Claude and Cursor. Payment links, orders, subscriptions, webhooks. Always up to date.
+
+**Setup tools page:**
+- Title: Free MCP Setup Tools — Fix GitHub MCP, ENOENT, Org Access — Context Bharat
+- Description: One-click setup scripts for GitHub MCP server on macOS, Linux, and Windows. Fix spawn npx ENOENT, configure PAT, auto-detect Claude/Cursor/VS Code.
+- Keywords: spawn npx enoent, github mcp setup, mcp personal access token, claude mcp not working, cursor mcp windows, mcp org access denied
+
+**GitHub MCP detail page:**
+- Title: GitHub MCP Setup Guide for macOS, Linux & Windows — Context Bharat
+- Description: Set up GitHub MCP server with your PAT in 2 minutes. Auto-configures Claude Desktop, Claude Code, Cursor, VS Code. Fixes ENOENT and org access issues.
 
 ---
 

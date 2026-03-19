@@ -41,6 +41,11 @@ help:
 	@echo "  make ingest-all                  Ingest all libraries"
 	@echo "  make ingest-indian               Ingest Indian fintech + DPI libs"
 	@echo ""
+	@echo "MCP Setup (for developers):"
+	@echo "  make setup-github-mcp         Set up GitHub MCP with your PAT"
+	@echo "  make setup-contextbharat-mcp  Set up Context Bharat MCP"
+	@echo "  make setup-all-mcp            Set up all MCP servers at once"
+	@echo ""
 	@echo "Utilities:"
 	@echo "  make query LIB=razorpay Q='payment link'   Test a query"
 	@echo "  make translate LIB=razorpay LANG=hi        Translate to Hindi"
@@ -174,6 +179,15 @@ translate:
 
 mcp-inspect:
 	cd mcp-server && npx @modelcontextprotocol/inspector dist/index.js
+
+setup-github-mcp:
+	@bash tools/setup-github-mcp.sh
+
+setup-contextbharat-mcp:
+	@bash tools/setup-contextbharat-mcp.sh
+
+setup-all-mcp:
+	@bash tools/setup-all-mcp.sh
 
 clean:
 	find . -type d -name __pycache__ -exec rm -rf {} +

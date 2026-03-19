@@ -226,9 +226,160 @@ Ingestion jobs (crawling + embedding + upserting 100+ libraries) are long-runnin
 
 ---
 
+## ADR-010: Pay-Per-Use Credits Over Subscriptions
+
+**Date:** March 2026
+**Status:** Accepted
+
+**Context:**
+Original pricing was subscription-based (Free / ₹399 Pro / ₹999 Team per month). Indian developers are subscription-fatigued and price-sensitive. Casual users (majority of early adopters) won't commit ₹399/month for occasional use. Industry trend (Anthropic, OpenAI, Upstash) is moving toward usage-based billing.
+
+**Decision:**
+Adopt **prepaid credit packs** (Anthropic-style) instead of subscriptions:
+- Free tier: 200 credits/day with account (50 without)
+- Credit packs: ₹99 (5K credits) → ₹3,999 (500K credits)
+- 1 query = 1 credit (simple, predictable)
+- Credits never expire (competitive advantage)
+- Implement with Razorpay (India) + Stripe (international) + DIY ledger in Supabase
+
+**Consequences:**
+- Lower barrier to entry — ₹99 starter pack vs ₹399/mo subscription
+- Revenue less predictable but scales with actual usage
+- Need to build credit ledger + metering (2 weeks of work)
+- Most users won't use 100% of credits → profitable at ~40-60% utilization
+- Can add hybrid "monthly auto-refill" plan later if needed
+- Full pricing strategy: see `docs/pricing-strategy.md`
+
+---
+
+## ADR-011: Open-Source vs Private Repository Split
+
+**Date:** March 2026
+**Status:** Accepted
+
+**Context:**
+We need to decide what code lives in the public GitHub repo (drives adoption, community, SEO, trust) vs what stays in a private Bitbucket repo (protects moat, proprietary logic, business secrets). The split must balance maximum community value with protecting competitive advantage.
+
+Key principles from our philosophy:
+- "Open-source the client, own the index" (ADR-008)
+- Free setup tools drive traffic at zero infra cost
+- Community contributions (library configs) are a growth lever
+- The ingestion pipeline, vector index, and ranking are our moat
+
+**Decision:**
+
+### PUBLIC — GitHub (`github.com/contextbharat/context-bharat`)
+
+Everything a developer needs to **use** Context Bharat or **contribute** library configs:
+
+| Component | Why Public |
+|-----------|-----------|
+| `mcp-server/` | Apache 2.0 MCP client — community can extend, fork, build integrations |
+| `tools/` | Setup scripts (GitHub MCP, Context Bharat, MCP Doctor) — zero-cost traffic driver, SEO magnet |
+| `frontend/app/(public)/` | Public pages: landing, docs, setup guides, pricing — marketing + SEO |
+| `frontend/app/setup/` | Setup tool pages — the whole point is discoverability |
+| `frontend/components/live-playground.tsx` | Demo component — lets developers try before signup |
+| `frontend/components/logo-slider.tsx` | Marketing component |
+| `docs/` | Philosophy, decisions, contributing guide, style guide — attracts contributors |
+| `knowledge-base/api-catalog.md` | Library catalog — community PRs to add new libraries |
+| `knowledge-base/mcp-server.md` | MCP server docs — helps integrators |
+| `backend/config/libraries/` | Library JSON configs — the community contribution target |
+| `backend/app/ingestion/base.py` | BaseCrawler interface — so community knows the contract |
+| `docker-compose.yml` | Local dev setup |
+| `Makefile` | Developer commands |
+| `.env.example` | Environment template |
+| `CLAUDE.md` | Claude Code instructions |
+| `README.md` | Project overview |
+| `website/` | Marketing copy source of truth |
+
+### PRIVATE — Bitbucket (`bitbucket.org/contextbharat/context-bharat-private`)
+
+Everything that is our **competitive moat** or contains **business secrets**:
+
+| Component | Why Private |
+|-----------|------------|
+| `backend/app/ingestion/pipeline.py` | Full ingestion orchestration — our core IP |
+| `backend/app/ingestion/crawlers/` | All crawler implementations (web, PDF, GitHub, portal) — hard-won logic for govt portals, OCR tuning |
+| `backend/app/ingestion/chunker.py` | Token-aware chunking with section boundary logic |
+| `backend/app/ingestion/embedder.py` | Embedding batch strategy, cost optimizations |
+| `backend/app/services/search_service.py` | Hybrid search + reranking algorithm — the ranking quality is our moat |
+| `backend/app/services/translation_service.py` | Sarvam AI integration, term preservation logic |
+| `backend/app/api/v1/` | API route handlers (thin, but reveals exact API behavior) |
+| `backend/app/repositories/` | Database access patterns, query optimizations |
+| `backend/app/tasks/` | Celery task definitions, retry logic for flaky govt portals |
+| `backend/app/core/config.py` | Internal config with all env var handling |
+| `backend/scripts/ingest.py` | CLI ingestion tool |
+| `backend/scripts/translate.py` | Translation CLI |
+| `backend/tests/` | Test suite — reveals internal implementation details |
+| `backend/alembic/` | DB migrations — reveals exact schema evolution |
+| `frontend/app/(dashboard)/` | Dashboard pages — reveals our product analytics, admin features |
+| `frontend/app/(auth)/` | Auth flow implementation |
+| `frontend/app/api/` | Internal API routes |
+| `frontend/components/api-key-manager.tsx` | Key management UI |
+| `frontend/components/usage-chart.tsx` | Usage analytics |
+| `frontend/components/query-tester.tsx` | Dashboard query sandbox (different from public demo) |
+| `frontend/lib/supabase.ts` | Supabase client config |
+| `frontend/lib/admin-api.ts` | Admin API client |
+| `frontend/app/admin/` | Full admin dashboard |
+| `knowledge-base/architecture.md` | Full system architecture with infra details |
+| `knowledge-base/infra.md` | Infrastructure setup, costs, secrets |
+| `knowledge-base/roadmap.md` | Detailed sprint plans and timelines |
+| `docs/pricing-strategy.md` | Detailed pricing model and margins |
+| `docs/deployment-plan.md` | Deployment infrastructure details |
+| `.github/workflows/` | CI/CD pipelines — reveals deploy targets, secrets structure |
+
+### SHARED — Exists in both, synced manually
+
+| File | Notes |
+|------|-------|
+| `backend/app/models/schemas.py` | Pydantic schemas — public for SDK builders, private for full implementation |
+| `backend/app/models/db.py` | DB models — public shows table structure (already in architecture docs), private has full implementation |
+
+**Consequences:**
+- Public repo is the "storefront" — clean, documented, welcoming to contributors
+- Private repo has the full working codebase — deployed from Bitbucket
+- Community PRs land on GitHub (library configs only), manually synced to Bitbucket
+- Setup tools are fully public — maximum discoverability and SEO
+- We never accidentally expose API keys, infra costs, or admin dashboard code
+- Two repos to maintain — use CI on Bitbucket for deploys, GitHub for community
+
+---
+
+## ADR-012: Free Setup Tools as Growth Strategy
+
+**Date:** March 2026
+**Status:** Accepted
+
+**Context:**
+MCP setup is broken for most developers. The `spawn npx ENOENT` error alone has thousands stuck. GitHub MCP's org-level PAT restrictions block most teams. No existing tool (Smithery, MCPM, mcp-installer) solves the prerequisite setup — they only handle package installation.
+
+We built setup scripts that solve these specific pain points. They run locally, cost us nothing, and every search for "github mcp setup" or "spawn npx ENOENT fix" can land on our site.
+
+**Decision:**
+Ship OS-specific setup scripts (`.sh` for macOS/Linux, `.ps1` for Windows) as free, open-source tools under the Context Bharat brand. Host the guide pages on contextbharat.com for SEO. Keep scripts in the public GitHub repo.
+
+Planned tools (in priority order):
+1. GitHub MCP Setup (shipped)
+2. Context Bharat MCP Setup (shipped)
+3. MCP Doctor (diagnoses ENOENT, JSON errors, token issues)
+4. Multi-Tool Config Sync (sync MCP configs across Claude/Cursor/VS Code/Windsurf)
+5. Jira/Confluence MCP Setup (huge Indian IT services audience)
+6. Supabase MCP Setup (popular with Indian indie hackers)
+7. "First MCP in 5 Minutes" onboarding (targets vibe coders)
+
+**Consequences:**
+- Zero infra cost — scripts run on user's machine
+- SEO traffic for "github mcp setup", "spawn npx enoent", "mcp not working"
+- Brand awareness before user needs our core product
+- Every setup script has a soft CTA for Context Bharat MCP
+- Scripts are Apache 2.0 — anyone can fork, but they carry our brand
+- Must maintain scripts as MCP ecosystem evolves
+
+---
+
 ## Future Decisions (Pending)
 
-- **ADR-010:** Qdrant migration trigger criteria and migration strategy
-- **ADR-011:** Self-hosting offering for enterprise customers
-- **ADR-012:** Southeast Asia expansion (GrabPay, GoPay, GCash APIs)
-- **ADR-013:** MCP Marketplace listing strategy
+- **ADR-013:** Qdrant migration trigger criteria and migration strategy
+- **ADR-014:** Self-hosting offering for enterprise customers
+- **ADR-015:** Southeast Asia expansion (GrabPay, GoPay, GCash APIs)
+- **ADR-016:** MCP Marketplace listing strategy
