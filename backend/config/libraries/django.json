@@ -1,0 +1,18 @@
+{
+  "library_id": "/django/django",
+  "name": "Django",
+  "description": "Python web framework with batteries included. ORM, admin, auth, forms, and template engine.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://docs.djangoproject.com/en/5.1/", "crawl_depth": 3},
+      {"type": "github", "repo": "django/django"}
+    ]
+  },
+  "pypi_package": "Django",
+  "github_repo": "django/django",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["python", "web", "orm", "fullstack", "backend"]
+}

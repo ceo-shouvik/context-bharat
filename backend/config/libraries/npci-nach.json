@@ -1,0 +1,16 @@
+{
+  "library_id": "/npci/nach-api",
+  "name": "NPCI NACH / eMandate",
+  "description": "National Automated Clearing House for recurring payments, EMIs, SIPs, and electronic mandates.",
+  "category": "india-dpi",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://www.npci.org.in/what-we-do/nach/product-overview", "crawl_depth": 2},
+      {"type": "pdf", "url": "https://www.npci.org.in/what-we-do/nach/product-overview"}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["nach", "india", "dpi", "npci", "mandate", "recurring", "emi"]
+}

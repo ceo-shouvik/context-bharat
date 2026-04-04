@@ -1,0 +1,15 @@
+{
+  "library_id": "/darwinbox/darwinbox-api",
+  "name": "Darwinbox",
+  "description": "Indian HR platform API for employee management, payroll, attendance, and performance reviews.",
+  "category": "enterprise-india",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://developer.darwinbox.com/docs", "crawl_depth": 3}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["hr", "india", "enterprise", "payroll", "darwinbox"]
+}

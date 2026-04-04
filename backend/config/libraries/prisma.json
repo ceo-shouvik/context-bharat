@@ -1,0 +1,18 @@
+{
+  "library_id": "/prisma/prisma",
+  "name": "Prisma",
+  "description": "TypeScript ORM for Node.js. Schema-first, type-safe database access, migrations, and Prisma Studio.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://www.prisma.io/docs", "crawl_depth": 3},
+      {"type": "github", "repo": "prisma/prisma"}
+    ]
+  },
+  "npm_package": "prisma",
+  "github_repo": "prisma/prisma",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["orm", "typescript", "database", "postgresql", "mysql"]
+}

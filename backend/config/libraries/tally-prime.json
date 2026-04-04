@@ -1,0 +1,16 @@
+{
+  "library_id": "/tally/tallyprime-api",
+  "name": "Tally Prime",
+  "description": "Tally's XML-based API for accounting, inventory, and GST reporting. The most used accounting software in India.",
+  "category": "enterprise-india",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://help.tallysolutions.com/tally-prime/", "crawl_depth": 3},
+      {"type": "pdf", "url": "https://help.tallysolutions.com/tally-prime/"}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["accounting", "india", "enterprise", "tally", "gst", "xml"]
+}

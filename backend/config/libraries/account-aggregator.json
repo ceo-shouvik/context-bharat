@@ -1,0 +1,18 @@
+{
+  "library_id": "/sahamati/aa-framework",
+  "name": "Account Aggregator Framework",
+  "description": "Sahamati's Account Aggregator framework for consent-based financial data sharing between FIPs and FIUs.",
+  "category": "india-dpi",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://sahamati.org.in/aa-ecosystem/", "crawl_depth": 3},
+      {"type": "github", "repo": "Sahamati/rahasya"},
+      {"type": "github", "repo": "Sahamati/aa-common-service"}
+    ]
+  },
+  "github_repo": "Sahamati/rahasya",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["account-aggregator", "india", "dpi", "fintech", "consent", "sahamati"]
+}

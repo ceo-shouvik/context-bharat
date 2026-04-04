@@ -1,0 +1,17 @@
+{
+  "library_id": "/spring-projects/spring-boot",
+  "name": "Spring Boot",
+  "description": "Java framework for production-grade applications. Auto-configuration, embedded servers, and Spring ecosystem.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://docs.spring.io/spring-boot/docs/current/reference/html/", "crawl_depth": 3},
+      {"type": "github", "repo": "spring-projects/spring-boot"}
+    ]
+  },
+  "github_repo": "spring-projects/spring-boot",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["java", "enterprise", "microservices", "spring", "backend"]
+}

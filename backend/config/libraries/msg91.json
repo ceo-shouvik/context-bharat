@@ -1,0 +1,15 @@
+{
+  "library_id": "/msg91/msg91-api",
+  "name": "MSG91",
+  "description": "Indian SMS and WhatsApp Business API. OTP verification, transactional SMS, and campaign messaging.",
+  "category": "india-devinfra",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://docs.msg91.com/", "crawl_depth": 3}
+    ]
+  },
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["sms", "india", "otp", "whatsapp", "messaging", "msg91"]
+}

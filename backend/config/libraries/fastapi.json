@@ -1,0 +1,18 @@
+{
+  "library_id": "/tiangolo/fastapi",
+  "name": "FastAPI",
+  "description": "Modern Python web framework. Async, type hints, automatic OpenAPI docs, and dependency injection.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://fastapi.tiangolo.com/", "crawl_depth": 3},
+      {"type": "github", "repo": "tiangolo/fastapi"}
+    ]
+  },
+  "pypi_package": "fastapi",
+  "github_repo": "tiangolo/fastapi",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["python", "api", "async", "openapi", "backend"]
+}

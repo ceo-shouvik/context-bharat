@@ -1,0 +1,15 @@
+{
+  "library_id": "/zoho/zoho-books-api",
+  "name": "Zoho Books",
+  "description": "Zoho's accounting API. Invoices, expenses, banking, inventory, and GST compliance for Indian businesses.",
+  "category": "enterprise-india",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://www.zoho.com/books/api/v3/", "crawl_depth": 3}
+    ]
+  },
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["accounting", "india", "enterprise", "zoho", "gst", "invoicing"]
+}

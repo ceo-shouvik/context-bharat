@@ -14,22 +14,17 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 def get_all_library_ids() -> list[str]:
     config_dir = Path(__file__).parent.parent / "config" / "libraries"
-    ids = []
-    for f in config_dir.glob("*.json"):
-        with open(f) as fp:
-            config = json.load(fp)
-        ids.append(config.get("library_id", "").lstrip("/").replace("/", "-"))
-    return ids
+    return [f.stem for f in sorted(config_dir.glob("*.json"))]
 
 
 def get_library_ids_by_category(category: str) -> list[str]:
     config_dir = Path(__file__).parent.parent / "config" / "libraries"
     ids = []
-    for f in config_dir.glob("*.json"):
+    for f in sorted(config_dir.glob("*.json")):
         with open(f) as fp:
             config = json.load(fp)
         if config.get("category") == category:
-            ids.append(config.get("library_id", "").lstrip("/").replace("/", "-"))
+            ids.append(f.stem)
     return ids
 
 

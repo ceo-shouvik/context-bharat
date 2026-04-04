@@ -1,0 +1,16 @@
+{
+  "library_id": "/billdesk/billdesk-api",
+  "name": "BillDesk",
+  "description": "One of India's oldest payment gateways. Bill payments, merchant PG, and recurring collections.",
+  "category": "indian-fintech",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://www.billdesk.com/web/developers", "crawl_depth": 2},
+      {"type": "pdf", "url": "https://www.billdesk.com/web/developers"}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["payments", "india", "fintech", "bills", "gateway"]
+}

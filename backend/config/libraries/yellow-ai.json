@@ -1,0 +1,15 @@
+{
+  "library_id": "/yellowai/yellow-api",
+  "name": "Yellow.ai",
+  "description": "Enterprise conversational AI platform. Chatbots, voice bots, and automation across channels.",
+  "category": "indian-ai",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://docs.yellow.ai/", "crawl_depth": 3}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["ai", "india", "chatbot", "conversational", "enterprise"]
+}

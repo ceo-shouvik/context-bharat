@@ -1,0 +1,18 @@
+{
+  "library_id": "/facebook/react",
+  "name": "React",
+  "description": "JavaScript library for building user interfaces. Components, hooks, server components, and concurrent features.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://react.dev/", "crawl_depth": 3},
+      {"type": "github", "repo": "facebook/react"}
+    ]
+  },
+  "npm_package": "react",
+  "github_repo": "facebook/react",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["frontend", "javascript", "ui", "components", "hooks"]
+}

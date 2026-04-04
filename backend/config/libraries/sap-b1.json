@@ -1,0 +1,16 @@
+{
+  "library_id": "/sap/sap-b1-sdk",
+  "name": "SAP Business One SDK",
+  "description": "SAP Business One ERP SDK for Indian MSMEs. DI API, UI API, and Service Layer for customization.",
+  "category": "enterprise-india",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://help.sap.com/docs/SAP_BUSINESS_ONE", "crawl_depth": 3},
+      {"type": "web", "url": "https://help.sap.com/docs/SAP_BUSINESS_ONE_SDK", "crawl_depth": 2}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["erp", "india", "enterprise", "sap", "msme"]
+}

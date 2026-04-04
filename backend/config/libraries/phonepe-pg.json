@@ -1,0 +1,16 @@
+{
+  "library_id": "/phonepe/pg-docs",
+  "name": "PhonePe Business",
+  "description": "PhonePe payment gateway for merchants. UPI payments, payment pages, and recurring mandates.",
+  "category": "indian-fintech",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://developer.phonepe.com/docs", "crawl_depth": 3}
+    ]
+  },
+  "github_repo": "PhonePe/phonepe-pg-sdk-nodejs",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["payments", "india", "fintech", "upi", "phonepe"]
+}

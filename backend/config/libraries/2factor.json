@@ -1,0 +1,15 @@
+{
+  "library_id": "/2factor/2factor-api",
+  "name": "2Factor SMS",
+  "description": "Indian OTP and SMS API. Transactional SMS, OTP verification, and voice OTP services.",
+  "category": "india-devinfra",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://2factor.in/CP/", "crawl_depth": 2}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["sms", "india", "otp", "verification", "2factor"]
+}

@@ -3,7 +3,11 @@
  * Used by React components to fetch library data.
  */
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL ?? "https://api.contextbharat.com";
+/** Use same-origin proxy in browser to avoid CORS; direct URL on server. */
+const API_BASE =
+  typeof window !== "undefined"
+    ? "/api"
+    : (process.env.API_BASE_URL ?? process.env.NEXT_PUBLIC_API_BASE_URL ?? "https://contextbharat-api-507218003648.asia-south1.run.app");
 
 export interface Library {
   library_id: string;
@@ -30,6 +34,21 @@ export async function getLibraries(params?: {
   if (!response.ok) throw new Error(`API error: ${response.status}`);
   const data = await response.json();
   return data.libraries;
+}
+
+/**
+ * Fetch the total number of indexed libraries from the backend.
+ * Returns the count as a number, or null if the API is unreachable.
+ */
+export async function getLibraryCount(): Promise<number | null> {
+  try {
+    const response = await fetch(`${API_BASE}/v1/libraries?limit=1`);
+    if (!response.ok) return null;
+    const data = await response.json();
+    return data.total ?? data.libraries?.length ?? null;
+  } catch {
+    return null;
+  }
 }
 
 export async function queryDocs(params: {

@@ -48,7 +48,7 @@ const TOOLS = [
       <span className="text-[#f59e1c] font-bold text-sm">cB</span>
     ),
     features: [
-      "100+ Indian API docs always up-to-date",
+      "Indian API docs always up-to-date",
       "Hindi + 5 regional languages",
       "Free tier — no credit card needed",
       "Works with Claude, Cursor, VS Code, Windsurf",

@@ -1,0 +1,18 @@
+{
+  "library_id": "/tailwindlabs/tailwindcss",
+  "name": "Tailwind CSS",
+  "description": "Utility-first CSS framework. Responsive design, dark mode, custom themes, and JIT compilation.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://tailwindcss.com/docs", "crawl_depth": 3},
+      {"type": "github", "repo": "tailwindlabs/tailwindcss"}
+    ]
+  },
+  "npm_package": "tailwindcss",
+  "github_repo": "tailwindlabs/tailwindcss",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["css", "frontend", "utility-first", "responsive", "design"]
+}

@@ -1,0 +1,19 @@
+{
+  "library_id": "/firebase/firebase-js-sdk",
+  "name": "Firebase",
+  "description": "Google's app development platform. Auth, Firestore, Realtime Database, Cloud Functions, and hosting.",
+  "category": "saas-cloud",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://firebase.google.com/docs", "crawl_depth": 3},
+      {"type": "github", "repo": "firebase/firebase-js-sdk"}
+    ]
+  },
+  "npm_package": "firebase",
+  "pypi_package": "firebase-admin",
+  "github_repo": "firebase/firebase-js-sdk",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["baas", "google", "auth", "firestore", "cloud-functions"]
+}

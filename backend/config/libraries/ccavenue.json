@@ -1,0 +1,16 @@
+{
+  "library_id": "/ccavenue/ccavenue-api",
+  "name": "CCAvenue",
+  "description": "Indian payment gateway with 200+ payment options. Cards, net banking, UPI, wallets, and EMI.",
+  "category": "indian-fintech",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://dashboard.ccavenue.com/resources/integrationKit.do", "crawl_depth": 2},
+      {"type": "pdf", "url": "https://dashboard.ccavenue.com/resources/integrationKit.do"}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["payments", "india", "fintech", "gateway", "ccavenue"]
+}

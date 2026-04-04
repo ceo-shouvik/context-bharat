@@ -1,0 +1,15 @@
+{
+  "library_id": "/springworks/springworks-api",
+  "name": "Springworks",
+  "description": "HR tech platform API. Background verification, employee onboarding, and engagement tools.",
+  "category": "india-devinfra",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://www.springworks.in/developers/", "crawl_depth": 2}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["hr", "india", "background-check", "onboarding", "springworks"]
+}

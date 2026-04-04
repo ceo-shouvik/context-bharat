@@ -1,0 +1,16 @@
+{
+  "library_id": "/nhha/abdm-api",
+  "name": "ABDM Health APIs",
+  "description": "Ayushman Bharat Digital Mission APIs for health records, provider linking, and consent management.",
+  "category": "india-dpi",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://sandbox.abdm.gov.in/docs/", "crawl_depth": 3},
+      {"type": "web", "url": "https://developer.abdm.gov.in/", "crawl_depth": 2}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["health", "india", "dpi", "abdm", "ayushman-bharat", "webhooks"]
+}

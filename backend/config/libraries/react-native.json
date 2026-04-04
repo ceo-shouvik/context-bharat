@@ -1,0 +1,18 @@
+{
+  "library_id": "/facebook/react-native",
+  "name": "React Native",
+  "description": "Framework for building native mobile apps using React. iOS and Android with shared JavaScript codebase.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://reactnative.dev/docs/getting-started", "crawl_depth": 3},
+      {"type": "github", "repo": "facebook/react-native"}
+    ]
+  },
+  "npm_package": "react-native",
+  "github_repo": "facebook/react-native",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["mobile", "react", "ios", "android", "cross-platform"]
+}

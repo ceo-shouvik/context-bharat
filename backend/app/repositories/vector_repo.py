@@ -122,14 +122,15 @@ class VectorRepository:
 
     async def delete_stale(self, library_id: str, current_hashes: set[str]) -> int:
         """Delete chunks no longer present in current crawl."""
+        hashes_list = list(current_hashes) if current_hashes else ["__never__"]
         result = await self._session.execute(
             text("""
                 DELETE FROM doc_chunks
                 WHERE library_id = :library_id
-                  AND content_hash NOT IN :hashes
+                  AND content_hash != ALL(:hashes)
                 RETURNING id
             """),
-            {"library_id": library_id, "hashes": tuple(current_hashes) or ("__never__",)},
+            {"library_id": library_id, "hashes": hashes_list},
         )
         deleted = len(result.fetchall())
         await self._session.commit()

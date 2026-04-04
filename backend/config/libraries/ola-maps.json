@@ -1,0 +1,15 @@
+{
+  "library_id": "/ola/ola-maps-api",
+  "name": "Ola Maps",
+  "description": "Ola's maps and location API. Geocoding, routing, places search, and map tiles for Indian geography.",
+  "category": "india-maps",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://maps.olakrutrim.com/docs", "crawl_depth": 3}
+    ]
+  },
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["maps", "india", "location", "geocoding", "routing", "ola"]
+}

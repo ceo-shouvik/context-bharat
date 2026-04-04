@@ -1,0 +1,19 @@
+{
+  "library_id": "/langchain-ai/langchain",
+  "name": "LangChain",
+  "description": "Framework for building LLM applications. Chains, agents, RAG, memory, and tool integration.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://python.langchain.com/docs/", "crawl_depth": 3},
+      {"type": "github", "repo": "langchain-ai/langchain"}
+    ]
+  },
+  "pypi_package": "langchain",
+  "npm_package": "langchain",
+  "github_repo": "langchain-ai/langchain",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["ai", "llm", "agents", "rag", "python", "chains"]
+}

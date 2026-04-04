@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Pricing — contextBharat",
-  description: "Free to start. ₹399/month for unlimited access to 100+ Indian APIs.",
+  description: "Free to start. ₹399/month for unlimited access to all Indian APIs.",
 };
 
 const plans = [
@@ -30,7 +30,7 @@ const plans = [
     badge: "Most Popular",
     features: [
       "Unlimited queries",
-      "All 100+ libraries",
+      "All libraries",
       "Hindi + 4 regional languages",
       "Offline documentation packs",
       "Remote MCP (Streamable HTTP)",

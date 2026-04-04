@@ -1,0 +1,19 @@
+{
+  "library_id": "/ai4bharat/indic-nlp",
+  "name": "AI4Bharat Indic NLP",
+  "description": "Open-source Indian language NLP models. Translation, transliteration, TTS, and ASR for 22 Indian languages.",
+  "category": "indian-ai",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "github", "repo": "AI4Bharat/IndicTrans2"},
+      {"type": "github", "repo": "AI4Bharat/IndicNLPSuite"},
+      {"type": "web", "url": "https://ai4bharat.iitm.ac.in/", "crawl_depth": 2}
+    ]
+  },
+  "pypi_package": "ai4bharat-transliteration",
+  "github_repo": "AI4Bharat/IndicTrans2",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["ai", "india", "nlp", "translation", "indic", "open-source"]
+}

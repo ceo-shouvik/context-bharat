@@ -1,0 +1,18 @@
+{
+  "library_id": "/mappls/mappls-api",
+  "name": "Mappls (MapMyIndia)",
+  "description": "India's leading mapping platform. Geocoding, routing, search, and interactive maps with Indian address support.",
+  "category": "india-maps",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://about.mappls.com/api/", "crawl_depth": 3},
+      {"type": "github", "repo": "MapmyIndia/mapmyindia-rest-api"}
+    ]
+  },
+  "npm_package": "mappls-web-maps",
+  "github_repo": "MapmyIndia/mapmyindia-rest-api",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["maps", "india", "location", "geocoding", "routing", "mapmyindia"]
+}

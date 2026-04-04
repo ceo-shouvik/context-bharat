@@ -1,0 +1,15 @@
+{
+  "library_id": "/exotel/exotel-api",
+  "name": "Exotel",
+  "description": "Indian cloud telephony API. Voice calls, IVR, call routing, and call center solutions.",
+  "category": "india-devinfra",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://developer.exotel.com/api/", "crawl_depth": 3}
+    ]
+  },
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["telephony", "india", "voice", "ivr", "call-center", "exotel"]
+}

@@ -1,0 +1,19 @@
+{
+  "library_id": "/aws/aws-sdk-js-v3",
+  "name": "AWS SDK v3",
+  "description": "AWS JavaScript SDK v3. Modular clients for S3, Lambda, SES, SQS, DynamoDB, and other AWS services.",
+  "category": "saas-cloud",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/", "crawl_depth": 3},
+      {"type": "github", "repo": "aws/aws-sdk-js-v3"}
+    ]
+  },
+  "npm_package": "@aws-sdk/client-s3",
+  "pypi_package": "boto3",
+  "github_repo": "aws/aws-sdk-js-v3",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["cloud", "aws", "s3", "lambda", "serverless", "infrastructure"]
+}

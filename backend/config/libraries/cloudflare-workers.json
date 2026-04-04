@@ -1,0 +1,18 @@
+{
+  "library_id": "/cloudflare/cloudflare-docs",
+  "name": "Cloudflare Workers",
+  "description": "Edge computing platform. Workers, KV, R2, D1, Durable Objects, and Pages for serverless at the edge.",
+  "category": "saas-cloud",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://developers.cloudflare.com/workers/", "crawl_depth": 3},
+      {"type": "github", "repo": "cloudflare/cloudflare-docs"}
+    ]
+  },
+  "npm_package": "wrangler",
+  "github_repo": "cloudflare/cloudflare-docs",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["edge", "serverless", "cloudflare", "workers", "kv", "cdn"]
+}

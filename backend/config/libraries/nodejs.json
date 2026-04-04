@@ -1,0 +1,17 @@
+{
+  "library_id": "/nodejs/node",
+  "name": "Node.js",
+  "description": "JavaScript runtime built on V8. HTTP, file system, streams, workers, and native ES modules.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://nodejs.org/docs/latest/api/", "crawl_depth": 3},
+      {"type": "github", "repo": "nodejs/node"}
+    ]
+  },
+  "github_repo": "nodejs/node",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["javascript", "runtime", "backend", "server", "npm"]
+}

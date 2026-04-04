@@ -1,0 +1,17 @@
+{
+  "library_id": "/laravel/laravel",
+  "name": "Laravel",
+  "description": "PHP web framework with elegant syntax. Eloquent ORM, Blade templates, queues, and authentication.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://laravel.com/docs/", "crawl_depth": 3},
+      {"type": "github", "repo": "laravel/laravel"}
+    ]
+  },
+  "github_repo": "laravel/laravel",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["php", "web", "orm", "fullstack", "backend"]
+}

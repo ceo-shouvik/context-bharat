@@ -14,8 +14,8 @@ class Settings(BaseSettings):
     SUPABASE_SERVICE_KEY: str = Field(..., description="Supabase service role key")
 
     # AI APIs
-    OPENAI_API_KEY: str = Field(..., description="OpenAI API key for embeddings")
-    COHERE_API_KEY: str = Field(..., description="Cohere API key for reranking")
+    OPENAI_API_KEY: str = Field("", description="OpenAI API key (optional, not used for embeddings)")
+    COHERE_API_KEY: str = Field("", description="Cohere API key for reranking (optional)")
     SARVAM_API_KEY: str = Field("", description="Sarvam AI key for translation")
     ANTHROPIC_API_KEY: str = Field("", description="Anthropic key for enrichment")
 
@@ -46,8 +46,8 @@ class Settings(BaseSettings):
     DEFAULT_CHUNK_SIZE: int = Field(512, description="Default chunk size in tokens")
     DEFAULT_CHUNK_OVERLAP: int = Field(50, description="Default chunk overlap in tokens")
     EMBEDDING_BATCH_SIZE: int = Field(100, description="OpenAI embedding batch size")
-    EMBEDDING_MODEL: str = Field("text-embedding-3-small", description="OpenAI embedding model")
-    EMBEDDING_DIMENSIONS: int = Field(1536, description="Embedding vector dimensions")
+    EMBEDDING_MODEL: str = Field("BAAI/bge-small-en-v1.5", description="Local embedding model")
+    EMBEDDING_DIMENSIONS: int = Field(384, description="Embedding vector dimensions")
 
     @property
     def is_production(self) -> bool:

@@ -1,0 +1,18 @@
+{
+  "library_id": "/shopify/shopify-api-js",
+  "name": "Shopify SDK",
+  "description": "Shopify API for e-commerce. Products, orders, customers, webhooks, and storefront API.",
+  "category": "saas-cloud",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://shopify.dev/docs/api", "crawl_depth": 3},
+      {"type": "github", "repo": "Shopify/shopify-api-js"}
+    ]
+  },
+  "npm_package": "@shopify/shopify-api",
+  "github_repo": "Shopify/shopify-api-js",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["ecommerce", "shopify", "d2c", "storefront", "api"]
+}

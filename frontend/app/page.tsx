@@ -3,13 +3,15 @@
  * UX: Demo-first. Show value before asking for signup.
  */
 import Link from "next/link";
+import { Suspense } from "react";
 import { LivePlayground } from "@/components/live-playground";
 import { LogoSlider } from "@/components/logo-slider";
+import { LibraryCountBadge } from "@/components/library-count-badge";
 
 export const metadata = {
   title: "contextBharat — Up-to-date docs for Indian APIs in your AI editor",
   description:
-    "Get up-to-date Razorpay, Zerodha, ONDC, UPI, and 100+ Indian API docs in Claude, Cursor, and VS Code. Free MCP server.",
+    "Get up-to-date Razorpay, Zerodha, ONDC, UPI, and Indian API docs in Claude, Cursor, and VS Code. Free MCP server.",
 };
 
 export default function LandingPage() {
@@ -69,7 +71,7 @@ export default function LandingPage() {
           </Link>
         </div>
         <p className="text-gray-600 text-sm">
-          No signup required to try. 100+ libraries indexed. Hindi docs available.
+          No signup required to try. <LibraryCountBadge suffix=" libraries indexed." fallback="Libraries indexed." /> Hindi docs available.
         </p>
       </section>
 
@@ -101,7 +103,9 @@ export default function LandingPage() {
       </section>
 
       {/* Logo slider — social proof */}
-      <LogoSlider />
+      <Suspense fallback={<div className="py-8" />}>
+        <LogoSlider />
+      </Suspense>
 
       {/* Live Playground — the hero feature */}
       <section id="try" className="max-w-4xl mx-auto px-6 py-16">
@@ -111,7 +115,9 @@ export default function LandingPage() {
             This is exactly what your AI assistant receives. Pick a library, ask a question.
           </p>
         </div>
-        <LivePlayground />
+        <Suspense fallback={<div className="bg-[#0c1120] border border-[#1e2d44] rounded-2xl p-8 min-h-[300px] flex items-center justify-center text-gray-500">Loading playground...</div>}>
+          <LivePlayground />
+        </Suspense>
       </section>
 
       {/* What it does — 3 clear benefits */}
@@ -121,7 +127,7 @@ export default function LandingPage() {
             {
               icon: "01",
               title: "Your AI knows Indian APIs",
-              body: "Stop pasting docs into prompts. contextBharat gives Claude and Cursor real-time access to Razorpay, ONDC, UPI, Zerodha, GSTN, and 100+ more libraries.",
+              body: "Stop pasting docs into prompts. contextBharat gives Claude and Cursor real-time access to Razorpay, ONDC, UPI, Zerodha, GSTN, and every major Indian API.",
             },
             {
               icon: "02",
@@ -146,7 +152,7 @@ export default function LandingPage() {
       {/* Library categories */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl font-bold">100+ Libraries Indexed</h2>
+          <h2 className="text-2xl font-bold"><LibraryCountBadge suffix=" Libraries Indexed" fallback="Libraries Indexed" /></h2>
           <Link href="/libraries" className="text-[#f59e1c] text-sm hover:underline">
             Browse all →
           </Link>
@@ -200,8 +206,11 @@ export default function LandingPage() {
       {/* Social proof */}
       <section className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
+            <div className="text-2xl font-bold text-[#f59e1c] mb-1"><LibraryCountBadge fallback="Many" /></div>
+            <div className="text-sm text-gray-500">Libraries indexed</div>
+          </div>
           {[
-            { val: "100+", label: "Libraries indexed" },
             { val: "<2s", label: "Response latency" },
             { val: "6", label: "Languages supported" },
             { val: "Free", label: "No credit card" },

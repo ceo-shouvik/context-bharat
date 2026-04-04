@@ -1,0 +1,15 @@
+{
+  "library_id": "/slanglabs/slang-api",
+  "name": "Slang Labs",
+  "description": "Voice assistant SDK for Indian apps. Vernacular voice search and navigation in Indian languages.",
+  "category": "indian-ai",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://docs.slanglabs.in/", "crawl_depth": 3}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["ai", "india", "voice", "vernacular", "sdk"]
+}

@@ -1,0 +1,18 @@
+{
+  "library_id": "/run-llama/llama_index",
+  "name": "LlamaIndex",
+  "description": "Data framework for LLM applications. Indexing, retrieval, RAG pipelines, and structured data extraction.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://docs.llamaindex.ai/en/stable/", "crawl_depth": 3},
+      {"type": "github", "repo": "run-llama/llama_index"}
+    ]
+  },
+  "pypi_package": "llama-index",
+  "github_repo": "run-llama/llama_index",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["ai", "llm", "rag", "indexing", "retrieval", "python"]
+}

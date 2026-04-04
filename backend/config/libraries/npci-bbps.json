@@ -1,0 +1,16 @@
+{
+  "library_id": "/npci/bbps-api",
+  "name": "NPCI BBPS",
+  "description": "Bharat Bill Payment System for utility bills, loan EMIs, and subscription payments across India.",
+  "category": "india-dpi",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://www.npci.org.in/what-we-do/bbps/product-overview", "crawl_depth": 2},
+      {"type": "pdf", "url": "https://www.npci.org.in/what-we-do/bbps/product-overview"}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["bbps", "india", "dpi", "npci", "bills", "payments"]
+}

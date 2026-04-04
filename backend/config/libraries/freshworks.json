@@ -1,0 +1,16 @@
+{
+  "library_id": "/freshworks/freshworks-api",
+  "name": "Freshworks APIs",
+  "description": "Freshworks suite APIs including Freshdesk, Freshsales, Freshservice, and Freshchat.",
+  "category": "enterprise-india",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://developers.freshworks.com/", "crawl_depth": 3},
+      {"type": "web", "url": "https://developers.freshdesk.com/api/", "crawl_depth": 3}
+    ]
+  },
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["crm", "india", "enterprise", "freshworks", "helpdesk", "saas"]
+}

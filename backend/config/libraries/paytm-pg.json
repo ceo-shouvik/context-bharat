@@ -1,0 +1,18 @@
+{
+  "library_id": "/paytm/payment-gateway",
+  "name": "Paytm Payment Gateway",
+  "description": "Paytm's payment gateway for accepting UPI, cards, net banking, and wallet payments.",
+  "category": "indian-fintech",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://developer.paytm.com/docs/", "crawl_depth": 3},
+      {"type": "web", "url": "https://business.paytm.com/docs", "crawl_depth": 2}
+    ]
+  },
+  "npm_package": "paytmchecksum",
+  "github_repo": "paytm/Paytm_Node_Checksum",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["payments", "india", "fintech", "upi", "paytm", "wallet"]
+}

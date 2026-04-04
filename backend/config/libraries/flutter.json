@@ -1,0 +1,17 @@
+{
+  "library_id": "/flutter/flutter",
+  "name": "Flutter",
+  "description": "Google's UI toolkit for cross-platform apps. Widgets, state management, and native compilation for mobile, web, and desktop.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://docs.flutter.dev/", "crawl_depth": 3},
+      {"type": "github", "repo": "flutter/flutter"}
+    ]
+  },
+  "github_repo": "flutter/flutter",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["mobile", "cross-platform", "dart", "ui", "google"]
+}

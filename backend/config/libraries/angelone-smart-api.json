@@ -1,0 +1,18 @@
+{
+  "library_id": "/angelone/smart-api",
+  "name": "AngelOne SmartAPI",
+  "description": "AngelOne's trading API for equities, derivatives, and mutual funds. REST API with Python, Java, and Node.js SDKs.",
+  "category": "indian-trading",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://smartapi.angelone.in/docs", "crawl_depth": 3},
+      {"type": "github", "repo": "angel-one/smartapi-python"}
+    ]
+  },
+  "pypi_package": "smartapi-python",
+  "github_repo": "angel-one/smartapi-python",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["trading", "india", "stocks", "angelone", "algo-trading"]
+}

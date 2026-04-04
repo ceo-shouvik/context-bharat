@@ -186,7 +186,7 @@ async def run_ingestion(
                 content=chunk.content,
                 embedding=chunk.embedding,
                 url=chunk.url,
-                section=chunk.section,
+                section=(chunk.section or "")[:500],
                 language=chunk.language,
                 content_hash=chunk.content_hash,
                 chunk_metadata=chunk.metadata,

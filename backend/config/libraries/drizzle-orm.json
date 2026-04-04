@@ -1,0 +1,18 @@
+{
+  "library_id": "/drizzle-team/drizzle-orm",
+  "name": "Drizzle ORM",
+  "description": "Lightweight TypeScript ORM. SQL-like query builder, schema declarations, and zero-overhead migrations.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://orm.drizzle.team/docs/overview", "crawl_depth": 3},
+      {"type": "github", "repo": "drizzle-team/drizzle-orm"}
+    ]
+  },
+  "npm_package": "drizzle-orm",
+  "github_repo": "drizzle-team/drizzle-orm",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["orm", "typescript", "database", "sql", "migrations"]
+}

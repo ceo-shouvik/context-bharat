@@ -1,0 +1,18 @@
+{
+  "library_id": "/encode/django-rest-framework",
+  "name": "Django REST Framework",
+  "description": "Toolkit for building Web APIs with Django. Serializers, viewsets, authentication, and browsable API.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://www.django-rest-framework.org/", "crawl_depth": 3},
+      {"type": "github", "repo": "encode/django-rest-framework"}
+    ]
+  },
+  "pypi_package": "djangorestframework",
+  "github_repo": "encode/django-rest-framework",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["python", "django", "api", "rest", "serialization"]
+}

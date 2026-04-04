@@ -1,0 +1,17 @@
+{
+  "library_id": "/clevertap/clevertap-api",
+  "name": "CleverTap",
+  "description": "Customer engagement and analytics platform API. Events, user profiles, campaigns, and push notifications.",
+  "category": "india-devinfra",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://developer.clevertap.com/docs", "crawl_depth": 3}
+    ]
+  },
+  "npm_package": "clevertap-web-sdk",
+  "github_repo": "CleverTap/clevertap-web-sdk",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["engagement", "india", "analytics", "push-notifications", "clevertap"]
+}

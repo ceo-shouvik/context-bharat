@@ -1,0 +1,15 @@
+{
+  "library_id": "/pinelabs/plutus-pos",
+  "name": "Pinelabs Plutus POS",
+  "description": "POS terminal SDK for in-store payments. Card swipe, UPI QR, and EMI at point of sale.",
+  "category": "indian-fintech",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://developer.pinelabs.com/docs", "crawl_depth": 3}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["payments", "india", "fintech", "pos", "terminal", "in-store"]
+}

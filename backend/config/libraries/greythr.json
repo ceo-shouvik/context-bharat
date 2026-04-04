@@ -1,0 +1,15 @@
+{
+  "library_id": "/greythr/greythr-api",
+  "name": "greytHR",
+  "description": "Indian payroll and HR management API. Employee records, payroll processing, leave, and attendance.",
+  "category": "enterprise-india",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://api.greythr.com/docs", "crawl_depth": 3}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["hr", "india", "enterprise", "payroll", "greythr"]
+}

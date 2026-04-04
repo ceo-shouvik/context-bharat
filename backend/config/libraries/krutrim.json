@@ -1,0 +1,15 @@
+{
+  "library_id": "/krutrim/krutrim-api",
+  "name": "Krutrim API",
+  "description": "Ola Krutrim's LLM API. OpenAI-compatible endpoints for text generation and embeddings with Indian language support.",
+  "category": "indian-ai",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://cloud.olakrutrim.com/console/docs", "crawl_depth": 3}
+    ]
+  },
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["ai", "india", "llm", "krutrim", "ola", "openai-compatible"]
+}

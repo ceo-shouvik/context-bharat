@@ -20,6 +20,11 @@
   },
   "keywords": ["mcp", "india", "razorpay", "zerodha", "ondc", "documentation", "ai"],
   "license": "Apache-2.0",
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "zod": "^3.23.8"

@@ -43,7 +43,7 @@ class DocChunk(Base):
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     library_id: Mapped[str] = mapped_column(String(255), ForeignKey("libraries.library_id"), nullable=False, index=True)
     content: Mapped[str] = mapped_column(Text, nullable=False)
-    embedding: Mapped[list[float] | None] = mapped_column(Vector(1536))  # text-embedding-3-small
+    embedding: Mapped[list[float] | None] = mapped_column(Vector(384))  # BAAI/bge-small-en-v1.5
     url: Mapped[str | None] = mapped_column(Text)
     section: Mapped[str | None] = mapped_column(String(500))
     language: Mapped[str] = mapped_column(String(10), default="en", index=True)

@@ -1,0 +1,19 @@
+{
+  "library_id": "/twilio/twilio-docs",
+  "name": "Twilio",
+  "description": "Cloud communications platform. SMS, voice, video, WhatsApp, and email APIs.",
+  "category": "saas-cloud",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://www.twilio.com/docs", "crawl_depth": 3},
+      {"type": "github", "repo": "twilio/twilio-node"}
+    ]
+  },
+  "npm_package": "twilio",
+  "pypi_package": "twilio",
+  "github_repo": "twilio/twilio-node",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["communications", "sms", "voice", "whatsapp", "twilio"]
+}

@@ -1,0 +1,19 @@
+{
+  "library_id": "/sendgrid/sendgrid-docs",
+  "name": "SendGrid",
+  "description": "Email delivery API by Twilio. Transactional email, marketing campaigns, and email validation.",
+  "category": "saas-cloud",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://docs.sendgrid.com/", "crawl_depth": 3},
+      {"type": "github", "repo": "sendgrid/sendgrid-nodejs"}
+    ]
+  },
+  "npm_package": "@sendgrid/mail",
+  "pypi_package": "sendgrid",
+  "github_repo": "sendgrid/sendgrid-nodejs",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["email", "transactional", "marketing", "sendgrid"]
+}

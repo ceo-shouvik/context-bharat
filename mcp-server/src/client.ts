@@ -51,21 +51,36 @@ class BackendClient {
   }
 
   async resolveLibrary(params: ResolveLibraryParams): Promise<ResolveLibraryResult> {
-    const response = await this.post<ResolveLibraryResult>("/v1/libraries/resolve", {
+    const raw = await this.post<Record<string, unknown>>("/v1/libraries/resolve", {
       query: params.query,
       library_name: params.libraryName,
     });
-    return response;
+    return {
+      libraryId: (raw.library_id ?? raw.libraryId) as string,
+      name: raw.name as string,
+      description: raw.description as string | undefined,
+      versions: (raw.versions ?? []) as string[],
+      tags: (raw.tags ?? []) as string[],
+      confidence: (raw.confidence ?? 0) as number,
+    };
   }
 
   async queryDocs(params: QueryDocsParams): Promise<QueryDocsResult> {
-    const response = await this.post<QueryDocsResult>("/v1/docs/query", {
+    const raw = await this.post<Record<string, unknown>>("/v1/docs/query", {
       library_id: params.libraryId,
       query: params.query,
       token_budget: params.tokenBudget ?? config.defaultTokenBudget,
       language: params.language ?? "en",
     });
-    return response;
+    return {
+      docs: (raw.docs ?? "") as string,
+      libraryId: (raw.library_id ?? raw.libraryId ?? "") as string,
+      libraryName: (raw.library_name ?? raw.libraryName ?? "") as string,
+      sources: (raw.sources ?? []) as string[],
+      freshnessScore: (raw.freshness_score ?? raw.freshnessScore) as number | undefined,
+      language: (raw.language ?? "en") as string,
+      tokenCount: (raw.token_count ?? raw.tokenCount ?? 0) as number,
+    };
   }
 
   async listLibraries(category?: string): Promise<{ libraries: ResolveLibraryResult[]; total: number }> {

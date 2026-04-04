@@ -1,0 +1,18 @@
+{
+  "library_id": "/instamojo/instamojo-api",
+  "name": "Instamojo",
+  "description": "Payment gateway and e-commerce platform for Indian SMBs. Payment links, store, and payouts.",
+  "category": "indian-fintech",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://docs.instamojo.com/", "crawl_depth": 3},
+      {"type": "github", "repo": "Instamojo/instamojo-py"}
+    ]
+  },
+  "pypi_package": "instamojo-wrapper",
+  "github_repo": "Instamojo/instamojo-py",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["payments", "india", "fintech", "ecommerce", "smb"]
+}

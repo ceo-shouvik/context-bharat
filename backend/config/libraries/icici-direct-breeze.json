@@ -1,0 +1,18 @@
+{
+  "library_id": "/icicidirect/breeze-connect",
+  "name": "ICICI Direct Breeze Connect",
+  "description": "ICICI Direct's Breeze API for trading equities, derivatives, and mutual funds.",
+  "category": "indian-trading",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://api.icicidirect.com/apiuser/home", "crawl_depth": 2},
+      {"type": "github", "repo": "Idirect-Securities/breeze-connect-python"}
+    ]
+  },
+  "pypi_package": "breeze-connect",
+  "github_repo": "Idirect-Securities/breeze-connect-python",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["trading", "india", "stocks", "icici", "breeze"]
+}

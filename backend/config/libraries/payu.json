@@ -1,0 +1,16 @@
+{
+  "library_id": "/payu/payu-docs",
+  "name": "PayU",
+  "description": "Indian payment gateway supporting cards, UPI, net banking, wallets, and EMI options.",
+  "category": "indian-fintech",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://docs.payu.in/", "crawl_depth": 3}
+    ]
+  },
+  "github_repo": "payu-intrepos/payu-web-sdk",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["payments", "india", "fintech", "upi", "gateway"]
+}

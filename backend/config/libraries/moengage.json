@@ -1,0 +1,16 @@
+{
+  "library_id": "/moengage/moengage-sdk",
+  "name": "MoEngage SDK",
+  "description": "Customer engagement platform SDK. Push notifications, in-app messaging, analytics, and segmentation.",
+  "category": "india-devinfra",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://developers.moengage.com/hc/en-us", "crawl_depth": 3}
+    ]
+  },
+  "npm_package": "@moengage/web-sdk",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["engagement", "india", "push-notifications", "analytics", "mobile"]
+}

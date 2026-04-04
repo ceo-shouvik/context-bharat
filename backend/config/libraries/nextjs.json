@@ -1,0 +1,18 @@
+{
+  "library_id": "/vercel/next.js",
+  "name": "Next.js",
+  "description": "React framework for production. App Router, Server Components, API routes, and static/dynamic rendering.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://nextjs.org/docs", "crawl_depth": 3},
+      {"type": "github", "repo": "vercel/next.js"}
+    ]
+  },
+  "npm_package": "next",
+  "github_repo": "vercel/next.js",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["frontend", "react", "ssr", "fullstack", "vercel"]
+}

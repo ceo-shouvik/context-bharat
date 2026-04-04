@@ -1,0 +1,15 @@
+{
+  "library_id": "/isro/bhuvan-api",
+  "name": "ISRO Bhuvan",
+  "description": "ISRO's geoportal for Indian satellite imagery, WMS/WMTS tile services, and geospatial data.",
+  "category": "india-maps",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://bhuvan.nrsc.gov.in/", "crawl_depth": 2}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["maps", "india", "satellite", "geospatial", "isro", "wms"]
+}

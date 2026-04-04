@@ -1,0 +1,15 @@
+{
+  "library_id": "/shiprocket/shiprocket-api",
+  "name": "Shiprocket API",
+  "description": "Indian logistics and shipping aggregator API. Order creation, tracking, rate calculation, and returns.",
+  "category": "india-devinfra",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://apidocs.shiprocket.in/", "crawl_depth": 3}
+    ]
+  },
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["logistics", "india", "shipping", "ecommerce", "tracking", "shiprocket"]
+}

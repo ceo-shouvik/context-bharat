@@ -1,0 +1,18 @@
+{
+  "library_id": "/5paisa/5paisa-api",
+  "name": "5paisa API",
+  "description": "5paisa trading API for equities, derivatives, and mutual funds.",
+  "category": "indian-trading",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://www.5paisa.com/developerapi", "crawl_depth": 2},
+      {"type": "github", "repo": "5paisa/py5paisa"}
+    ]
+  },
+  "pypi_package": "py5paisa",
+  "github_repo": "5paisa/py5paisa",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["trading", "india", "stocks", "5paisa"]
+}

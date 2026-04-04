@@ -1,0 +1,16 @@
+{
+  "library_id": "/npci/fastag-api",
+  "name": "NPCI FASTag",
+  "description": "NPCI FASTag API for electronic toll collection on Indian highways.",
+  "category": "india-dpi",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://www.npci.org.in/what-we-do/netc-fastag/product-overview", "crawl_depth": 2},
+      {"type": "pdf", "url": "https://www.npci.org.in/what-we-do/netc-fastag/product-overview"}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["fastag", "india", "dpi", "npci", "toll", "transport"]
+}

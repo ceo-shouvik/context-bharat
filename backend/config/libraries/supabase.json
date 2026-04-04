@@ -1,0 +1,19 @@
+{
+  "library_id": "/supabase/supabase",
+  "name": "Supabase",
+  "description": "Open-source Firebase alternative. PostgreSQL, auth, storage, realtime subscriptions, and edge functions.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://supabase.com/docs", "crawl_depth": 3},
+      {"type": "github", "repo": "supabase/supabase"}
+    ]
+  },
+  "npm_package": "@supabase/supabase-js",
+  "pypi_package": "supabase",
+  "github_repo": "supabase/supabase",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["database", "auth", "storage", "realtime", "postgresql", "baas"]
+}

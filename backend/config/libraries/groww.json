@@ -1,0 +1,15 @@
+{
+  "library_id": "/groww/developer-api",
+  "name": "Groww Developer API",
+  "description": "Groww's developer API for stocks and mutual fund trading. Limited public documentation.",
+  "category": "indian-trading",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://groww.in/developer", "crawl_depth": 2}
+    ]
+  },
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["trading", "india", "stocks", "mutual-funds", "groww"]
+}

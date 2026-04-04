@@ -1,0 +1,19 @@
+{
+  "library_id": "/stripe/stripe-api",
+  "name": "Stripe",
+  "description": "Global payment processing API. Charges, subscriptions, invoicing, Connect, and webhooks.",
+  "category": "saas-cloud",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://docs.stripe.com/", "crawl_depth": 3},
+      {"type": "github", "repo": "stripe/stripe-node"}
+    ]
+  },
+  "npm_package": "stripe",
+  "pypi_package": "stripe",
+  "github_repo": "stripe/stripe-node",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["payments", "global", "subscriptions", "invoicing", "stripe"]
+}

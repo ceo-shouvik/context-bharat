@@ -93,7 +93,7 @@ function LogoRow({ logos, direction }: { logos: LogoItem[]; direction: "left" | 
   const doubled = [...logos, ...logos];
 
   return (
-    <div className="overflow-hidden relative">
+    <div className="overflow-hidden relative h-10">
       {/* Fade edges */}
       <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#05080f] to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#05080f] to-transparent z-10 pointer-events-none" />
@@ -126,7 +126,7 @@ export function LogoSlider() {
     <section className="py-8">
       <div className="text-center mb-5">
         <p className="text-gray-500 text-sm">
-          Documentation for <span className="text-white font-medium">100+ APIs</span> — always
+          Documentation for <span className="text-white font-medium">Indian &amp; global APIs</span> — always
           fresh, always accurate
         </p>
       </div>

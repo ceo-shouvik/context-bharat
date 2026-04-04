@@ -1,0 +1,18 @@
+{
+  "library_id": "/expressjs/express",
+  "name": "Express.js",
+  "description": "Minimal Node.js web framework. Routing, middleware, and HTTP utilities for building APIs and web apps.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://expressjs.com/", "crawl_depth": 3},
+      {"type": "github", "repo": "expressjs/express"}
+    ]
+  },
+  "npm_package": "express",
+  "github_repo": "expressjs/express",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["javascript", "nodejs", "api", "web", "middleware"]
+}

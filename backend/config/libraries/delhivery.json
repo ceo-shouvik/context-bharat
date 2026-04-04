@@ -1,0 +1,15 @@
+{
+  "library_id": "/delhivery/delhivery-api",
+  "name": "Delhivery API",
+  "description": "Indian logistics provider API. Shipment creation, tracking, warehouse management, and reverse logistics.",
+  "category": "india-devinfra",
+  "source": {
+    "type": "web",
+    "sources": [
+      {"type": "web", "url": "https://dlv-api.delhivery.com/documentation/", "crawl_depth": 3}
+    ]
+  },
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["logistics", "india", "shipping", "ecommerce", "delhivery"]
+}

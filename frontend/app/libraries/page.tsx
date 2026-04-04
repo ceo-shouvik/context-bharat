@@ -1,11 +1,14 @@
 /**
- * Library browser — search and filter all indexed libraries.
+ * Public library browser — search and filter all indexed libraries.
+ * This is the public version (no auth required).
  */
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { getLibraries, type Library } from "@/lib/api";
 import { LibraryCard } from "@/components/library-card";
+import { useLibraryCount, formatLibraryCount } from "@/lib/use-library-count";
 
 const CATEGORIES = [
   { value: "", label: "All" },
@@ -18,12 +21,13 @@ const CATEGORIES = [
   { value: "saas-cloud", label: "SaaS" },
 ];
 
-export default function LibrariesPage() {
+export default function PublicLibrariesPage() {
   const [libraries, setLibraries] = useState<Library[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [category, setCategory] = useState("");
   const [search, setSearch] = useState("");
+  const libraryCount = useLibraryCount();
 
   useEffect(() => {
     fetchLibraries();
@@ -61,11 +65,36 @@ export default function LibrariesPage() {
     : libraries;
 
   return (
-    <div className="min-h-screen bg-[#05080f]"><title>Libraries — contextBharat</title>
+    <div className="min-h-screen bg-[#05080f]">
+      <title>Libraries — contextBharat</title>
+
+      {/* Public Nav */}
+      <nav className="border-b border-white/10 px-6 py-4">
+        <div className="max-w-6xl mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-8">
+            <Link href="/" className="font-bold text-lg">
+              <span className="text-[#f59e1c]">context</span>
+              <span className="text-white">Bharat</span>
+            </Link>
+            <div className="hidden md:flex gap-4 text-sm">
+              <Link href="/libraries" className="text-white font-medium">Libraries</Link>
+              <Link href="/docs" className="text-gray-400 hover:text-white transition-colors">Docs</Link>
+              <Link href="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link>
+            </div>
+          </div>
+          <Link
+            href="/dashboard"
+            className="bg-[#f59e1c] text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#fbbf45] transition-colors"
+          >
+            Get Free API Key
+          </Link>
+        </div>
+      </nav>
+
       <div className="max-w-6xl mx-auto px-6 py-12">
         <h1 className="text-white text-2xl font-semibold mb-2">Library Catalog</h1>
         <p className="text-gray-400 mb-8">
-          100+ Indian APIs, government specs, and global frameworks — all queryable via MCP
+          {formatLibraryCount(libraryCount, "Indian")} APIs, government specs, and global frameworks — all queryable via MCP
         </p>
 
         {/* Search */}
@@ -120,8 +149,9 @@ export default function LibrariesPage() {
             {error}
           </div>
         ) : filtered.length === 0 ? (
-          <div className="text-gray-500 text-sm text-center py-16">
-            No libraries found. Try a different search or category.
+          <div className="text-gray-500 text-center py-16">
+            <p className="text-lg mb-2">No libraries indexed yet</p>
+            <p className="text-sm">Libraries are being indexed. Check back soon or browse our <Link href="/docs" className="text-[#f59e1c] hover:underline">documentation</Link>.</p>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -132,7 +162,7 @@ export default function LibrariesPage() {
         )}
 
         <div className="text-gray-600 text-xs text-center mt-8">
-          {filtered.length} libraries shown
+          {filtered.length} {filtered.length === 1 ? "library" : "libraries"} shown
           {category && ` in ${CATEGORIES.find((c) => c.value === category)?.label}`}
         </div>
       </div>

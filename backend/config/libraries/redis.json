@@ -1,0 +1,19 @@
+{
+  "library_id": "/redis/redis-doc",
+  "name": "Redis",
+  "description": "In-memory data store. Caching, pub/sub, streams, sorted sets, and Lua scripting.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://redis.io/docs/", "crawl_depth": 3},
+      {"type": "github", "repo": "redis/redis-doc"}
+    ]
+  },
+  "npm_package": "redis",
+  "pypi_package": "redis",
+  "github_repo": "redis/redis-doc",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["database", "cache", "in-memory", "pub-sub", "redis"]
+}

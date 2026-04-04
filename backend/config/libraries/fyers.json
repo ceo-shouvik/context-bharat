@@ -1,0 +1,18 @@
+{
+  "library_id": "/fyers/fyers-api",
+  "name": "Fyers API",
+  "description": "Fyers trading API with WebSocket and REST endpoints for equities and derivatives.",
+  "category": "indian-trading",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://myapi.fyers.in/docsv3", "crawl_depth": 3},
+      {"type": "github", "repo": "fyers-api/fyers-api-v3"}
+    ]
+  },
+  "pypi_package": "fyers-apiv3",
+  "github_repo": "fyers-api/fyers-api-v3",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["trading", "india", "stocks", "fyers", "websocket", "algo-trading"]
+}

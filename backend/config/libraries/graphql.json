@@ -1,0 +1,18 @@
+{
+  "library_id": "/graphql/graphql-spec",
+  "name": "GraphQL",
+  "description": "Query language for APIs. Schema definition, resolvers, subscriptions, and type system specification.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://graphql.org/learn/", "crawl_depth": 3},
+      {"type": "github", "repo": "graphql/graphql-spec"}
+    ]
+  },
+  "npm_package": "graphql",
+  "github_repo": "graphql/graphql-spec",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["api", "query-language", "schema", "graphql", "specification"]
+}

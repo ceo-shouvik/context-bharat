@@ -1,0 +1,18 @@
+{
+  "library_id": "/trpc/trpc",
+  "name": "tRPC",
+  "description": "End-to-end typesafe APIs for TypeScript. Procedures, middleware, and React Query integration without code generation.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://trpc.io/docs", "crawl_depth": 3},
+      {"type": "github", "repo": "trpc/trpc"}
+    ]
+  },
+  "npm_package": "@trpc/server",
+  "github_repo": "trpc/trpc",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["typescript", "api", "typesafe", "react", "fullstack"]
+}
