@@ -3,6 +3,7 @@
  * Zero infra cost. Drives traffic. Solves real pain.
  */
 import Link from "next/link";
+import { Navbar } from "@/components/navbar";
 
 export const metadata = {
   title: "Free MCP Setup Tools — contextBharat",
@@ -97,26 +98,7 @@ const TOOLS = [
 export default function ToolsHubPage() {
   return (
     <main className="min-h-screen bg-[#05080f] text-white">
-      {/* Nav */}
-      <nav className="border-b border-white/10 px-6 py-4">
-        <div className="flex items-center justify-between max-w-6xl mx-auto">
-          <Link href="/" className="font-bold text-[#f59e1c] text-xl">
-            context<span className="text-white">Bharat</span>
-          </Link>
-          <div className="hidden md:flex gap-6 text-sm text-gray-400">
-            <Link href="/docs" className="hover:text-white transition-colors">Install</Link>
-            <Link href="/setup" className="text-white">Tools</Link>
-            <Link href="/libraries" className="hover:text-white transition-colors">Libraries</Link>
-            <Link href="/pricing" className="hover:text-white transition-colors">Plans</Link>
-          </div>
-          <Link
-            href="/dashboard"
-            className="bg-[#f59e1c] text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#fbbf45] transition-colors"
-          >
-            Get API Key
-          </Link>
-        </div>
-      </nav>
+      <Navbar />
 
       <div className="max-w-6xl mx-auto px-6 py-16">
         {/* Header */}
@@ -233,9 +215,9 @@ export default function ToolsHubPage() {
             context<span className="text-white">Bharat</span>
           </div>
           <div className="flex gap-6 text-sm text-gray-500">
-            <Link href="/docs" className="hover:text-white transition-colors">Install</Link>
             <Link href="/libraries" className="hover:text-white transition-colors">Libraries</Link>
-            <Link href="/pricing" className="hover:text-white transition-colors">Plans</Link>
+            <Link href="/docs" className="hover:text-white transition-colors">Docs</Link>
+            <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
             <Link href="https://github.com/contextbharat/context-bharat" className="hover:text-white transition-colors">GitHub</Link>
           </div>
         </div>

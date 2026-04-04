@@ -1,7 +1,10 @@
 /**
  * Docs / Setup page — how to connect Context Bharat MCP to your AI tools.
+ * Uses CodeBlock component for all code snippets with copy buttons.
  */
 import Link from "next/link";
+import { Navbar } from "@/components/navbar";
+import { DocsCodeBlock, SetupCard, ApiExampleCard } from "./docs-code-blocks";
 
 export const metadata = {
   title: "Setup Guide — contextBharat",
@@ -32,7 +35,7 @@ const SETUP_OPTIONS = [
   },
   {
     tool: "Cursor",
-    icon: "⌘",
+    icon: "\u2318",
     iconBg: "bg-blue-500/15 text-blue-400",
     config: `{
   "mcpServers": {
@@ -44,7 +47,7 @@ const SETUP_OPTIONS = [
 }`,
     configPath: ".cursor/mcp.json",
     steps: [
-      "Open Cursor Settings → MCP",
+      "Open Cursor Settings \u2192 MCP",
       "Click 'Add new MCP server'",
       "Paste the configuration below",
       'Type "use contextbharat" in Cursor chat',
@@ -84,13 +87,24 @@ const SETUP_OPTIONS = [
 }`,
     configPath: "~/.codeium/windsurf/mcp_config.json",
     steps: [
-      "Open Windsurf Settings → MCP",
+      "Open Windsurf Settings \u2192 MCP",
       "Add a new MCP server",
       "Paste the configuration below",
       'Type "use contextbharat" in Cascade',
     ],
   },
 ];
+
+const REMOTE_CONFIG = `{
+  "mcpServers": {
+    "contextbharat": {
+      "url": "https://mcp.contextbharat.com/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_API_KEY"
+      }
+    }
+  }
+}`;
 
 const API_EXAMPLES = [
   {
@@ -128,29 +142,7 @@ const API_EXAMPLES = [
 export default function DocsPage() {
   return (
     <main className="min-h-screen bg-[#05080f] text-white">
-      {/* Nav */}
-      <nav className="border-b border-white/10 px-6 py-4 flex items-center justify-between max-w-6xl mx-auto">
-        <Link href="/" className="font-bold text-[#f59e1c] text-xl">
-          context<span className="text-white">Bharat</span>
-        </Link>
-        <div className="flex gap-6 text-sm text-gray-400">
-          <Link href="/libraries" className="hover:text-white transition-colors">
-            Libraries
-          </Link>
-          <Link href="/docs" className="text-white">
-            Docs
-          </Link>
-          <Link href="/pricing" className="hover:text-white transition-colors">
-            Pricing
-          </Link>
-        </div>
-        <Link
-          href="/dashboard"
-          className="bg-[#f59e1c] text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#fbbf45] transition-colors"
-        >
-          Get Free API Key
-        </Link>
-      </nav>
+      <Navbar />
 
       <div className="max-w-4xl mx-auto px-6 py-16">
         {/* Header */}
@@ -167,9 +159,7 @@ export default function DocsPage() {
             <p className="text-gray-400 text-sm mb-3">
               Works with any MCP-compatible tool. Just run:
             </p>
-            <pre className="bg-black/40 rounded-lg p-4 text-green-300 font-mono text-sm">
-              npx @contextbharat/mcp
-            </pre>
+            <DocsCodeBlock code="npx @contextbharat/mcp" language="bash" />
             <p className="text-gray-500 text-xs mt-3">
               Or with an API key for higher limits:{" "}
               <code className="text-gray-400">npx @contextbharat/mcp --api-key YOUR_KEY</code>
@@ -182,32 +172,7 @@ export default function DocsPage() {
           <h2 className="text-2xl font-bold mb-6">Setup by Tool</h2>
           <div className="grid gap-6">
             {SETUP_OPTIONS.map((opt) => (
-              <div
-                key={opt.tool}
-                className="bg-[#0c1120] border border-[#1e2d44] rounded-xl overflow-hidden"
-              >
-                <div className="px-6 py-4 border-b border-[#1e2d44] flex items-center gap-3">
-                  <div
-                    className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold ${opt.iconBg}`}
-                  >
-                    {opt.icon}
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">{opt.tool}</div>
-                    <div className="text-gray-500 text-xs font-mono">{opt.configPath}</div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <ol className="list-decimal list-inside text-sm text-gray-400 space-y-2 mb-4">
-                    {opt.steps.map((step) => (
-                      <li key={step}>{step}</li>
-                    ))}
-                  </ol>
-                  <pre className="bg-black/40 rounded-lg p-4 text-green-300 font-mono text-xs overflow-x-auto">
-                    {opt.config}
-                  </pre>
-                </div>
-              </div>
+              <SetupCard key={opt.tool} {...opt} />
             ))}
           </div>
         </section>
@@ -220,18 +185,7 @@ export default function DocsPage() {
               Pro users can use the remote server — no local npx needed. Lower latency, always
               up-to-date.
             </p>
-            <pre className="bg-black/40 rounded-lg p-4 text-green-300 font-mono text-xs overflow-x-auto">
-              {`{
-  "mcpServers": {
-    "contextbharat": {
-      "url": "https://mcp.contextbharat.com/mcp",
-      "headers": {
-        "Authorization": "Bearer YOUR_API_KEY"
-      }
-    }
-  }
-}`}
-            </pre>
+            <DocsCodeBlock code={REMOTE_CONFIG} language="json" />
           </div>
         </section>
 
@@ -270,28 +224,7 @@ export default function DocsPage() {
           </p>
           <div className="grid gap-6">
             {API_EXAMPLES.map((ex) => (
-              <div
-                key={ex.title}
-                className="bg-[#0c1120] border border-[#1e2d44] rounded-xl overflow-hidden"
-              >
-                <div className="px-5 py-3 border-b border-[#1e2d44] flex items-center gap-3">
-                  <span className="bg-green-500/15 text-green-400 text-xs font-bold px-2 py-0.5 rounded">
-                    {ex.method}
-                  </span>
-                  <span className="text-white font-mono text-sm">{ex.endpoint}</span>
-                  <span className="text-gray-500 text-xs ml-auto">{ex.title}</span>
-                </div>
-                <div className="grid md:grid-cols-2 divide-x divide-[#1e2d44]">
-                  <div className="p-4">
-                    <div className="text-gray-500 text-xs mb-2">Request</div>
-                    <pre className="text-gray-300 font-mono text-xs">{ex.body}</pre>
-                  </div>
-                  <div className="p-4">
-                    <div className="text-gray-500 text-xs mb-2">Response</div>
-                    <pre className="text-green-300 font-mono text-xs">{ex.response}</pre>
-                  </div>
-                </div>
-              </div>
+              <ApiExampleCard key={ex.title} {...ex} />
             ))}
           </div>
         </section>
@@ -301,20 +234,19 @@ export default function DocsPage() {
           <h2 className="text-2xl font-bold mb-6">Supported Languages</h2>
           <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
             {[
-              { code: "en", name: "English", flag: "🇬🇧" },
-              { code: "hi", name: "Hindi", flag: "🇮🇳" },
-              { code: "ta", name: "Tamil", flag: "🇮🇳" },
-              { code: "te", name: "Telugu", flag: "🇮🇳" },
-              { code: "kn", name: "Kannada", flag: "🇮🇳" },
-              { code: "bn", name: "Bengali", flag: "🇮🇳" },
-            ].map(({ code, name, flag }) => (
+              { code: "en", name: "English" },
+              { code: "hi", name: "Hindi" },
+              { code: "ta", name: "Tamil" },
+              { code: "te", name: "Telugu" },
+              { code: "kn", name: "Kannada" },
+              { code: "bn", name: "Bengali" },
+            ].map(({ code, name }) => (
               <div
                 key={code}
                 className="bg-[#0c1120] border border-[#1e2d44] rounded-xl p-4 text-center"
               >
-                <div className="text-2xl mb-1">{flag}</div>
                 <div className="text-white text-sm font-medium">{name}</div>
-                <div className="text-gray-500 text-xs font-mono">{code}</div>
+                <div className="text-gray-500 text-xs font-mono mt-1">{code}</div>
               </div>
             ))}
           </div>
@@ -344,7 +276,7 @@ export default function DocsPage() {
           <h3 className="text-xl font-bold mb-4">Ready to start?</h3>
           <div className="flex gap-4 justify-center">
             <Link
-              href="/dashboard"
+              href="/login"
               className="bg-[#f59e1c] text-black px-6 py-3 rounded-xl font-semibold hover:bg-[#fbbf45] transition-colors"
             >
               Get Free API Key

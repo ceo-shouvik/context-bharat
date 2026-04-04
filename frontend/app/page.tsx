@@ -1,12 +1,15 @@
 /**
  * Landing page — contextBharat
  * UX: Demo-first. Show value before asking for signup.
+ * Messaging: Vibe coding value prop + comparison section.
  */
 import Link from "next/link";
 import { Suspense } from "react";
 import { LivePlayground } from "@/components/live-playground";
 import { LogoSlider } from "@/components/logo-slider";
 import { LibraryCountBadge } from "@/components/library-count-badge";
+import { LandingCodeBlock } from "@/components/landing-code-block";
+import { Navbar } from "@/components/navbar";
 
 export const metadata = {
   title: "contextBharat — Up-to-date docs for Indian APIs in your AI editor",
@@ -17,44 +20,26 @@ export const metadata = {
 export default function LandingPage() {
   return (
     <main className="min-h-screen bg-[#05080f] text-white">
-      {/* Nav — simplified */}
-      <nav className="border-b border-white/10 px-6 py-4">
-        <div className="flex items-center justify-between max-w-6xl mx-auto">
-          <Link href="/" className="font-bold text-[#f59e1c] text-xl">
-            context<span className="text-white">Bharat</span>
-          </Link>
-          <div className="hidden md:flex gap-6 text-sm text-gray-400">
-            <Link href="/docs" className="hover:text-white transition-colors">Install</Link>
-            <Link href="/setup" className="hover:text-white transition-colors">Tools</Link>
-            <Link href="/libraries" className="hover:text-white transition-colors">Libraries</Link>
-            <Link href="/pricing" className="hover:text-white transition-colors">Plans</Link>
-          </div>
-          <div className="flex gap-3">
-            <Link
-              href="#try"
-              className="bg-[#f59e1c] text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#fbbf45] transition-colors"
-            >
-              Try Live
-            </Link>
-            <Link
-              href="/dashboard"
-              className="border border-white/20 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/5 transition-colors hidden md:block"
-            >
-              Get API Key
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
-      {/* Hero — clear, concise */}
+      {/* Hero — vibe coding value prop */}
       <section className="max-w-6xl mx-auto px-6 pt-20 pb-12 text-center">
+        <div className="inline-flex items-center gap-2 bg-[#f59e1c]/10 border border-[#f59e1c]/20 rounded-full px-4 py-1.5 mb-6">
+          <span className="w-1.5 h-1.5 bg-green-400 rounded-full" />
+          <span className="text-sm text-gray-400">
+            <LibraryCountBadge suffix=" libraries indexed" fallback="Libraries indexed" />
+          </span>
+        </div>
         <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-5">
-          Up-to-date docs for <span className="text-[#f59e1c]">Indian APIs</span>
-          <br className="hidden md:block" /> in your AI editor
+          Your AI editor <span className="text-[#f59e1c]">hallucinates</span>
+          <br className="hidden md:block" /> Indian API code.
+          <br className="hidden md:block" /> We fix that.
         </h1>
         <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-8">
-          Razorpay, ONDC, UPI, Zerodha, GSTN — accurate documentation injected into
-          Claude, Cursor, and VS Code via MCP. No hallucinations. Always fresh.
+          Vibe coding platforms generate broken Razorpay, ONDC, and UPI integrations
+          because they lack current docs. contextBharat injects fresh, accurate
+          documentation directly into Claude, Cursor, and VS Code. No more debugging
+          hallucinated code.
         </p>
         <div className="flex gap-3 justify-center mb-4">
           <Link
@@ -71,41 +56,91 @@ export default function LandingPage() {
           </Link>
         </div>
         <p className="text-gray-600 text-sm">
-          No signup required to try. <LibraryCountBadge suffix=" libraries indexed." fallback="Libraries indexed." /> Hindi docs available.
+          No signup required to try. Hindi docs available. Works with all MCP-compatible editors.
         </p>
       </section>
 
-      {/* Install snippet — immediate clarity */}
+      {/* Install snippet with copy button */}
       <section className="max-w-3xl mx-auto px-6 pb-12">
-        <div className="bg-[#0c1120] border border-[#1e2d44] rounded-xl p-5">
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-gray-500 text-xs">Add to Claude / Cursor / VS Code</span>
-            <span className="text-green-400 text-xs flex items-center gap-1">
-              <span className="w-1.5 h-1.5 bg-green-400 rounded-full" />
-              MCP Compatible
-            </span>
-          </div>
-          <pre className="bg-black/40 rounded-lg p-4 text-sm text-green-300 font-mono overflow-x-auto">
-{`{
-  "mcpServers": {
-    "contextbharat": {
-      "command": "npx",
-      "args": ["-y", "@contextbharat/mcp"]
-    }
-  }
-}`}
-          </pre>
-          <p className="text-gray-500 text-xs mt-3">
-            Then type <code className="text-[#f59e1c] font-semibold">use contextbharat</code> in
-            any prompt. That&apos;s it.
-          </p>
-        </div>
+        <LandingCodeBlock />
       </section>
 
       {/* Logo slider — social proof */}
       <Suspense fallback={<div className="py-8" />}>
         <LogoSlider />
       </Suspense>
+
+      {/* Without vs With comparison — THE value prop */}
+      <section className="max-w-5xl mx-auto px-6 py-20">
+        <h2 className="text-3xl font-bold text-center mb-3">
+          Vibe coding Indian APIs is broken
+        </h2>
+        <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+          AI coding assistants hallucinate Indian API integrations because they were never trained on current docs.
+          contextBharat eliminates this problem.
+        </p>
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Without */}
+          <div className="bg-red-500/[0.03] border border-red-500/20 rounded-2xl p-6">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-8 h-8 rounded-full bg-red-500/15 flex items-center justify-center">
+                <svg className="w-4 h-4 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </div>
+              <span className="text-red-400 font-semibold text-sm">Without contextBharat</span>
+            </div>
+            <ul className="space-y-3">
+              {[
+                "AI writes Razorpay v2 code when v3 is current",
+                "Hallucinated ONDC endpoints that don't exist",
+                "UPI integration uses deprecated XML format",
+                "GSTN API calls fail silently with wrong auth",
+                "Hours spent debugging AI-generated code",
+                "Pasting docs into prompts every session",
+              ].map((item) => (
+                <li key={item} className="flex gap-2.5 text-sm text-gray-400">
+                  <svg className="w-4 h-4 text-red-500/60 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* With */}
+          <div className="bg-green-500/[0.03] border border-green-500/20 rounded-2xl p-6">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-8 h-8 rounded-full bg-green-500/15 flex items-center justify-center">
+                <svg className="w-4 h-4 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <span className="text-green-400 font-semibold text-sm">With contextBharat</span>
+            </div>
+            <ul className="space-y-3">
+              {[
+                "AI gets current Razorpay v3 docs in real-time",
+                "Accurate ONDC Beckn Protocol flow from source",
+                "UPI integration uses latest NPCI spec",
+                "GSTN auth handled correctly with fresh examples",
+                "Ship integrations in minutes, not hours",
+                "Type 'use contextbharat' — docs injected automatically",
+              ].map((item) => (
+                <li key={item} className="flex gap-2.5 text-sm text-gray-300">
+                  <svg className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
 
       {/* Live Playground — the hero feature */}
       <section id="try" className="max-w-4xl mx-auto px-6 py-16">
@@ -126,18 +161,18 @@ export default function LandingPage() {
           {[
             {
               icon: "01",
-              title: "Your AI knows Indian APIs",
-              body: "Stop pasting docs into prompts. contextBharat gives Claude and Cursor real-time access to Razorpay, ONDC, UPI, Zerodha, GSTN, and every major Indian API.",
+              title: "Eliminates manual API implementation",
+              body: "Stop pasting docs into prompts. contextBharat gives your AI editor real-time access to Razorpay, ONDC, UPI, Zerodha, GSTN, and every major Indian API. Vibe code Indian integrations without the bugs.",
             },
             {
               icon: "02",
-              title: "Always up-to-date",
-              body: "We re-crawl every library daily. When Razorpay ships a new API version, your AI knows about it within 24 hours. No more deprecated code.",
+              title: "Always up-to-date, never stale",
+              body: "We re-crawl every library daily. When Razorpay ships a new API version, your AI knows within 24 hours. No more deprecated code, no more outdated patterns.",
             },
             {
               icon: "03",
-              title: "Hindi + regional languages",
-              body: "First-ever Hindi developer docs for Indian APIs. Tamil, Telugu, Kannada, Bengali also supported. Built with Sarvam AI Mayura.",
+              title: "Hindi + regional language docs",
+              body: "First-ever Hindi developer docs for Indian APIs. Tamil, Telugu, Kannada, Bengali also supported. 43% of India speaks Hindi first — now they can code with docs in their language.",
             },
           ].map(({ icon, title, body }) => (
             <div key={icon}>
@@ -154,7 +189,7 @@ export default function LandingPage() {
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-2xl font-bold"><LibraryCountBadge suffix=" Libraries Indexed" fallback="Libraries Indexed" /></h2>
           <Link href="/libraries" className="text-[#f59e1c] text-sm hover:underline">
-            Browse all →
+            Browse all &rarr;
           </Link>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -178,7 +213,6 @@ export default function LandingPage() {
       <section className="max-w-4xl mx-auto px-6 py-20">
         <h2 className="text-2xl font-bold text-center mb-12">How it works</h2>
         <div className="relative">
-          {/* Connection line */}
           <div className="hidden md:block absolute top-8 left-[16.5%] right-[16.5%] h-px bg-gradient-to-r from-[#f59e1c]/0 via-[#f59e1c]/30 to-[#f59e1c]/0" />
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -194,7 +228,7 @@ export default function LandingPage() {
                 <p className="text-gray-400 text-sm mb-3">{desc}</p>
                 {cta && href && (
                   <Link href={href} className="text-[#f59e1c] text-xs hover:underline">
-                    {cta} →
+                    {cta} &rarr;
                   </Link>
                 )}
               </div>
@@ -229,9 +263,9 @@ export default function LandingPage() {
         <p className="text-gray-400 text-center mb-10">Start free. Upgrade when you need more.</p>
         <div className="grid md:grid-cols-3 gap-5">
           {[
-            { name: "Free", price: "₹0", desc: "100 queries/day, 30 libraries", hl: false },
-            { name: "Pro", price: "₹399/mo", desc: "Unlimited, all libraries, Hindi", hl: true },
-            { name: "Team", price: "₹999/seat", desc: "Private repos, SLA, analytics", hl: false },
+            { name: "Free", price: "\u20B90", desc: "100 queries/day, 30 libraries", hl: false },
+            { name: "Pro", price: "\u20B9399/mo", desc: "Unlimited, all libraries, Hindi", hl: true },
+            { name: "Team", price: "\u20B9999/seat", desc: "Private repos, SLA, analytics", hl: false },
           ].map((p) => (
             <div key={p.name} className={`rounded-xl p-5 text-center ${p.hl ? "border-2 border-[#f59e1c] bg-[#f59e1c]/[0.04]" : "border border-[#1e2d44] bg-[#0c1120]"}`}>
               <div className="text-gray-500 text-xs font-semibold uppercase tracking-wider mb-1">{p.name}</div>
@@ -242,7 +276,7 @@ export default function LandingPage() {
         </div>
         <div className="text-center mt-6">
           <Link href="/pricing" className="text-[#f59e1c] text-sm hover:underline">
-            Compare plans →
+            Compare plans &rarr;
           </Link>
         </div>
       </section>
@@ -306,20 +340,20 @@ export default function LandingPage() {
             </div>
             <div className="flex gap-10 text-sm text-gray-500">
               <div className="flex flex-col gap-2">
-                <Link href="/docs" className="hover:text-white transition-colors">Install</Link>
-                <Link href="/setup" className="hover:text-white transition-colors">Setup Tools</Link>
                 <Link href="/libraries" className="hover:text-white transition-colors">Libraries</Link>
-                <Link href="/pricing" className="hover:text-white transition-colors">Plans</Link>
+                <Link href="/docs" className="hover:text-white transition-colors">Docs</Link>
+                <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
+                <Link href="/setup" className="hover:text-white transition-colors">Tools</Link>
               </div>
               <div className="flex flex-col gap-2">
-                <Link href="/dashboard" className="hover:text-white transition-colors">Dashboard</Link>
+                <Link href="/login" className="hover:text-white transition-colors">Dashboard</Link>
                 <Link href="https://github.com/contextbharat/context-bharat" className="hover:text-white transition-colors">GitHub</Link>
                 <Link href="https://twitter.com/contextbharat" className="hover:text-white transition-colors">Twitter</Link>
               </div>
             </div>
           </div>
           <div className="mt-8 pt-5 border-t border-white/5 text-center text-xs text-gray-700">
-            Built in India. Apache 2.0 (MCP Client). © 2026 contextBharat.
+            Built in India. Apache 2.0 (MCP Client). &copy; 2026 contextBharat.
           </div>
         </div>
       </footer>

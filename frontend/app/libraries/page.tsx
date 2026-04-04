@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { getLibraries, type Library } from "@/lib/api";
 import { LibraryCard } from "@/components/library-card";
+import { Navbar } from "@/components/navbar";
 import { useLibraryCount, formatLibraryCount } from "@/lib/use-library-count";
 
 const CATEGORIES = [
@@ -68,28 +69,7 @@ export default function PublicLibrariesPage() {
     <div className="min-h-screen bg-[#05080f]">
       <title>Libraries — contextBharat</title>
 
-      {/* Public Nav */}
-      <nav className="border-b border-white/10 px-6 py-4">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-8">
-            <Link href="/" className="font-bold text-lg">
-              <span className="text-[#f59e1c]">context</span>
-              <span className="text-white">Bharat</span>
-            </Link>
-            <div className="hidden md:flex gap-4 text-sm">
-              <Link href="/libraries" className="text-white font-medium">Libraries</Link>
-              <Link href="/docs" className="text-gray-400 hover:text-white transition-colors">Docs</Link>
-              <Link href="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link>
-            </div>
-          </div>
-          <Link
-            href="/dashboard"
-            className="bg-[#f59e1c] text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#fbbf45] transition-colors"
-          >
-            Get Free API Key
-          </Link>
-        </div>
-      </nav>
+      <Navbar />
 
       <div className="max-w-6xl mx-auto px-6 py-12">
         <h1 className="text-white text-2xl font-semibold mb-2">Library Catalog</h1>

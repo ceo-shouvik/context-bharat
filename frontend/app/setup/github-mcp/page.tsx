@@ -6,6 +6,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { Navbar } from "@/components/navbar";
 
 type OS = "macos" | "linux" | "windows";
 
@@ -161,26 +162,7 @@ export default function GitHubMcpPage() {
 
   return (
     <main className="min-h-screen bg-[#05080f] text-white">
-      {/* Nav */}
-      <nav className="border-b border-white/10 px-6 py-4">
-        <div className="flex items-center justify-between max-w-6xl mx-auto">
-          <Link href="/" className="font-bold text-[#f59e1c] text-xl">
-            context<span className="text-white">Bharat</span>
-          </Link>
-          <div className="hidden md:flex gap-6 text-sm text-gray-400">
-            <Link href="/docs" className="hover:text-white transition-colors">Install</Link>
-            <Link href="/setup" className="hover:text-white transition-colors">Tools</Link>
-            <Link href="/libraries" className="hover:text-white transition-colors">Libraries</Link>
-            <Link href="/pricing" className="hover:text-white transition-colors">Plans</Link>
-          </div>
-          <Link
-            href="/dashboard"
-            className="bg-[#f59e1c] text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#fbbf45] transition-colors"
-          >
-            Get API Key
-          </Link>
-        </div>
-      </nav>
+      <Navbar />
 
       <div className="max-w-4xl mx-auto px-6 py-12">
         {/* Breadcrumb */}
