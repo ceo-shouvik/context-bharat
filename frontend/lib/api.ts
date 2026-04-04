@@ -37,15 +37,20 @@ export async function getLibraries(params?: {
 }
 
 /**
- * Fetch the total number of indexed libraries from the backend.
+ * Fetch the number of indexed libraries that have actual documentation chunks.
+ * The API's `total` field reflects per-page count, not DB total, so we fetch
+ * all libraries and count those with chunk_count > 0.
  * Returns the count as a number, or null if the API is unreachable.
  */
 export async function getLibraryCount(): Promise<number | null> {
   try {
-    const response = await fetch(`${API_BASE}/v1/libraries?limit=1`);
+    const response = await fetch(`${API_BASE}/v1/libraries?limit=200`);
     if (!response.ok) return null;
     const data = await response.json();
-    return data.total ?? data.libraries?.length ?? null;
+    const libraries: Library[] = data.libraries ?? [];
+    // Count only libraries that have been indexed (chunk_count > 0)
+    const withDocs = libraries.filter((lib) => lib.chunk_count > 0).length;
+    return withDocs > 0 ? withDocs : libraries.length || null;
   } catch {
     return null;
   }

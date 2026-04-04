@@ -9,6 +9,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.v1 import libraries, docs, keys, health, admin
+from app.core.middleware import RateLimitMiddleware, SecurityHeadersMiddleware
 from app.api.v1 import snippets, offline, cookbooks, sdkgen, testgen, openapigen, starters, workflows, features
 from app.api.v1 import integrations, compliance, errors, community
 from app.core.config import settings
@@ -35,6 +36,11 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+# Middleware stack (outermost first in Starlette's add_middleware model,
+# but execution order is last-added = outermost wrapper).
+# Desired execution: SecurityHeaders -> RateLimit -> CORS -> handler
+# So add in reverse: CORS first, then RateLimit, then SecurityHeaders.
+
 # CORS — allow MCP clients and frontend
 app.add_middleware(
     CORSMiddleware,
@@ -43,6 +49,12 @@ app.add_middleware(
     allow_methods=["GET", "POST", "PUT", "DELETE"],
     allow_headers=["*"],
 )
+
+# Rate limiting — Redis-backed per-IP counters
+app.add_middleware(RateLimitMiddleware)
+
+# Security headers — added to every response
+app.add_middleware(SecurityHeadersMiddleware)
 
 # Routers
 app.include_router(health.router)
