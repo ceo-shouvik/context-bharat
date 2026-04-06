@@ -1,0 +1,18 @@
+{
+  "library_id": "/vercel/ai",
+  "name": "Vercel AI SDK",
+  "description": "TypeScript toolkit for building AI-powered applications. Chat, text generation, structured output, tool calling, streaming, and multi-provider support.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://sdk.vercel.ai/docs", "crawl_depth": 3},
+      {"type": "github", "repo": "vercel/ai"}
+    ]
+  },
+  "npm_package": "ai",
+  "github_repo": "vercel/ai",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["ai", "llm", "streaming", "chat", "vercel", "openai", "anthropic"]
+}

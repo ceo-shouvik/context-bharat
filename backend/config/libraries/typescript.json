@@ -1,0 +1,18 @@
+{
+  "library_id": "/microsoft/typescript",
+  "name": "TypeScript",
+  "description": "Typed superset of JavaScript. Type system, tsconfig, utility types, generics, decorators, and compiler options.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://www.typescriptlang.org/docs/", "crawl_depth": 3},
+      {"type": "github", "repo": "microsoft/TypeScript"}
+    ]
+  },
+  "npm_package": "typescript",
+  "github_repo": "microsoft/TypeScript",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["typescript", "javascript", "types", "compiler", "language"]
+}

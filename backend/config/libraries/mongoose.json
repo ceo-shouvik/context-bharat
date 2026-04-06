@@ -1,0 +1,18 @@
+{
+  "library_id": "/automattic/mongoose",
+  "name": "Mongoose",
+  "description": "Elegant MongoDB object modeling for Node.js. Schemas, models, queries, population, middleware, and validation.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://mongoosejs.com/docs/", "crawl_depth": 3},
+      {"type": "github", "repo": "Automattic/mongoose"}
+    ]
+  },
+  "npm_package": "mongoose",
+  "github_repo": "Automattic/mongoose",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["mongodb", "database", "orm", "odm", "nodejs", "schema"]
+}

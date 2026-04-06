@@ -1,0 +1,18 @@
+{
+  "library_id": "/vitest-dev/vitest",
+  "name": "Vitest",
+  "description": "Next-generation testing framework powered by Vite. Fast HMR, ESM-first, in-source testing, and Chai-compatible assertions.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://vitest.dev/guide/", "crawl_depth": 3},
+      {"type": "github", "repo": "vitest-dev/vitest"}
+    ]
+  },
+  "npm_package": "vitest",
+  "github_repo": "vitest-dev/vitest",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["testing", "vite", "javascript", "typescript", "fast", "esm"]
+}

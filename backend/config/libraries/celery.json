@@ -1,0 +1,18 @@
+{
+  "library_id": "/celery/celery",
+  "name": "Celery",
+  "description": "Distributed task queue for Python. Workers, beats scheduler, result backends, task chains, groups, and chords.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://docs.celeryq.dev/en/stable/", "crawl_depth": 3},
+      {"type": "github", "repo": "celery/celery"}
+    ]
+  },
+  "pypi_package": "celery",
+  "github_repo": "celery/celery",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["python", "task-queue", "async", "workers", "redis", "rabbitmq"]
+}

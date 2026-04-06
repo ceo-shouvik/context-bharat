@@ -1,0 +1,18 @@
+{
+  "library_id": "/sqlalchemy/sqlalchemy",
+  "name": "SQLAlchemy",
+  "description": "Python SQL toolkit and ORM. Engine, sessions, declarative models, relationships, async support, and query building.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://docs.sqlalchemy.org/en/20/tutorial/", "crawl_depth": 4},
+      {"type": "github", "repo": "sqlalchemy/sqlalchemy"}
+    ]
+  },
+  "pypi_package": "sqlalchemy",
+  "github_repo": "sqlalchemy/sqlalchemy",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["python", "sql", "orm", "database", "postgres", "mysql", "async"]
+}

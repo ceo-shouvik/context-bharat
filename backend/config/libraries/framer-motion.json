@@ -1,0 +1,18 @@
+{
+  "library_id": "/framer/motion",
+  "name": "Framer Motion",
+  "description": "Production-ready animation library for React. Motion components, gestures, layout animations, scroll triggers, and variants.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://motion.dev/docs", "crawl_depth": 3},
+      {"type": "github", "repo": "motiondivision/motion"}
+    ]
+  },
+  "npm_package": "framer-motion",
+  "github_repo": "motiondivision/motion",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["react", "animation", "motion", "gestures", "layout", "frontend"]
+}

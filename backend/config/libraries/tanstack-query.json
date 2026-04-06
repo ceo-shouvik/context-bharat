@@ -1,0 +1,18 @@
+{
+  "library_id": "/tanstack/query",
+  "name": "TanStack Query",
+  "description": "Powerful asynchronous state management for React. Data fetching, caching, synchronization, pagination, and infinite queries.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://tanstack.com/query/latest/docs/framework/react/overview", "crawl_depth": 3},
+      {"type": "github", "repo": "TanStack/query"}
+    ]
+  },
+  "npm_package": "@tanstack/react-query",
+  "github_repo": "TanStack/query",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["react", "data-fetching", "cache", "state", "async", "query"]
+}

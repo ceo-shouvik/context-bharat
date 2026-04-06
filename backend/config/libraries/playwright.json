@@ -1,0 +1,19 @@
+{
+  "library_id": "/microsoft/playwright",
+  "name": "Playwright",
+  "description": "Browser automation and testing framework. Cross-browser testing, selectors, assertions, fixtures, and visual comparisons.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://playwright.dev/docs/intro", "crawl_depth": 3},
+      {"type": "github", "repo": "microsoft/playwright"}
+    ]
+  },
+  "npm_package": "playwright",
+  "pypi_package": "playwright",
+  "github_repo": "microsoft/playwright",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["testing", "browser", "automation", "e2e", "chromium", "firefox", "webkit"]
+}

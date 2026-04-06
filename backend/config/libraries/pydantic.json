@@ -1,0 +1,18 @@
+{
+  "library_id": "/pydantic/pydantic",
+  "name": "Pydantic",
+  "description": "Data validation using Python type annotations. BaseModel, Field, validators, serialization, settings, and JSON Schema.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://docs.pydantic.dev/latest/", "crawl_depth": 3},
+      {"type": "github", "repo": "pydantic/pydantic"}
+    ]
+  },
+  "pypi_package": "pydantic",
+  "github_repo": "pydantic/pydantic",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["python", "validation", "types", "serialization", "settings", "schema"]
+}

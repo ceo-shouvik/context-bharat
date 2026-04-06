@@ -1,0 +1,18 @@
+{
+  "library_id": "/honojs/hono",
+  "name": "Hono",
+  "description": "Ultrafast web framework for the Edge. Routing, middleware, JSX, RPC, validators, and multi-runtime support.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://hono.dev/docs/", "crawl_depth": 3},
+      {"type": "github", "repo": "honojs/hono"}
+    ]
+  },
+  "npm_package": "hono",
+  "github_repo": "honojs/hono",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["web", "framework", "edge", "cloudflare", "deno", "bun", "api"]
+}

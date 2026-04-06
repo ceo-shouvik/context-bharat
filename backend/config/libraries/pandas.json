@@ -1,0 +1,18 @@
+{
+  "library_id": "/pandas-dev/pandas",
+  "name": "Pandas",
+  "description": "Python data analysis and manipulation library. DataFrames, Series, groupby, merge, pivot, time series, and IO operations.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://pandas.pydata.org/docs/", "crawl_depth": 3},
+      {"type": "github", "repo": "pandas-dev/pandas"}
+    ]
+  },
+  "pypi_package": "pandas",
+  "github_repo": "pandas-dev/pandas",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["python", "data", "dataframe", "analysis", "csv", "excel"]
+}

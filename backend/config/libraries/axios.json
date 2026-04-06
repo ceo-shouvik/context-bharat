@@ -1,0 +1,18 @@
+{
+  "library_id": "/axios/axios",
+  "name": "Axios",
+  "description": "Promise-based HTTP client for the browser and Node.js. Interceptors, request/response transforms, cancellation, and retry.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://axios-http.com/docs/intro", "crawl_depth": 3},
+      {"type": "github", "repo": "axios/axios"}
+    ]
+  },
+  "npm_package": "axios",
+  "github_repo": "axios/axios",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["http", "client", "api", "rest", "fetch", "nodejs", "browser"]
+}

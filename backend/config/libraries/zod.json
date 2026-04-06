@@ -1,0 +1,18 @@
+{
+  "library_id": "/colinhacks/zod",
+  "name": "Zod",
+  "description": "TypeScript-first schema validation with static type inference. Parsing, transforms, refinements, and error handling.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://zod.dev/", "crawl_depth": 3},
+      {"type": "github", "repo": "colinhacks/zod"}
+    ]
+  },
+  "npm_package": "zod",
+  "github_repo": "colinhacks/zod",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["validation", "typescript", "schema", "parsing", "types"]
+}

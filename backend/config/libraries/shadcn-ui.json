@@ -1,0 +1,18 @@
+{
+  "library_id": "/shadcn-ui/ui",
+  "name": "shadcn/ui",
+  "description": "Beautifully designed components built with Radix UI and Tailwind CSS. Copy-paste component library for React.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://ui.shadcn.com/docs", "crawl_depth": 3},
+      {"type": "github", "repo": "shadcn-ui/ui"}
+    ]
+  },
+  "npm_package": "shadcn-ui",
+  "github_repo": "shadcn-ui/ui",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["ui", "react", "components", "tailwind", "radix", "frontend"]
+}

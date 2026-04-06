@@ -1,0 +1,18 @@
+{
+  "library_id": "/jestjs/jest",
+  "name": "Jest",
+  "description": "JavaScript testing framework. Test runners, matchers, mocks, snapshots, code coverage, and async testing.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://jestjs.io/docs/getting-started", "crawl_depth": 3},
+      {"type": "github", "repo": "jestjs/jest"}
+    ]
+  },
+  "npm_package": "jest",
+  "github_repo": "jestjs/jest",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["testing", "javascript", "typescript", "mocks", "snapshots", "coverage"]
+}

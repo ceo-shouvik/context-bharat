@@ -1,0 +1,15 @@
+{
+  "library_id": "/kubernetes/kubernetes",
+  "name": "Kubernetes",
+  "description": "Container orchestration platform. Pods, deployments, services, ingress, ConfigMaps, secrets, and Helm charts.",
+  "category": "global-framework",
+  "source": {
+    "type": "web",
+    "url": "https://kubernetes.io/docs/concepts/",
+    "crawl_depth": 4
+  },
+  "github_repo": "kubernetes/kubernetes",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["kubernetes", "k8s", "containers", "orchestration", "devops", "infrastructure"]
+}

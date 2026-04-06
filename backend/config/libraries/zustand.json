@@ -1,0 +1,18 @@
+{
+  "library_id": "/pmndrs/zustand",
+  "name": "Zustand",
+  "description": "Small, fast, scalable state management for React. Store creation, selectors, middleware, devtools, and persist.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://zustand.docs.pmnd.rs/getting-started/introduction", "crawl_depth": 3},
+      {"type": "github", "repo": "pmndrs/zustand"}
+    ]
+  },
+  "npm_package": "zustand",
+  "github_repo": "pmndrs/zustand",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["react", "state-management", "store", "hooks", "frontend"]
+}

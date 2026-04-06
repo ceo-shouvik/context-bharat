@@ -1,0 +1,18 @@
+{
+  "library_id": "/react-hook-form/react-hook-form",
+  "name": "React Hook Form",
+  "description": "Performant, flexible forms for React. useForm, Controller, validation resolvers, field arrays, and schema integration.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://react-hook-form.com/docs", "crawl_depth": 3},
+      {"type": "github", "repo": "react-hook-form/react-hook-form"}
+    ]
+  },
+  "npm_package": "react-hook-form",
+  "github_repo": "react-hook-form/react-hook-form",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["react", "forms", "validation", "hooks", "performance", "frontend"]
+}
