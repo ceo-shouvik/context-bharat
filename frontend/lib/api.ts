@@ -48,9 +48,7 @@ export async function getLibraryCount(): Promise<number | null> {
     if (!response.ok) return null;
     const data = await response.json();
     const libraries: Library[] = data.libraries ?? [];
-    // Count only libraries that have been indexed (chunk_count > 0)
-    const withDocs = libraries.filter((lib) => lib.chunk_count > 0).length;
-    return withDocs > 0 ? withDocs : libraries.length || null;
+    return libraries.length || null;
   } catch {
     return null;
   }

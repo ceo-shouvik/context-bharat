@@ -7,8 +7,9 @@
 import { useEffect, useState } from "react";
 import { getLibraryCount } from "@/lib/api";
 
-/** Cached count so we only fetch once per page session */
-let cachedCount: number | null = null;
+/** Cached count so we only fetch once per page session.
+ *  Seeded with 100 to avoid flash of empty text on first render. */
+let cachedCount: number | null = 100;
 
 export function useLibraryCount(): number | null {
   const [count, setCount] = useState<number | null>(cachedCount);
