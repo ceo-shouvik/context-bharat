@@ -1,0 +1,19 @@
+{
+  "library_id": "/openai/openai-node",
+  "name": "OpenAI SDK",
+  "description": "Official OpenAI API client. Chat completions, embeddings, assistants, function calling, streaming, images, and audio.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://platform.openai.com/docs/api-reference", "crawl_depth": 3},
+      {"type": "github", "repo": "openai/openai-node"}
+    ]
+  },
+  "npm_package": "openai",
+  "pypi_package": "openai",
+  "github_repo": "openai/openai-node",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["ai", "llm", "openai", "gpt", "embeddings", "chat", "api"]
+}

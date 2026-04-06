@@ -1,0 +1,18 @@
+{
+  "library_id": "/remix-run/react-router",
+  "name": "React Router",
+  "description": "Declarative routing for React. Route configuration, loaders, actions, nested routes, lazy loading, and navigation.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://reactrouter.com/start/framework/installation", "crawl_depth": 3},
+      {"type": "github", "repo": "remix-run/react-router"}
+    ]
+  },
+  "npm_package": "react-router",
+  "github_repo": "remix-run/react-router",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["react", "routing", "spa", "navigation", "remix", "frontend"]
+}

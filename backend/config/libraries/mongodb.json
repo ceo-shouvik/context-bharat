@@ -1,0 +1,15 @@
+{
+  "library_id": "/mongodb/mongo",
+  "name": "MongoDB",
+  "description": "Document database. CRUD operations, aggregation pipeline, indexes, transactions, Atlas, and query operators.",
+  "category": "global-framework",
+  "source": {
+    "type": "web",
+    "url": "https://www.mongodb.com/docs/manual/",
+    "crawl_depth": 3
+  },
+  "github_repo": "mongodb/mongo",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["database", "nosql", "document", "atlas", "aggregation", "queries"]
+}

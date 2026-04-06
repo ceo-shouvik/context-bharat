@@ -1,0 +1,18 @@
+{
+  "library_id": "/nextauthjs/next-auth",
+  "name": "Auth.js (NextAuth)",
+  "description": "Authentication for Next.js and web frameworks. OAuth providers, credentials, JWT sessions, database adapters, and middleware.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://authjs.dev/getting-started", "crawl_depth": 3},
+      {"type": "github", "repo": "nextauthjs/next-auth"}
+    ]
+  },
+  "npm_package": "next-auth",
+  "github_repo": "nextauthjs/next-auth",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["auth", "nextjs", "oauth", "jwt", "session", "login", "react"]
+}

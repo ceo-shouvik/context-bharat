@@ -1,0 +1,18 @@
+{
+  "library_id": "/socketio/socket.io",
+  "name": "Socket.IO",
+  "description": "Real-time bidirectional event-based communication. Rooms, namespaces, broadcasting, acknowledgements, and adapters.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://socket.io/docs/v4/", "crawl_depth": 3},
+      {"type": "github", "repo": "socketio/socket.io"}
+    ]
+  },
+  "npm_package": "socket.io",
+  "github_repo": "socketio/socket.io",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["websocket", "realtime", "events", "rooms", "nodejs", "chat"]
+}

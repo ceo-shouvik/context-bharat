@@ -1,0 +1,18 @@
+{
+  "library_id": "/vitejs/vite",
+  "name": "Vite",
+  "description": "Next-generation frontend build tool. Dev server, HMR, plugins, SSR, library mode, and environment variables.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://vite.dev/guide/", "crawl_depth": 3},
+      {"type": "github", "repo": "vitejs/vite"}
+    ]
+  },
+  "npm_package": "vite",
+  "github_repo": "vitejs/vite",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["build", "bundler", "hmr", "frontend", "dev-server", "esm"]
+}

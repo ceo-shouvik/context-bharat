@@ -1,0 +1,18 @@
+{
+  "library_id": "/vercel/swr",
+  "name": "SWR",
+  "description": "React hooks for data fetching by Vercel. Stale-while-revalidate, mutations, pagination, suspense, and optimistic UI.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://swr.vercel.app/docs/getting-started", "crawl_depth": 3},
+      {"type": "github", "repo": "vercel/swr"}
+    ]
+  },
+  "npm_package": "swr",
+  "github_repo": "vercel/swr",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["react", "data-fetching", "cache", "hooks", "vercel", "swr"]
+}

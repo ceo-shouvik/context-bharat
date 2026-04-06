@@ -1,0 +1,18 @@
+{
+  "library_id": "/nestjs/nest",
+  "name": "NestJS",
+  "description": "Progressive Node.js framework for enterprise server-side applications. Modules, controllers, providers, guards, pipes, and microservices.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://docs.nestjs.com/", "crawl_depth": 3},
+      {"type": "github", "repo": "nestjs/nest"}
+    ]
+  },
+  "npm_package": "@nestjs/core",
+  "github_repo": "nestjs/nest",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["nodejs", "backend", "typescript", "enterprise", "api", "microservices"]
+}

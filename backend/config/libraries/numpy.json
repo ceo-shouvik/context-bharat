@@ -1,0 +1,18 @@
+{
+  "library_id": "/numpy/numpy",
+  "name": "NumPy",
+  "description": "Fundamental package for scientific computing in Python. Arrays, linear algebra, random, FFT, and mathematical functions.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://numpy.org/doc/stable/user/index.html", "crawl_depth": 3},
+      {"type": "github", "repo": "numpy/numpy"}
+    ]
+  },
+  "pypi_package": "numpy",
+  "github_repo": "numpy/numpy",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["python", "scientific", "arrays", "math", "linear-algebra", "data"]
+}

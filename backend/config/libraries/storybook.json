@@ -1,0 +1,18 @@
+{
+  "library_id": "/storybookjs/storybook",
+  "name": "Storybook",
+  "description": "UI component development tool. Stories, args, decorators, addons, visual testing, and documentation generation.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://storybook.js.org/docs", "crawl_depth": 3},
+      {"type": "github", "repo": "storybookjs/storybook"}
+    ]
+  },
+  "npm_package": "storybook",
+  "github_repo": "storybookjs/storybook",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["ui", "components", "testing", "documentation", "react", "design-system"]
+}
