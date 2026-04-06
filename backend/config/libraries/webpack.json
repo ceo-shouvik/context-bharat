@@ -1,0 +1,18 @@
+{
+  "library_id": "/webpack/webpack",
+  "name": "Webpack",
+  "description": "Module bundler for JavaScript applications. Loaders, plugins, code splitting, tree shaking, HMR, and optimization.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://webpack.js.org/concepts/", "crawl_depth": 3},
+      {"type": "github", "repo": "webpack/webpack"}
+    ]
+  },
+  "npm_package": "webpack",
+  "github_repo": "webpack/webpack",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["bundler", "build", "javascript", "loaders", "plugins", "optimization"]
+}

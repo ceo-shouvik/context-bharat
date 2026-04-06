@@ -1,0 +1,18 @@
+{
+  "library_id": "/scikit-learn/scikit-learn",
+  "name": "scikit-learn",
+  "description": "Machine learning in Python. Classification, regression, clustering, dimensionality reduction, model selection, and preprocessing.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://scikit-learn.org/stable/user_guide.html", "crawl_depth": 3},
+      {"type": "github", "repo": "scikit-learn/scikit-learn"}
+    ]
+  },
+  "pypi_package": "scikit-learn",
+  "github_repo": "scikit-learn/scikit-learn",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["python", "machine-learning", "classification", "regression", "clustering", "data-science"]
+}

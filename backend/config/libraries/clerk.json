@@ -1,0 +1,18 @@
+{
+  "library_id": "/clerk/javascript",
+  "name": "Clerk",
+  "description": "Drop-in authentication and user management. Sign-in components, organizations, webhooks, middleware, and multi-tenancy.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://clerk.com/docs", "crawl_depth": 3},
+      {"type": "github", "repo": "clerk/javascript"}
+    ]
+  },
+  "npm_package": "@clerk/nextjs",
+  "github_repo": "clerk/javascript",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["auth", "users", "organizations", "nextjs", "react", "middleware"]
+}

@@ -1,0 +1,18 @@
+{
+  "library_id": "/recharts/recharts",
+  "name": "Recharts",
+  "description": "Composable charting library built on React and D3. Line, bar, area, pie, scatter, radar, and responsive containers.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://recharts.org/en-US/guide", "crawl_depth": 3},
+      {"type": "github", "repo": "recharts/recharts"}
+    ]
+  },
+  "npm_package": "recharts",
+  "github_repo": "recharts/recharts",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["charts", "react", "d3", "visualization", "graphs", "dashboard"]
+}

@@ -1,0 +1,18 @@
+{
+  "library_id": "/tanstack/table",
+  "name": "TanStack Table",
+  "description": "Headless UI for building powerful tables and datagrids. Sorting, filtering, pagination, grouping, and virtualization.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://tanstack.com/table/latest/docs/introduction", "crawl_depth": 3},
+      {"type": "github", "repo": "TanStack/table"}
+    ]
+  },
+  "npm_package": "@tanstack/react-table",
+  "github_repo": "TanStack/table",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["react", "table", "datagrid", "sorting", "filtering", "pagination"]
+}

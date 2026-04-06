@@ -1,0 +1,18 @@
+{
+  "library_id": "/vercel/turborepo",
+  "name": "Turborepo",
+  "description": "High-performance monorepo build system. Task pipelines, caching, remote cache, pruning, and workspace management.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://turbo.build/repo/docs", "crawl_depth": 3},
+      {"type": "github", "repo": "vercel/turborepo"}
+    ]
+  },
+  "npm_package": "turbo",
+  "github_repo": "vercel/turborepo",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["monorepo", "build", "cache", "vercel", "workspace", "ci"]
+}

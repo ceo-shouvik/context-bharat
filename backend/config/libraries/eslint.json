@@ -1,0 +1,18 @@
+{
+  "library_id": "/eslint/eslint",
+  "name": "ESLint",
+  "description": "Pluggable JavaScript/TypeScript linter. Flat config, rules, plugins, formatters, and custom rule authoring.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://eslint.org/docs/latest/", "crawl_depth": 3},
+      {"type": "github", "repo": "eslint/eslint"}
+    ]
+  },
+  "npm_package": "eslint",
+  "github_repo": "eslint/eslint",
+  "refresh_interval_hours": 72,
+  "languages": ["en"],
+  "tags": ["linting", "javascript", "typescript", "code-quality", "plugins"]
+}

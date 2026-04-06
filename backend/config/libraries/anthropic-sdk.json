@@ -1,0 +1,19 @@
+{
+  "library_id": "/anthropics/anthropic-sdk",
+  "name": "Anthropic SDK",
+  "description": "Official Anthropic API client. Claude chat, streaming, tool use, vision, batches, and message API.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://docs.anthropic.com/en/api/getting-started", "crawl_depth": 3},
+      {"type": "github", "repo": "anthropics/anthropic-sdk-python"}
+    ]
+  },
+  "npm_package": "@anthropic-ai/sdk",
+  "pypi_package": "anthropic",
+  "github_repo": "anthropics/anthropic-sdk-python",
+  "refresh_interval_hours": 24,
+  "languages": ["en"],
+  "tags": ["ai", "llm", "claude", "anthropic", "chat", "streaming", "api"]
+}

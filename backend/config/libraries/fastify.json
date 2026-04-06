@@ -1,0 +1,18 @@
+{
+  "library_id": "/fastify/fastify",
+  "name": "Fastify",
+  "description": "Fast and low overhead Node.js web framework. Plugins, hooks, validation, serialization, decorators, and TypeScript support.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://fastify.dev/docs/latest/", "crawl_depth": 3},
+      {"type": "github", "repo": "fastify/fastify"}
+    ]
+  },
+  "npm_package": "fastify",
+  "github_repo": "fastify/fastify",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["nodejs", "backend", "api", "fast", "plugins", "typescript"]
+}
