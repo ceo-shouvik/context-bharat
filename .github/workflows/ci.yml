@@ -75,8 +75,6 @@ jobs:
         with:
           node-version: "20"
       - uses: pnpm/action-setup@v4
-        with:
-          version: 9
       - name: Install and test
         run: |
           cd mcp-server
@@ -93,8 +91,6 @@ jobs:
         with:
           node-version: "20"
       - uses: pnpm/action-setup@v4
-        with:
-          version: 9
       - name: Install and build
         env:
           NEXT_PUBLIC_SUPABASE_URL: https://placeholder.supabase.co
@@ -114,5 +110,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install ruff
+      - run: pip install ruff==0.7.0
       - run: cd backend && ruff check . && ruff format --check .
