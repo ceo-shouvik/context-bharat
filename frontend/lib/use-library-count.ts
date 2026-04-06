@@ -9,7 +9,7 @@ import { getLibraryCount } from "@/lib/api";
 
 /** Cached count so we only fetch once per page session.
  *  Seeded with 100 to avoid flash of empty text on first render. */
-let cachedCount: number | null = 100;
+let cachedCount: number | null = 120;
 
 export function useLibraryCount(): number | null {
   const [count, setCount] = useState<number | null>(cachedCount);
