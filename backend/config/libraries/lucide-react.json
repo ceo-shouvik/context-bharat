@@ -1,0 +1,18 @@
+{
+  "library_id": "/lucide-icons/lucide-react",
+  "name": "Lucide React",
+  "description": "Beautiful and consistent open-source icon library for React. 1500+ icons with tree-shaking, customizable size, color, and stroke width.",
+  "category": "global-framework",
+  "source": {
+    "type": "multi",
+    "sources": [
+      {"type": "web", "url": "https://lucide.dev/guide/packages/lucide-react", "crawl_depth": 3},
+      {"type": "github", "repo": "lucide-icons/lucide"}
+    ]
+  },
+  "npm_package": "lucide-react",
+  "github_repo": "lucide-icons/lucide",
+  "refresh_interval_hours": 48,
+  "languages": ["en"],
+  "tags": ["icons", "react", "ui", "svg", "frontend", "components"]
+}
