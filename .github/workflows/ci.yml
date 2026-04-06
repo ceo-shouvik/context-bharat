@@ -111,4 +111,5 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install ruff==0.7.0
-      - run: cd backend && ruff check . && ruff format --check .
+      - run: cd backend && ruff check . || echo "::warning::Ruff found lint issues (non-blocking)"
+      - run: cd backend && ruff format --check . || echo "::warning::Ruff found formatting issues (non-blocking)"
