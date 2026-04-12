@@ -155,19 +155,21 @@ async function startHttpServer(port: number): Promise<void> {
 
     // MCP endpoint
     if (req.url === "/mcp" || req.url === "/") {
-      // Collect request body
-      const chunks: Buffer[] = [];
-      req.on("data", (chunk: Buffer) => chunks.push(chunk));
-      await new Promise<void>((resolve) => req.on("end", resolve));
-      const body = Buffer.concat(chunks).toString("utf-8");
-
+      // Only collect body for POST/DELETE — GET (SSE) has no body and
+      // collecting it would hang waiting for data that never arrives.
       let parsedBody: unknown;
-      try {
-        parsedBody = body ? JSON.parse(body) : undefined;
-      } catch {
-        res.writeHead(400, { "Content-Type": "application/json" });
-        res.end(JSON.stringify({ error: "Invalid JSON body" }));
-        return;
+      if (req.method !== "GET") {
+        const chunks: Buffer[] = [];
+        req.on("data", (chunk: Buffer) => chunks.push(chunk));
+        await new Promise<void>((resolve) => req.on("end", resolve));
+        const body = Buffer.concat(chunks).toString("utf-8");
+        try {
+          parsedBody = body ? JSON.parse(body) : undefined;
+        } catch {
+          res.writeHead(400, { "Content-Type": "application/json" });
+          res.end(JSON.stringify({ error: "Invalid JSON body" }));
+          return;
+        }
       }
 
       // Create a fresh server + transport per request (stateless)
@@ -226,3 +228,11 @@ main().catch((error) => {
   process.stderr.write(`Fatal: ${error}\n`);
   process.exit(1);
 });
+
+// Graceful shutdown — Cloud Run sends SIGTERM before killing the container
+function shutdown(signal: string): void {
+  process.stderr.write(`Context Bharat MCP: received ${signal}, shutting down\n`);
+  process.exit(0);
+}
+process.on("SIGTERM", () => shutdown("SIGTERM"));
+process.on("SIGINT", () => shutdown("SIGINT"));

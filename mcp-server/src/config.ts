@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const pkg = require("../package.json") as { version: string };
+
 /**
  * MCP Server configuration.
  * Reads environment variables at startup.
@@ -11,6 +14,6 @@ export const config = {
   defaultTokenBudget: 5000,
   /** Request timeout in milliseconds */
   requestTimeoutMs: 10_000,
-  /** Server version */
-  version: "0.1.0",
+  /** Server version — sourced from package.json, never drifts */
+  version: pkg.version,
 } as const;
