@@ -1,8 +1,4 @@
 # Environment
-.env
-.env.local
-.env.production
-.env.staging
 *.env
 
 # Python
@@ -54,3 +50,4 @@ logs/
 
 # Alembic (compiled)
 alembic/versions/__pycache__/
+config.bat
