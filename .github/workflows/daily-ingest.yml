@@ -48,10 +48,3 @@ jobs:
           else
             python backend/scripts/trigger_scheduled_ingestion.py
           fi
-
-      - name: Notify on failure
-        if: failure()
-        run: |
-          curl -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
-            -H "Content-Type: application/json" \
-            -d '{"text": "⚠️ Context Bharat: Daily re-index failed! Check GitHub Actions."}'
